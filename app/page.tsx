@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen bg-[#181818]">
       <Navbar />
-      <div className="relative mt-10 mx-5 sm:mt-20 sm:ml-20 lg:mt-40 lg:ml-40 z-10">
+      <div className="relative mt-10 mx-5 sm:mt-20 sm:ml-20 lg:mt-32 lg:ml-40 z-10">
         <p
           className={
             raleway.className +
@@ -41,14 +41,19 @@ export default function Home() {
         >
           Deutsches Museum
           <br />
-          13.09 - 14.09
+          12.09 - 13.09
         </p>
       </div>
+
       <div className="absolute right-0 bottom-0">
         <div className="2xl:w-full xl:w-[800px] h-full lg:w-[700px] w-[500px]">
           <Image src={Munich} alt="Munich" />
         </div>
       </div>
+      <div className="absolute right-0 bottom-0">
+        <div className="md:hidden min-w-[500px] min-h-[500px] from-[rgba(24,24,24,0.2)] to-[rgba(24,24,24,0.7)] bg-gradient-to-t to-50%"></div>
+      </div>
+
       <Footer />
     </div>
   );

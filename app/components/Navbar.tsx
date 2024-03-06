@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between w-full h-[100px] border-b-[1px] border-white px-4 sm:px-10 md:px-20">
+    <div className="flex items-center justify-between w-full h-[75px] md:h-[100px] border-b-[1px] border-white px-4 sm:px-10 md:px-20">
       <div className="flex items-center h-full">
         <a
           href="https://www.tum-blockchain.com/"
@@ -44,7 +44,7 @@ const Navbar = () => {
           href="https://www.tum-blockchain.com/conference2023"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:flex cursor-pointer text-white text-sm ml-2 sm:ml-8 mr-2 md:mx-8"
+          className="hidden sm:flex cursor-pointer text-[#f87aff] text-sm ml-2 sm:ml-8 mr-2 md:mx-8"
         >
           Throwback 2023
         </a>

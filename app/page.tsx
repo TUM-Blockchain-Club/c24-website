@@ -9,7 +9,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-[#181818]">
+    <div className="w-full min-h-screen bg-black">
       <Navbar />
       <div className="relative mt-10 mx-5 sm:mt-20 sm:ml-20 lg:mt-32 lg:ml-40 z-10">
         <p

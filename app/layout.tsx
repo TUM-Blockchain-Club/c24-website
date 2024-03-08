@@ -6,7 +6,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
-  description: "Germany's leading student-run conference exploring the frontiers of blockchain technology",
+  description:
+    "Germany's leading student-run conference exploring the frontiers of blockchain technology",
+  openGraph: {
+    title: "TUM Blockchain Conference 24",
+    description:
+      "Germany's leading student-run conference exploring the frontiers of blockchain technology",
+  },
 };
 
 export default function RootLayout({

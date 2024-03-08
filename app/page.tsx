@@ -43,6 +43,14 @@ export default function Home() {
           <br />
           12.09 - 13.09
         </p>
+        <p
+          className={
+            raleway.className +
+            " text-white sm:text-3xl text-2xl leading-tight mt-8"
+          }
+        >
+          Coming soon...
+        </p>
       </div>
 
       <div className="absolute right-0 bottom-0">

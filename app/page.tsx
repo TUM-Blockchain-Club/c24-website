@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute right-0 bottom-0">
-        <div className="md:hidden min-w-[500px] min-h-[500px] from-[rgba(24,24,24,0.2)] to-[rgba(24,24,24,0.7)] bg-gradient-to-t to-50%"></div>
+        <div className="md:hidden min-w-[500px] min-h-[500px] from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.7)] bg-gradient-to-t to-50%"></div>
       </div>
 
       <Footer />

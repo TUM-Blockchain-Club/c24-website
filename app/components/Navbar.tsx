@@ -18,14 +18,14 @@ const Navbar = () => {
         >
           <Image src={Logo} alt="Logo" width={50} height={50} />
         </a>
-        <div className="hidden sm:block w-[1px] h-[30px] bg-white mx-6"></div>
+        <div className="hidden lg:block w-[1px] h-[30px] bg-white mx-6"></div>
         <a
           href="https://www.tum-blockchain.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:flex cursor-pointer"
+          className="hidden lg:flex cursor-pointer"
         >
-          <p className="text-white text-sm sm:mr-2">TUM Blockchain Club</p>
+          <p className="text-white text-sm mr-2">TUM Blockchain Club</p>
           <div>
             <Image src={Arrow} alt="Arrow" width={20} height={20} />
           </div>
@@ -36,17 +36,23 @@ const Navbar = () => {
           href="https://www.tum-blockchain.com/conference2023"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex sm:hidden cursor-pointer text-white text-sm ml-2"
+          className="flex sm:hidden cursor-pointer ml-2"
         >
-          Throwback
+          <p className="text-white text-sm sm:mr-2">2023</p>
+          <div>
+            <Image src={Arrow} alt="Arrow" width={20} height={20} />
+          </div>
         </a>
         <a
           href="https://www.tum-blockchain.com/conference2023"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:flex cursor-pointer text-[#f87aff] text-sm ml-2 sm:ml-8 mr-2 md:mx-8"
+          className="hidden sm:flex cursor-pointer ml-2 sm:ml-8 mr-2 sm:mx-8"
         >
-          Throwback 2023
+          <p className="text-white text-sm sm:mr-2">Conference 2023</p>
+          <div>
+            <Image src={Arrow} alt="Arrow" width={20} height={20} />
+          </div>
         </a>
         <div className="hidden sm:block w-[1px] h-[30px] bg-white mr-6"></div>
         <a

@@ -30,20 +30,20 @@ export default function Home() {
           exploring the frontiers of blockchain technology
         </p>
         <div className="md:flex">
-          <button className="group mobile-wide:h-[40px] flex w-[275px] md:w-[300px] items-center justify-center mr-8 px-4 sm:px-16 py-4 sm:py-4 mobile-wide:py-0 bg-[#FCCF6A] hover:border-white border-2 border-[#FCCF6A] duration-300 ease-in">
-            <p className="group-hover:hidden text-black mr-4 text-sm">
+          <button className="group mobile-wide:h-[40px] flex w-[275px] md:w-[300px] items-center justify-center mr-8 px-4 sm:px-16 py-4 sm:py-4 mobile-wide:py-0 bg-[#FCCF6A] hover:border-white border-2 border-[#FCCF6A] duration-150 ease-in">
+            <p className="group-hover:hidden text-black mr-2 text-sm">
               Speaker Application
             </p>
-            <p className="hidden group-hover:block text-black mr-4 text-sm">
+            <p className="hidden group-hover:block text-black mr-2 text-sm">
               Opening soon
             </p>
             <Image src={Arrow} alt="Arrow" width={20} height={20} />
           </button>
           <a
             href="mailto:sponsors@tum-blockchain.com"
-            className="flex mobile-wide:h-[40px] w-[275px] bg-black md:w-[250px] justify-center items-center mt-8 md:mt-0 px-4 sm:px-14 py-4 group sm:py-4 hover:border-white border-2 border-[#FCCF6A] duration-300 ease-in"
+            className="flex mobile-wide:h-[40px] w-[275px] bg-black md:w-[250px] justify-center items-center mt-8 md:mt-0 px-4 sm:px-14 py-4 group sm:py-4 hover:border-white border-2 border-[#FCCF6A] duration-150 ease-in"
           >
-            <p className="text-[#FCCF6A] mr-4 text-sm group-hover:text-white duration-300 ease-in">
+            <p className="text-[#FCCF6A] mr-4 text-sm group-hover:text-white duration-150 ease-in">
               Become Sponsor
             </p>
           </a>

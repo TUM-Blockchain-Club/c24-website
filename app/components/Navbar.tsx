@@ -49,7 +49,9 @@ const Navbar = () => {
           rel="noopener noreferrer"
           className="hidden sm:flex cursor-pointer ml-2 sm:ml-8 mr-2 sm:mx-8"
         >
-          <p className="text-white text-sm sm:mr-2">Conference 2023</p>
+          <p className="text-white text-sm sm:mr-2 hover:text-[#DC5BA0] duration-300">
+            Conference 2023
+          </p>
           <div>
             <Image src={Arrow} alt="Arrow" width={20} height={20} />
           </div>

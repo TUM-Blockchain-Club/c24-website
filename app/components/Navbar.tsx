@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between w-full h-[75px] md:h-[100px] border-b-[1px] border-white px-4 sm:px-10 md:px-20">
+    <div className="flex items-center justify-between w-full mobile-wide:h-[55px] h-[75px] md:h-[100px] border-b-[1px] border-white px-4 sm:px-10 md:px-20">
       <div className="flex items-center h-full">
         <a
           href="https://www.tum-blockchain.com/"

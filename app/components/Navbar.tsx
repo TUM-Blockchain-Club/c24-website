@@ -47,9 +47,9 @@ const Navbar = () => {
           href="https://www.tum-blockchain.com/conference2023"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:flex cursor-pointer ml-2 sm:ml-8 mr-2 sm:mx-8"
+          className="group hidden sm:flex cursor-pointer ml-2 sm:ml-8 mr-2 sm:mx-8"
         >
-          <p className="text-white text-sm sm:mr-2 hover:text-[#DC5BA0] duration-300">
+          <p className="text-white text-sm sm:mr-2 group-hover:text-[#FCCF6A] duration-150">
             Conference 2023
           </p>
           <div>

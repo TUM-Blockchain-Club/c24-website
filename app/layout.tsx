@@ -23,6 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <script
+        defer
+        data-domain="conference.tum-blockchain.com"
+        src="https://plausible.rbg.tum-blockchain.com/js/script.js"
+      ></script>
     </html>
   );
 }

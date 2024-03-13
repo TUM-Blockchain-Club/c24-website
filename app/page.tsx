@@ -24,16 +24,6 @@ export default function Home() {
           <br />
           CONFERENCE 24
         </p>
-        <p
-          className={
-            raleway.className +
-            " text-white mobile-wide:block text-3xl visible leading-tight mb-2"
-          }
-        >
-          TUM BLOCKCHAIN
-          <br />
-          CONFERENCE 24
-        </p>
         <p className="text-white mobile-wide:mb-4 mb-8 text-xs sm:text-sm mobile-wide:text-xs">
           Germany's leading student-run conference
           <br />

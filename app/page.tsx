@@ -40,8 +40,13 @@ export default function Home() {
           exploring the frontiers of blockchain technology
         </p>
         <div className="md:flex">
-          <button className="mobile-wide:h-[40px] flex w-[275px] md:w-[300px] items-center justify-center mr-8 px-4 sm:px-16 py-4 sm:py-4 mobile-wide:py-0 bg-[#FCCF6A] hover:border-white border-2 border-[#FCCF6A] duration-300 ease-in">
-            <p className="text-black mr-4 text-sm">Speaker Application</p>
+          <button className="group mobile-wide:h-[40px] flex w-[275px] md:w-[300px] items-center justify-center mr-8 px-4 sm:px-16 py-4 sm:py-4 mobile-wide:py-0 bg-[#FCCF6A] hover:border-white border-2 border-[#FCCF6A] duration-300 ease-in">
+            <p className="group-hover:hidden text-black mr-4 text-sm">
+              Speaker Application
+            </p>
+            <p className="hidden group-hover:block text-black mr-4 text-sm">
+              Opening soon
+            </p>
             <Image src={Arrow} alt="Arrow" width={20} height={20} />
           </button>
           <a

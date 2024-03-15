@@ -5,6 +5,7 @@ import X from "@/public/x-logo.png";
 import LinkedIn from "@/public/linkedin-logo.png";
 import Mail from "@/public/mail.png";
 import Image from "next/image";
+import Discord from "@/public/discord-logo.png";
 
 const Navbar = () => {
   return (
@@ -75,9 +76,17 @@ const Navbar = () => {
         </a>
         <a
           href="mailto:relations@tum-blockchain.com?subject=Query%20regarding%20TUM%20Blockchain%20conference"
-          className="flex cursor-pointer ml-2 sm:mx-2"
+          className="flex cursor-pointer mx-2"
         >
           <Image src={Mail} alt="Mail" width={25} height={25} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://discord.gg/7V7KG8SESF"
+          className="flex cursor-pointer ml-2 sm:mx-2"
+        >
+          <Image src={Discord} alt="Discord" width={25} height={25} />
         </a>
       </div>
     </div>

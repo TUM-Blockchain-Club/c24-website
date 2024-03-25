@@ -58,11 +58,14 @@ export default function Home() {
           <br />
           12.09 - 13.09
         </p>
-        <button className="flex items-center mt-8 mobile-wide:mt-0">
+        <a
+          className="flex items-center mt-8 mobile-wide:mt-0"
+          href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave"
+        >
           <p className="text-[#FCCF6A] underline mr-4 text-sm">
             Conference Newsletter
           </p>
-        </button>
+        </a>
         <p
           className={
             raleway.className +

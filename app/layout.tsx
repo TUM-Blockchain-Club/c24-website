@@ -22,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://tally.so/widgets/embed.js" />
+        <script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/c872b6f1b2d2d50968a58838/script.js"
+        ></script>
+      </head>
       <body className={inter.className}>{children}</body>
       <script
         defer

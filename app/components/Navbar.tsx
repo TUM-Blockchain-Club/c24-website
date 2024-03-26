@@ -6,6 +6,7 @@ import LinkedIn from "@/public/linkedin-logo.png";
 import Mail from "@/public/mail.png";
 import Image from "next/image";
 import Discord from "@/public/discord-logo.png";
+import Telegram from "@/public/telegram-logo.png";
 
 const Navbar = () => {
   return (
@@ -87,6 +88,14 @@ const Navbar = () => {
           className="flex cursor-pointer ml-2 sm:mx-2"
         >
           <Image src={Discord} alt="Discord" width={25} height={25} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://t.me/+6SMYu7pub0E1MGUy"
+          className="flex cursor-pointer ml-2 sm:mx-2"
+        >
+          <Image src={Telegram} alt="Telegram" width={25} height={25} />
         </a>
       </div>
     </div>

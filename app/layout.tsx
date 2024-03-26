@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <Script src="https://tally.so/widgets/embed.js"></Script>
         <Script
-          src={`https://cdn-cookieyes.com/client_data/6331baf83b563ec3150ad4bb/script.js`}
+          src={`https://cdn-cookieyes.com/client_data/c872b6f1b2d2d50968a58838/script.js`}
           strategy="beforeInteractive"
         ></Script>
       </head>

@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 :root {
-  background-color: black;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-
+a {
+  @apply underline underline-offset-[6px] decoration-2 decoration-dotted;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.border-gradient-tbc {
+  border-image: linear-gradient(to right bottom, theme('colors.tbc-yellow'), theme('colors.tbc-pink'), theme('colors.tbc-blue')) 1;
+}
+
+.bg-gradient-tbc {
+  background-image: linear-gradient(to right bottom, theme('colors.tbc-yellow'), theme('colors.tbc-pink'), theme('colors.tbc-blue'));
 }

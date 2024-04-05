@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Raleway, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
+const raleway = Raleway({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
@@ -30,7 +32,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
         ></Script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={montserrat.className}>{children}</body>
       <script
         defer
         data-domain="conference.tum-blockchain.com"

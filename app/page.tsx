@@ -1,89 +1,58 @@
-import Navbar from "./components/Navbar";
-import Munich from "@/public/munich.png";
 import Image from "next/image";
-import Arrow from "@/public/arrow-black.png";
+import c24Wordmark from "../public/c24-wordmark.svg";
+import Arrow from "../public/arrow-white.png";
 
-import { Raleway } from "next/font/google";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-const raleway = Raleway({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-black">
+    <>
       <Navbar />
-      <div className="relative mt-10 mobile-wide:mt-4 mx-5 sm:mt-20 sm:ml-20 lg:mt-32 lg:ml-40 z-10">
-        <p
-          className={
-            raleway.className +
-            " text-white mobile-wide:hidden text-3xl sm:text-5xl lg:text-7xl leading-tight mb-2"
-          }
-        >
-          TUM
-          <br />
-          BLOCKCHAIN
-          <br />
-          CONFERENCE 24
-        </p>
-        <p className="text-white mobile-wide:mb-4 mb-8 text-xs sm:text-sm mobile-wide:text-xs">
-          Germany's leading student-run conference
-          <br />
-          exploring the frontiers of blockchain technology
-        </p>
-        <div className="md:flex">
-          <button className="group mobile-wide:h-[40px] flex w-[275px] md:w-[300px] items-center justify-center mr-8 px-4 sm:px-16 py-4 sm:py-4 mobile-wide:py-0 bg-[#FCCF6A] hover:border-white border-2 border-[#FCCF6A] duration-150 ease-in">
-            <p className="group-hover:hidden text-black mr-2 text-sm">
-              Speaker Application
-            </p>
-            <p className="hidden group-hover:block text-black mr-2 text-sm">
-              Opening soon
-            </p>
-            <Image src={Arrow} alt="Arrow" width={20} height={20} />
-          </button>
-          <a
-            href="mailto:sponsors@tum-blockchain.com"
-            className="flex mobile-wide:h-[40px] w-[275px] bg-black md:w-[250px] justify-center items-center mt-8 md:mt-0 px-4 sm:px-14 py-4 group sm:py-4 hover:border-white border-2 border-[#FCCF6A] duration-150 ease-in"
-          >
-            <p className="text-[#FCCF6A] mr-4 text-sm group-hover:text-white duration-150 ease-in">
-              Become Sponsor
-            </p>
-          </a>
-        </div>
-        <p
-          className={
-            raleway.className +
-            " text-white sm:text-3xl text-2xl leading-tight mt-8 mobile-wide:mt-2 mobile-wide:text-xl"
-          }
-        >
-          Deutsches Museum
-          <br />
-          12.09 - 13.09
-        </p>
-        <a
-          className="flex items-center mt-8 mobile-wide:mt-0"
-          href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave"
-        >
-          <p className="text-[#FCCF6A] underline mr-4 text-sm">
-            Conference Newsletter
+      <div className="w-full h-screen flex justify-center items-center">
+        <div>
+          <div className="w-full flex justify-center">
+            <div className="relative w-[200px] h-[100px] md:w-[500px] md:h-[200px]">
+              <Image
+                src={c24Wordmark}
+                alt="TUM Blockchain Conference 24"
+                fill={true}
+              />
+            </div>
+          </div>
+          <p className="w-full text-center mt-12 text-xs md:text-xl">
+            Munich, Deutsches Museum
           </p>
-        </a>
-        <p
-          className={
-            raleway.className +
-            " text-white sm:text-3xl text-2xl leading-tight mt-8"
-          }
-        ></p>
-      </div>
-
-      <div className="absolute right-0 bottom-0">
-        <div className="2xl:w-full xl:w-[800px] mobile-wide:w-[400px] h-full lg:w-[700px] w-[500px]">
-          <Image src={Munich} alt="Munich" />
+          <p className="w-full text-center mt-2 text-xs md:text-xl">
+            September 12th - 13th
+          </p>
+          <p className="w-full text-center mt-12 text-xs md:text-base">
+            Last Year's Conference
+          </p>
+          <div className="flex items-center space-x-3 md:space-x-8 mt-6">
+            <div>
+              <p className="md:text-2xl w-full text-center">1000+</p>
+              <p className="text-xs md:text-base">Attendees</p>
+            </div>
+            <div className="h-8 w-0.5 bg-neutral-500" />
+            <div>
+              <p className="md:text-2xl w-full text-center">100+</p>
+              <p className="text-xs md:text-base">Speakers</p>
+            </div>
+            <div className="h-8 w-0.5 bg-neutral-500" />
+            <div>
+              <p className="md:text-2xl w-full text-center">40+</p>
+              <p className="text-xs md:text-base">Talks</p>
+            </div>
+            <div className="h-8 w-0.5 bg-neutral-500" />
+            <div>
+              <p className="md:text-2xl w-full text-center">20+</p>
+              <p className="text-xs md:text-base">Sponsors</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="absolute right-0 bottom-0">
-        <div className="md:hidden min-w-[500px] min-h-[500px] from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.7)] bg-gradient-to-t to-50%"></div>
-      </div>
-
       <Footer />
-    </div>
+    </>
   );
 }

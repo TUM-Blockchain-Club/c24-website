@@ -13,7 +13,7 @@ const Footer = () => {
       </a>
       <a
         className="text-neutral-500 text-xs md:text-base"
-        href="mailto:info@tum-blockchain.com"
+        href="https://www.tum-blockchain.com/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
       >

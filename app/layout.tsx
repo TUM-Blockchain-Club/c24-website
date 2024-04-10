@@ -26,18 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/*<Script src="https://tally.so/widgets/embed.js"></Script>
+        <Script src="https://tally.so/widgets/embed.js"></Script>
         <Script
           src={`https://cdn-cookieyes.com/client_data/6331baf83b563ec3150ad4bb/script.js`}
           strategy="beforeInteractive"
-  ></Script>*/}
+        ></Script>
       </head>
       <body className={montserrat.className}>{children}</body>
-      {/*<script
+      <script
         defer
         data-domain="conference.tum-blockchain.com"
         src="https://plausible.rbg.tum-blockchain.com/js/script.js"
-  ></script>*/}
+      ></script>
     </html>
   );
 }

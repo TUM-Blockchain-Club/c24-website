@@ -60,7 +60,7 @@ export default function Home() {
               href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave"
             >
               <p className="cursor-pointer text-sm md:text-base w-full text-center opacity-50">
-                Join waitlist
+                Join Waitlist
               </p>
             </a>
           </div>

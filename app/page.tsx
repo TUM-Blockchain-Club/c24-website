@@ -54,6 +54,16 @@ export default function Home() {
               <p className="text-xs md:text-base">Sponsors</p>
             </div>
           </div>
+          <div className="w-full mt-10">
+            <a
+              className="flex items-center"
+              href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave"
+            >
+              <p className="cursor-pointer text-sm md:text-base w-full text-center opacity-50">
+                Conference Newsletter
+              </p>
+            </a>
+          </div>
         </div>
       </div>
       <Footer />

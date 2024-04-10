@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import c24Wordmark from "../public/c24-wordmark.svg";
 import Arrow from "../public/arrow-white.png";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Canvas from "./components/Canvas";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <Canvas />
       <div className="w-full h-screen flex justify-center items-center">
         <div>
           <div className="w-full flex justify-center">

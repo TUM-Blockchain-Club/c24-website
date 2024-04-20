@@ -12,9 +12,20 @@ a {
 }
 
 .border-gradient-tbc {
-  border-image: linear-gradient(to right bottom, theme('colors.tbc-yellow'), theme('colors.tbc-pink'), theme('colors.tbc-blue')) 1;
+  border-image: linear-gradient(
+      to right bottom,
+      theme("colors.tbc-yellow"),
+      theme("colors.tbc-pink"),
+      theme("colors.tbc-blue")
+    )
+    1;
 }
 
 .bg-gradient-tbc {
-  background-image: linear-gradient(to right bottom, theme('colors.tbc-yellow'), theme('colors.tbc-pink'), theme('colors.tbc-blue'));
+  background-image: linear-gradient(
+    to right bottom,
+    theme("colors.tbc-yellow"),
+    theme("colors.tbc-pink"),
+    theme("colors.tbc-blue")
+  );
 }

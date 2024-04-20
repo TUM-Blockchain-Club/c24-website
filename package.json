@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prettier": "npx prettier . --write"
+    "prettier": "npx prettier . --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
@@ -35,10 +36,16 @@
     "eslint-config-next": "14.1.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "3.2.5",
     "storybook": "^8.0.8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

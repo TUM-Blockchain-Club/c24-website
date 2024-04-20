@@ -21,7 +21,7 @@ export interface ButtonProps
   extends React.ComponentPropsWithoutRef<"button">,
     Omit<ButtonVariantProps, "buttonType">,
     Required<Pick<ButtonVariantProps, "buttonType">> {
-  asChild: undefined | true;
+  asChild?: undefined | true;
 }
 
 export const Button = React.forwardRef<ButtonElement, ButtonProps>(

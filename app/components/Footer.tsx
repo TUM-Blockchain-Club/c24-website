@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="fixed bottom-0 right-0 flex p-5 space-x-8">
       <a
         className="text-neutral-500 text-xs md:text-base"
-        href="https://tum-blockchain.notion.site/Privacy-Policy-3af6ed14b0b3429191a161f3dd0b379d"
+        href="mailto:relations@tum-blockchain.com"
         target="_blank"
         rel="noopener noreferrer"
       >

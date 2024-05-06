@@ -2,7 +2,7 @@ import React from "react";
 
 const Manifesto = () => {
   return (
-    <div className="w-full mt-20 mb-40 px-12 2xl:px-0">
+    <div className="w-full mt-20 mb-40 px-12 2xl:px-0 mobile-wide:mt-[450px]">
       <div className="w-full flex justify-center">
         <p className="text-gradient text-4xl lg:text-6xl md:mt-40 lg:mt-60 xl:mt-0">
           Manifesto

@@ -5,8 +5,8 @@ import c24Wordmark from "../../public/logos/c24-wordmark.svg";
 const Hero = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center px-8 2xl:px-0">
-      <div className="xl:flex w-full justify-between items-center md:mt-40 lg:mt-60 xl:mt-0">
-        <div className="xl:mr-32 mt-[0px] xl:mt-0">
+      <div className="xl:flex w-full justify-between items-center md:mt-40 lg:mt-60 xl:mt-0 mobile-wide:mt-[450px]">
+        <div className="xl:mr-32">
           <div className="relative w-[250px] h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">
             <Image
               src={c24Wordmark}

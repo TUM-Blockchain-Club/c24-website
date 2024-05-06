@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import c24Wordmark from "../public/c24-wordmark.svg";
 import Arrow from "../public/arrow-white.png";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Canvas from "./components/Canvas";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <Canvas />
       <div className="w-full h-screen flex justify-center items-center">
         <div>
           <div className="w-full flex justify-center">
@@ -49,6 +53,16 @@ export default function Home() {
               <p className="md:text-2xl w-full text-center">20+</p>
               <p className="text-xs md:text-base">Sponsors</p>
             </div>
+          </div>
+          <div className="w-full mt-10">
+            <a
+              className="flex items-center"
+              href="#tally-open=wAlAek&tally-emoji-text=👋&tally-emoji-animation=wave"
+            >
+              <p className="cursor-pointer text-sm md:text-base w-full text-center">
+                Join Waitlist
+              </p>
+            </a>
           </div>
         </div>
       </div>

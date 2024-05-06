@@ -25,7 +25,9 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             Conference 2023
-            <Image src={Arrow} alt="Arrow" width={20} height={20} />
+            <div className="relative">
+              <Image src={Arrow} alt="Arrow" width={20} height={20} />
+            </div>
           </a>
         </div>
       </div>

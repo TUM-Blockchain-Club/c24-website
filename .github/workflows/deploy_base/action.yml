@@ -6,6 +6,9 @@ inputs:
   environment:
     description: "The environment of deployment"
     required: true
+  vercel_token:
+    description: "Vercel Token"
+    required: true
 
 runs:
   using: "composite"
@@ -28,9 +31,9 @@ runs:
       shell: bash
       run: |
         if [ "${{ inputs.environment }}" = "prod" ]; then 
-          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --prod --token=${{ inputs.vercel_token }}
         else
-          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --token=${{ inputs.vercel_token }}
         fi
     - name: Create Build Artifact
       uses: actions/upload-artifact@v4

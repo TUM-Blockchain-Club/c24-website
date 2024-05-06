@@ -17,6 +17,7 @@ jobs:
       - uses: ./.github/workflows/build_base
         with:
           environment: "dev"
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
   deploy_dev:
     runs-on: ubuntu-latest
     name: "deploy:dev"
@@ -28,3 +29,4 @@ jobs:
       - uses: ./.github/workflow/deploy_base
         with:
           environment: "dev"
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}

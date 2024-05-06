@@ -1,0 +1,37 @@
+#file: noinspection YAMLSchemaValidation
+name: "Deploy to Vercel"
+description: "Build artiface and publish on Vercel"
+
+inputs:
+  environment:
+    description: "The environment of deployment"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download build artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: web_build
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: Install Vercel CLI
+      run: npm i -g vercel
+    - name: Install Dependencies
+      run: yarn install
+    - name: Vercel Deploy
+      run: |
+        if [ "${{ inputs.environment }}" = "prod" ]; then 
+          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        else
+          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        fi
+    - name: Create Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: build
+        path: .vercel/output
+

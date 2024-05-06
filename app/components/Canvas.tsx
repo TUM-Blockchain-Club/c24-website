@@ -117,7 +117,7 @@ const Canvas = (props: any) => {
 
       ctx.fillStyle = "rgb(12,12,12)";
 
-      if (Math.round(Math.random() * 40) == 10) {
+      if (Math.round(Math.random() * 35) == 10) {
         arr[Math.floor(Math.random() * arr.length)].propagate(1, 0.5);
       }
 

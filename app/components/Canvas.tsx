@@ -51,7 +51,7 @@ const Canvas = (props: any) => {
             }
           }
           let w = Math.ceil(
-            (width - (boxDistance - boxSize) / 2) / boxDistance
+            (width - (boxDistance - boxSize) / 2) / boxDistance,
           );
           if (this.index + w < arr.length) {
             if (arr[this.index + w].y > this.y) {

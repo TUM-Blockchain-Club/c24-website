@@ -7,17 +7,17 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     buttonType: {
       table: {
-        disable: true
-      }
+        disable: true,
+      },
     },
     children: {
-      type: "string"
-    }
-  }
+      type: "string",
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -26,20 +26,20 @@ type Story = StoryObj<typeof meta>;
 export const CTA: Story = {
   args: {
     buttonType: "cta",
-    children: "CTA Button"
-  }
-}
+    children: "CTA Button",
+  },
+};
 
 export const Primary: Story = {
   args: {
     buttonType: "primary",
-    children: "Primary Button"
-  }
-}
+    children: "Primary Button",
+  },
+};
 
 export const Secondary: Story = {
   args: {
     buttonType: "secondary",
-    children: "Secondary Button"
-  }
-}
+    children: "Secondary Button",
+  },
+};

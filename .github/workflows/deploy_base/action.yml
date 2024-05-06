@@ -1,6 +1,6 @@
 #file: noinspection YAMLSchemaValidation
 name: "Deploy to Vercel"
-description: "Build artiface and publish on Vercel"
+description: "Build artifact and publish on Vercel"
 
 inputs:
   environment:

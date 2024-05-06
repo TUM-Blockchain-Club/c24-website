@@ -23,6 +23,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const CTA: Story = {
+  args: {
+    buttonType: "cta",
+    children: "CTA Button"
+  }
+}
+
 export const Primary: Story = {
   args: {
     buttonType: "primary",

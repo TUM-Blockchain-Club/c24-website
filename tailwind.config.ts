@@ -25,6 +25,9 @@ const config: Config = {
           raw: "((max-width: 1020px) and (max-height: 620px))",
         },
       },
+      transitionProperty: {
+        "bg-img": "background-image"
+      }
     },
   },
   plugins: [],

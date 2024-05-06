@@ -15,10 +15,13 @@ runs:
       with:
         node-version: 20
     - name: Install Vercel CLI
+      shell: bash
       run: npm i -g vercel
     - name: Install Dependencies
+      shell: bash
       run: yarn install
     - name: Vercel Build
+      shell: bash
       run: |
         if [ "${{ inputs.environment }}" = "prod" ]; then 
           vercel build --yes --prod --token=${{ secrets.VERCEL_TOKEN }}

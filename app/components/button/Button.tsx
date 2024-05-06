@@ -16,7 +16,7 @@ const buttonVariants = cva("button p-4 bg-black", {
 });
 type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
-export type ButtonElement = React.ElementRef<"button">;
+type ButtonElement = React.ElementRef<"button">;
 export interface ButtonProps
   extends React.ComponentPropsWithoutRef<"button">,
     Omit<ButtonVariantProps, "buttonType">,
@@ -35,6 +35,7 @@ export const Button = React.forwardRef<ButtonElement, ButtonProps>(
         {...buttonProps}
         disabled={disabled}
         className={buttonVariants({ className, buttonType })}
+        ref={ref}
       ></Comp>
     );
   },

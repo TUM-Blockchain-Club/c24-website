@@ -57,9 +57,9 @@ export default function Home() {
           <div className="w-full mt-10">
             <a
               className="flex items-center"
-              href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave"
+              href="#tally-open=wAlAek&tally-emoji-text=👋&tally-emoji-animation=wave"
             >
-              <p className="cursor-pointer text-sm md:text-base w-full text-center opacity-50">
+              <p className="cursor-pointer text-sm md:text-base w-full text-center">
                 Join Waitlist
               </p>
             </a>

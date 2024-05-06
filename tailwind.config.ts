@@ -13,6 +13,7 @@ const config: Config = {
         "tbc-yellow": "#FFCB6D",
         "tbc-pink": "#E434A5",
         "tbc-blue": "#348AEB",
+        "bg-hover": "#1D1D1D"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

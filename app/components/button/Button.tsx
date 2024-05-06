@@ -2,12 +2,12 @@ import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
 
-const buttonVariants = cva("button", {
+const buttonVariants = cva("button p-4 duration-300", {
   variants: {
     buttonType: {
       cta: "",
-      primary: "",
-      secondary: "",
+      primary: "border border-white bg-black hover:bg-bg-hover",
+      secondary: "bg-black hover:bg-bg-hover",
     },
   },
   defaultVariants: {

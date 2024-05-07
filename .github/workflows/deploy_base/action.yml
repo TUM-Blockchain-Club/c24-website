@@ -29,14 +29,4 @@ runs:
       run: yarn install
     - name: Vercel Deploy
       shell: bash
-      run: |
-        if [ "${{ inputs.environment }}" = "prod" ]; then 
-          vercel deploy --prebuilt --prod --token=${{ inputs.vercel_token }}
-        else
-          vercel deploy --prebuilt --token=${{ inputs.vercel_token }}
-        fi
-    - name: Create Build Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: build
-        path: .vercel/output
+      run: vercel deploy --yes --prebuilt --prod --token=${{ inputs.vercel_token }}

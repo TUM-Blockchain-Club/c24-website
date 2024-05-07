@@ -1,3 +1,4 @@
-import * as Button from "./Button";
-
-export default Button;
+export {
+  Button,
+  type ButtonProps
+} from './Button';

@@ -6,7 +6,7 @@ on:
       - development
 
 jobs:
-  build_dev:
+  dev:
     name: "dev"
     uses: ./.github/workflows/deploy.yml
     with:

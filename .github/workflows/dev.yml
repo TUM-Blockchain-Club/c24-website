@@ -2,6 +2,7 @@ name: "Development"
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 on:
   push:
     branches:
@@ -9,26 +10,20 @@ on:
 
 jobs:
   build_dev:
-    runs-on: ubuntu-latest
     name: "build:dev"
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build
-        uses: ./.github/workflows/build_base
-        with:
-          environment: "dev"
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+    uses: .github/workflows/deploy.yml
+    with:
+      environment: "dev"
+    secrets:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   deploy_dev:
-    runs-on: ubuntu-latest
     name: "deploy:dev"
-    needs:
-      - build_dev
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Deploy
-        uses: ./.github/workflow/deploy_base
-        with:
-          environment: "dev"
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+    uses: .github/workflows/deploy.yml
+    with:
+      environment: "dev"
+    secrets:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

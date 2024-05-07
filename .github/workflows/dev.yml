@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_dev:
-    name: "build:dev"
+    name: "dev"
     uses: ./.github/workflows/deploy.yml
     with:
       environment: "dev"

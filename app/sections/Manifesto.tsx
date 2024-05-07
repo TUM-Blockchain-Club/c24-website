@@ -2,15 +2,17 @@ import React from "react";
 
 const Manifesto = () => {
   return (
-    <div className="w-full mt-20 mb-40 px-12 2xl:px-0">
-      <p className="text-gradient text-center text-4xl lg:text-6xl md:mt-40 lg:mt-60 xl:mt-0">
-        Manifesto
-      </p>
+    <div className="w-full mt-20 mb-40 px-12 2xl:px-0 mobile-wide:mt-[450px]">
+      <div className="w-full flex justify-center">
+        <p className="text-gradient text-4xl lg:text-6xl md:mt-40 lg:mt-60 xl:mt-0">
+          Manifesto
+        </p>
+      </div>
       <div className="w-full flex justify-center">
         <p className="w-[800px] mt-20 text-sm">
           Europe's biggest student-run blockchain event is back! Hosted again at
           the historic Deutsches Museum in Munich, the{" "}
-          <i>TUM Blockchain Conference</i> is bringing together the next
+          <b>TUM Blockchain Conference</b> is bringing together the next
           generation of builders and thinkers in web3 in a non-profit setting
           where technology and substantive discourse take center stage.
           <br />
@@ -32,17 +34,16 @@ const Manifesto = () => {
           of tech and tradition that defines the city, the conference creates a
           platform for connections not just within the web3 community but with
           established companies and government representatives from across
-          Germany and Europe. And yes, it's all going down just before
-          Oktoberfest - because who says tech can't have a little fun?
+          Germany and Europe. And it's all going down just before Oktoberfest.
           <br />
           <br />
           Behind the scenes, powering this event, is the TUM Blockchain Club - a
-          crew of students and web3 builders with a passion for pushing
-          boundaries. As a non-profit organization, we're driven by our love for
-          the tech and our commitment to building a better digital world.
-          Together, let's build something incredible.
+          crew of web3 builders with a passion for pushing boundaries. As a
+          non-profit organization, we're driven by our love for the tech and our
+          commitment to building a better digital world. Together, let's build
+          something incredible.
           <br />
-          <br />— TUM Blockchain Club
+          <br />- TUM Blockchain Club
         </p>
       </div>
     </div>

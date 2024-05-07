@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: ./.github/workflows/build_base
+      - name: Build
+        uses: ./.github/workflows/build_base
         with:
           environment: "dev"
           vercel_token: ${{ secrets.VERCEL_TOKEN }}
@@ -26,7 +27,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: ./.github/workflow/deploy_base
+      - name: Deploy
+        uses: ./.github/workflow/deploy_base
         with:
           environment: "dev"
           vercel_token: ${{ secrets.VERCEL_TOKEN }}

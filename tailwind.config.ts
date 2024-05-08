@@ -1,4 +1,3 @@
-import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -28,6 +27,9 @@ const config: Config = {
       transitionProperty: {
         "bg-img": "background-image",
       },
+      fontFamily: {
+        display: 'var(--space-grotesk)'
+      }
     },
   },
   plugins: [],

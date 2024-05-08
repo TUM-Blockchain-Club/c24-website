@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
 const textVariants = cva("", {
   variants: {
     textType: {
-      hero: "",
+      hero: "text-8xl font-display",
       sub_hero: "",
       title: "",
       sub_title: "",

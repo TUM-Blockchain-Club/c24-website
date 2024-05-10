@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 const raleway = Raleway({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
@@ -32,7 +33,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
         ></Script>
       </head>
-      <body className={`bg-black text-white`}>
+      <body className={`${montserrat.className} bg-black text-white`}>
         {children}
       </body>
       <Script

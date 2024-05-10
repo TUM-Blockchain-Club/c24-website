@@ -1,7 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@/app/components/button/Button";
+import { Text } from "@/app/components/text";
+import React from "react";
 
-const meta = {
+type TextPropAndCustomArgs = React.ComponentProps<typeof Button> & {
+  label: string;
+};
+
+const meta: Meta<TextPropAndCustomArgs> = {
   title: "Button",
   component: Button,
   parameters: {
@@ -14,32 +20,37 @@ const meta = {
         disable: true,
       },
     },
+    label: {
+      type: "string"
+    },
     children: {
-      type: "string",
+      table: {
+        disable: true,
+      },
     },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TextPropAndCustomArgs>;
 
 export const CTA: Story = {
   args: {
-    buttonType: "cta",
-    children: "CTA Button",
+    label: "CTA Button"
   },
+  render: ({ label }) => <Button buttonType={'cta'}><Text>{label}</Text></Button>,
 };
 
 export const Primary: Story = {
   args: {
-    buttonType: "primary",
-    children: "Primary Button",
+    label: "Primary Button"
   },
+  render: ({ label }) => <Button><Text>{label}</Text></Button>,
 };
 
 export const Secondary: Story = {
   args: {
-    buttonType: "secondary",
-    children: "Secondary Button",
+    label: "Secondary Button"
   },
+  render: ({ label }) => <Button buttonType={'secondary'}><Text>{label}</Text></Button>,
 };

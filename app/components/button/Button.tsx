@@ -19,8 +19,7 @@ type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 type ButtonElement = React.ElementRef<"button">;
 export interface ButtonProps
   extends React.ComponentPropsWithoutRef<"button">,
-    Omit<ButtonVariantProps, "buttonType">,
-    Required<Pick<ButtonVariantProps, "buttonType">> {
+    ButtonVariantProps {
   asChild?: undefined | true;
 }
 

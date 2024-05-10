@@ -24,11 +24,46 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const text = "The quick brown fox jumps over the lazy fox.";
+const text = "The quick brown fox jumps over the lazy dog.";
 
 export const Hero: Story = {
   args: {
     children: text,
     textType: "hero",
+  },
+};
+
+export const Subhero: Story = {
+  args: {
+    children: text,
+    textType: "sub_hero",
+  },
+};
+
+export const Title: Story = {
+  args: {
+    children: text,
+    textType: "title",
+  },
+};
+
+export const Subtitle: Story = {
+  args: {
+    children: text,
+    textType: "sub_title",
+  },
+};
+
+export const Paragraph: Story = {
+  args: {
+    children: text,
+    textType: "paragraph",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    children: text,
+    textType: "small",
   },
 };

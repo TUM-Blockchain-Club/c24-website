@@ -1,16 +1,28 @@
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
+import { Montserrat, Space_Grotesk } from "next/font/google";
+import classNames from "classnames";
 
-const textVariants = cva("", {
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat"
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
+const textVariants = cva("dark:text-white text-black", {
   variants: {
     textType: {
       hero: "text-8xl font-display",
-      sub_hero: "",
-      title: "",
-      sub_title: "",
-      paragraph: "",
-      small: "",
+      sub_hero: "text-7xl font-display",
+      title: "text-5xl font-sans",
+      sub_title: "text-2xl font-sans",
+      paragraph: "text-base font-sans",
+      small: "text-xs font-sans",
     },
   },
   defaultVariants: {
@@ -48,7 +60,7 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
       data-accent-color={color}
       {...textProps}
       ref={ref}
-      className={textVariants({ className, textType })}
+      className={textVariants({ className: classNames(className, spaceGrotesk.variable, montserrat.variable), textType })}
     >
       {asChild ? children : <Tag>{children}</Tag>}
     </Slot>

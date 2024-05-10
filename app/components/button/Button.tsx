@@ -2,7 +2,7 @@ import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
 
-const buttonVariants = cva("button p-4 bg-black", {
+const buttonVariants = cva("button text-white p-4 bg-black", {
   variants: {
     buttonType: {
       cta: "border-gradient-tbc border-2 hover:bg-gradient-to-br hover:from-tbc-yellow hover:via-tbc-pink hover:to-tbc-blue",

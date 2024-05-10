@@ -28,8 +28,9 @@ const config: Config = {
         "bg-img": "background-image",
       },
       fontFamily: {
-        display: 'var(--space-grotesk)'
-      }
+        display: ["var(--font-space-grotesk)"],
+        sans: ["var(--font-montserrat)"]
+      },
     },
   },
   plugins: [],

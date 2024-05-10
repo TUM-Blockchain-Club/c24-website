@@ -6,8 +6,6 @@ import classNames from "classnames";
 
 const raleway = Raleway({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
-const spaceGrotesk = Space_Grotesk( {subsets: ["latin-ext"], variable: '--space-grotesk'});
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
@@ -34,19 +32,14 @@ export default function RootLayout({
           strategy="beforeInteractive"
         ></Script>
       </head>
-      <body
-        className={classNames(
-          montserrat.className,
-          spaceGrotesk.variable
-        )}
-      >
+      <body className={`bg-black text-white`}>
         {children}
       </body>
-      <script
+      <Script
         defer
         data-domain="conference.tum-blockchain.com"
         src="https://plausible.rbg.tum-blockchain.com/js/script.js"
-      ></script>
+      ></Script>
     </html>
   );
 }

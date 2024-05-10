@@ -29,7 +29,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)"],
-        sans: ["var(--font-montserrat)"]
+        sans: ["var(--font-montserrat)"],
       },
     },
   },

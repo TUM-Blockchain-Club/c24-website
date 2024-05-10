@@ -4,13 +4,13 @@ import "@/app/globals.css";
 const preview: Preview = {
   parameters: {
     backgrounds: {
-      default: 'dark',
+      default: "dark",
       values: [
         {
-          name: 'dark',
-          value: '#000'
-        }
-      ]
+          name: "dark",
+          value: "#000",
+        },
+      ],
     },
     controls: {
       matchers: {

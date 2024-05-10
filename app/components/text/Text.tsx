@@ -6,7 +6,7 @@ import classNames from "classnames";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-montserrat"
+  variable: "--font-montserrat",
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -32,9 +32,7 @@ const textVariants = cva("dark:text-white text-black", {
 type TextVariantProps = VariantProps<typeof textVariants>;
 
 type TextElement = React.ElementRef<"span">;
-interface CommonTextProps
-  extends Omit<TextVariantProps, "textType">,
-    Required<Pick<TextVariantProps, "textType">> {
+interface CommonTextProps extends TextVariantProps {
   asChild?: true | undefined;
 }
 
@@ -60,7 +58,14 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
       data-accent-color={color}
       {...textProps}
       ref={ref}
-      className={textVariants({ className: classNames(className, spaceGrotesk.variable, montserrat.variable), textType })}
+      className={textVariants({
+        className: classNames(
+          className,
+          spaceGrotesk.variable,
+          montserrat.variable,
+        ),
+        textType,
+      })}
     >
       {asChild ? children : <Tag>{children}</Tag>}
     </Slot>

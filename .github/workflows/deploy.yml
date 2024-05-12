@@ -1,0 +1,65 @@
+name: "Deploy Vercel"
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      VERCEL_TOKEN:
+        required: true
+      VERCEL_ORG_ID:
+        required: true
+      VERCEL_PROJECT_ID:
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Vercel CLI
+        shell: bash
+        run: npm i -g vercel
+      - name: Install Dependencies
+        shell: bash
+        run: yarn install
+      - name: Vercel Build
+        shell: bash
+        run: |
+          if [ "${{ inputs.environment }}" = "prod" ]; then 
+            vercel build --yes --prod --token=${{ secrets.vercel_token }}
+          else
+            vercel build --yes --token=${{ secrets.vercel_token }}
+          fi
+      - name: Create Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web_build
+          path: .vercel/output
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web_build
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Vercel CLI
+        shell: bash
+        run: npm i -g vercel
+      - name: Install Dependencies
+        shell: bash
+        run: yarn install
+      - name: Vercel Deploy
+        shell: bash
+        run: vercel deploy --yes --prebuilt --prod --token=${{ secrets.vercel_token }}

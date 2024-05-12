@@ -1,0 +1,17 @@
+name: "Deploy Development"
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  dev:
+    name: "dev"
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: "dev"
+    secrets:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

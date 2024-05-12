@@ -1,4 +1,3 @@
-import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'tbc-yellow': '#FFCB6D',
-        'tbc-pink': '#E434A5',
-        'tbc-blue': '#348AEB',
+        "tbc-yellow": "#FFCB6D",
+        "tbc-pink": "#E434A5",
+        "tbc-blue": "#348AEB",
+        "bg-hover": "#1D1D1D",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,10 +20,17 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'mobile-wide': {
-          'raw': '((max-width: 1020px) and (max-height: 620px))'
+        "mobile-wide": {
+          raw: "((max-width: 1020px) and (max-height: 620px))",
         },
-      }
+      },
+      transitionProperty: {
+        "bg-img": "background-image",
+      },
+      fontFamily: {
+        display: ["var(--font-space-grotesk)"],
+        sans: ["var(--font-montserrat)"],
+      },
     },
   },
   plugins: [],

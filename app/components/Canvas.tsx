@@ -1,15 +1,5 @@
 import { useEffect, useRef } from "react";
 
-const map = (
-  val: number,
-  min1: number,
-  max1: number,
-  min2: number,
-  max2: number
-) => {
-  return ((val - min1) * (max2 - min2)) / (max1 - min1) + min2;
-};
-
 const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
 const Canvas = (props: any) => {
@@ -20,10 +10,7 @@ const Canvas = (props: any) => {
     called = true;
 
     const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    var mouseX = width / 2,
-      mouseY = height / 2;
+    const height = document.documentElement.scrollHeight;
 
     let boxDistance = 30;
     let boxSize = 28;
@@ -64,7 +51,7 @@ const Canvas = (props: any) => {
             }
           }
           let w = Math.ceil(
-            (width - (boxDistance - boxSize) / 2) / boxDistance
+            (width - (boxDistance - boxSize) / 2) / boxDistance,
           );
           if (this.index + w < arr.length) {
             if (arr[this.index + w].y > this.y) {
@@ -130,7 +117,7 @@ const Canvas = (props: any) => {
 
       ctx.fillStyle = "rgb(12,12,12)";
 
-      if (Math.round(Math.random() * 40) == 10) {
+      if (Math.round(Math.random() * 35) == 10) {
         arr[Math.floor(Math.random() * arr.length)].propagate(1, 0.5);
       }
 
@@ -152,19 +139,12 @@ const Canvas = (props: any) => {
     function resizeCanvas() {
       if (canvas == null) return;
       let width = window.innerWidth;
-      let height = window.innerHeight;
+      let height = document.documentElement.scrollHeight;
       canvas.width = width;
       canvas.height = height;
     }
 
     resizeCanvas();
-
-    (function () {
-      document.onmousemove = (e) => {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-      };
-    })();
   }, []);
 
   return (
@@ -181,10 +161,3 @@ const Canvas = (props: any) => {
 };
 
 export default Canvas;
-
-/*
-id="canvas"
-        width="100%"
-        height="100%"
-        style={{ display: "block" }}
-*/

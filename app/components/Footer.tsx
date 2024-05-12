@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 right-0 flex p-5 space-x-8">
+    <div className="relative flex p-5 space-x-8">
       <a
         className="text-neutral-500 text-xs md:text-base"
         href="mailto:relations@tum-blockchain.com"

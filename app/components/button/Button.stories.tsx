@@ -21,7 +21,7 @@ const meta: Meta<TextPropAndCustomArgs> = {
       },
     },
     label: {
-      type: "string"
+      type: "string",
     },
     children: {
       table: {
@@ -36,21 +36,33 @@ type Story = StoryObj<TextPropAndCustomArgs>;
 
 export const CTA: Story = {
   args: {
-    label: "CTA Button"
+    label: "CTA Button",
   },
-  render: ({ label }) => <Button buttonType={'cta'}><Text>{label}</Text></Button>,
+  render: ({ label }) => (
+    <Button buttonType={"cta"}>
+      <Text>{label}</Text>
+    </Button>
+  ),
 };
 
 export const Primary: Story = {
   args: {
-    label: "Primary Button"
+    label: "Primary Button",
   },
-  render: ({ label }) => <Button><Text>{label}</Text></Button>,
+  render: ({ label }) => (
+    <Button>
+      <Text>{label}</Text>
+    </Button>
+  ),
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Secondary Button"
+    label: "Secondary Button",
   },
-  render: ({ label }) => <Button buttonType={'secondary'}><Text>{label}</Text></Button>,
+  render: ({ label }) => (
+    <Button buttonType={"secondary"}>
+      <Text>{label}</Text>
+    </Button>
+  ),
 };

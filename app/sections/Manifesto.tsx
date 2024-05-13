@@ -10,7 +10,7 @@ const Manifesto = () => {
         </Text>
       </div>
       <div className="w-full flex justify-center">
-        <Text className="mt-20 text-sm">
+        <Text className="mt-20 text-sm max-w-[42rem]">
           Europe's biggest student-run blockchain event is back! Hosted again at
           the historic Deutsches Museum in Munich, the{" "}
           <b>TUM Blockchain Conference</b> is bringing together the next

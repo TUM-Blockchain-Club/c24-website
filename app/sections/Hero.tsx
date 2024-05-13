@@ -4,9 +4,9 @@ import c24Wordmark from "../../public/logos/c24-wordmark.svg";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center px-8 2xl:px-0">
-      <div className="xl:flex w-full justify-between items-center md:mt-40 lg:mt-60 xl:mt-0 mobile-wide:mt-[450px]">
-        <div className="xl:mr-32">
+    <section className="w-full flex justify-center items-center">
+      <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-16">
+        <div>
           <div className="relative w-[250px] h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">
             <Image
               src={c24Wordmark}
@@ -37,7 +37,7 @@ const Hero = () => {
           </video>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

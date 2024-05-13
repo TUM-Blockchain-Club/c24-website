@@ -10,21 +10,23 @@ import { Header } from "@/app/components/header";
 
 export default function Home() {
   return (
-    <div className="flex justify-center w-full">
+    <div>
       <Canvas />
-      <div className="w-full max-w-[1500px]">
-        <Header />
-        <Hero />
-        <Manifesto />
-        <div
-          className={"w-full mt-20 mb-40 px-12 2xl:px-0 flex justify-center"}
-        >
-          <Button buttonType={"primary"} asChild>
-            <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
-          </Button>
+      <Header />
+      <main className={"w-full flex justify-center pt-[100px]"}>
+        <div className={"flex flex-col py-24 max-w-7xl gap-32"}>
+          <Hero />
+          <Manifesto />
+          <div
+            className={"w-full mt-20 mb-40 px-12 2xl:px-0 flex justify-center"}
+          >
+            <Button buttonType={"primary"} asChild>
+              <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
+            </Button>
+          </div>
         </div>
-        <Footer />
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }

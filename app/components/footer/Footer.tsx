@@ -64,7 +64,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
         </div>
         <div
           className={
-            "block max-w-[50%] max-h-[420px] absolute bottom-0 z-10 right-0"
+            "block max-w-[80%] max-h-[420px] absolute bottom-0 z-10 right-0"
           }
         >
           <Image

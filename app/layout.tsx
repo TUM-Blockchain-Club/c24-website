@@ -32,6 +32,7 @@ export default function RootLayout({
           src={`https://cdn-cookieyes.com/client_data/6331baf83b563ec3150ad4bb/script.js`}
           strategy="beforeInteractive"
         ></Script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${montserrat.className} bg-black text-white`}>
         {children}

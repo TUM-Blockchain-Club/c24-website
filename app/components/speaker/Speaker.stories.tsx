@@ -14,7 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {
-    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg",
+    imageSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg",
     name: "Vitalik Buterin",
     position: "CEO",
     company: "Ethereum Foundation",

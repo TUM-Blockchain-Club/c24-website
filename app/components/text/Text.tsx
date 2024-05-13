@@ -17,10 +17,10 @@ const spaceGrotesk = Space_Grotesk({
 const textVariants = cva("dark:text-white text-black", {
   variants: {
     textType: {
-      hero: "text-7xl lg:text-8xl font-display",
-      sub_hero: "text-6xl lg:text-7xl font-display",
-      title: "text-4xl lg:text-5xl font-sans",
-      sub_title: "text-xl lg:text-2xl font-sans",
+      hero: "text-6xl lg:text-8xl font-display",
+      sub_hero: "text-5xl lg:text-7xl font-display",
+      title: "text-2xl lg:text-5xl font-sans",
+      sub_title: "text-md lg:text-2xl font-sans",
       paragraph: "text-sm lg:text-base font-sans",
       small: "text-xs font-sans",
     },

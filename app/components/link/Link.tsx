@@ -9,11 +9,12 @@ export const Link = React.forwardRef<LinkElement, LinkProps>((props, ref) => {
   const { className, ...restProps } = props;
   return (
     <NextLink
+      {...restProps}
       className={classNames(
         className,
         "hover:decoration-wavy dark:hover:decoration-white hover:underline hover:decoration hover:underline-offset-4",
       )}
-      {...restProps}
+      ref={ref}
     />
   );
 });

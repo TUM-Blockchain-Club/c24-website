@@ -15,12 +15,12 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
     const { className, ...propRest } = props;
     return (
       <header
+        {...propRest}
         className={classNames(
           className,
           "fixed z-[9999] bg-black/75 w-full py-6 flex justify-center items-center px-6 md:px-12 lg:px-24 backdrop-blur-md",
         )}
         ref={ref}
-        {...propRest}
       >
         <div className={"max-w-7xl w-full flex justify-between items-center"}>
           <div className={"w-11 lg:w-16"}>

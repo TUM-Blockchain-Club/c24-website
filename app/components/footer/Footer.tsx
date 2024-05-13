@@ -15,15 +15,14 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
     const { className, ...restProps } = props;
     return (
       <footer
+        {...restProps}
         className={classNames(
           className,
           "flex flex-col lg:block w-full relative min-h-[500px] z-10",
         )}
-        {...restProps}
+        ref={ref}
       >
-        <div
-          className={"flex justify-center py-6 px-6 md:px-12 lg:px-24 z-20"}
-        >
+        <div className={"flex justify-center py-6 px-6 md:px-12 lg:px-24 z-20"}>
           <div className={"flex justify-between max-w-7xl w-full"}>
             <div className={"flex flex-col gap-4 items-start"}>
               <Image
@@ -46,7 +45,9 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
               }
             >
               <Text asChild>
-                <Link href={"mailto:relations@tum-blockchain.com"}>Contact</Link>
+                <Link href={"mailto:relations@tum-blockchain.com"}>
+                  Contact
+                </Link>
               </Text>
               <Text asChild>
                 <Link href={"https://www.tum-blockchain.com/privacy-policy"}>

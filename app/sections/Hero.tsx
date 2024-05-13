@@ -4,20 +4,20 @@ import c24Wordmark from "../../public/logos/c24-wordmark.svg";
 
 const Hero = () => {
   return (
-    <section className="w-full flex justify-center items-center">
+    <section className="px-10 lg:px-0 h-screen w-full flex justify-center items-center">
       <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-16">
-        <div>
-          <div className="relative w-[250px] h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">
+        <div className={"w-full"}>
+          <div className="relative w-full min-h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">
             <Image
               src={c24Wordmark}
               alt="TUM Blockchain Conference 24"
-              fill={true}
+              fill
             />
           </div>
           <p className="mt-2 text-xs md:text-xl">Deutsches Museum, Munich</p>
           <p className="mt-2 text-xs md:text-xl">September 12th - 13th 2024</p>
         </div>
-        <div className="mt-20 w-full flex justify-center xl:mt-0 xl:justify-normal">
+        <div className="w-full flex justify-center">
           <video
             className="glow"
             autoPlay

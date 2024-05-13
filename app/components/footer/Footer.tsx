@@ -23,7 +23,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
         ref={ref}
       >
         <div className={"flex justify-center py-6 px-6 md:px-12 lg:px-24 z-20"}>
-          <div className={"flex justify-between max-w-7xl w-full"}>
+          <div className={"flex flex-col gap-y-8 lg:flex-row justify-between max-w-7xl w-full"}>
             <div className={"flex flex-col gap-4 items-start"}>
               <Image
                 src={confLogo}
@@ -41,7 +41,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
             </div>
             <div
               className={
-                "flex flex-col lg:flex-row h-full justify-start lg:justify-center gap-8 items-end lg:items-start"
+                "flex flex-col lg:flex-row h-full justify-start lg:justify-center gap-4 lg:gap-8"
               }
             >
               <Text asChild>
@@ -64,7 +64,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
         </div>
         <div
           className={
-            "block max-w-[80%] max-h-[420px] absolute bottom-0 z-10 right-0"
+            "self-end block max-w-[80%] max-h-[420px] lg:absolute bottom-0 z-10 right-0"
           }
         >
           <Image

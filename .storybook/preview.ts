@@ -10,6 +10,10 @@ const preview: Preview = {
           name: "dark",
           value: "#000",
         },
+        {
+          name: "light",
+          value: "#fff",
+        },
       ],
     },
     controls: {

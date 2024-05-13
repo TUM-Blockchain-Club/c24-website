@@ -21,35 +21,51 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
         )}
         {...restProps}
       >
-        <div className={"flex py-6 px-6 md:px-12 lg:px-24 justify-between z-20"}>
-          <div className={"flex flex-col gap-4 items-start"}>
-            <Image
-              src={confLogo}
-              alt={"TUM Blockchain Conference Logo"}
-              height={88}
-            />
-            <div className={"flex flex-col gap-2"}>
-              <Text textType={"small"}>Organized by</Text>
+        <div
+          className={"flex justify-center py-6 px-6 md:px-12 lg:px-24 z-20"}
+        >
+          <div className={"flex justify-between max-w-7xl w-full"}>
+            <div className={"flex flex-col gap-4 items-start"}>
               <Image
-                src={tbcLogo}
-                alt={"TUM Blockchain Club Logo"}
-                width={145}
+                src={confLogo}
+                alt={"TUM Blockchain Conference Logo"}
+                height={88}
               />
+              <div className={"flex flex-col gap-2"}>
+                <Text textType={"small"}>Organized by</Text>
+                <Image
+                  src={tbcLogo}
+                  alt={"TUM Blockchain Club Logo"}
+                  width={145}
+                />
+              </div>
+            </div>
+            <div
+              className={
+                "flex flex-col lg:flex-row h-full justify-start lg:justify-center gap-8 items-end lg:items-start"
+              }
+            >
+              <Text asChild>
+                <Link href={"mailto:relations@tum-blockchain.com"}>Contact</Link>
+              </Text>
+              <Text asChild>
+                <Link href={"https://www.tum-blockchain.com/privacy-policy"}>
+                  Privacy Policy
+                </Link>
+              </Text>
+              <Text asChild>
+                <Link href={"https://www.tum-blockchain.com/imprint"}>
+                  Impressum
+                </Link>
+              </Text>
             </div>
           </div>
-          <div className={"flex flex-col lg:flex-row h-full justify-center gap-8 items-end lg:items-center"}>
-            <Text asChild>
-              <Link href={"mailto:relations@tum-blockchain.com"}>Contact</Link>
-            </Text>
-            <Text asChild>
-              <Link href={"https://www.tum-blockchain.com/privacy-policy"}>Privacy Policy</Link>
-            </Text>
-            <Text asChild>
-              <Link href={"https://www.tum-blockchain.com/imprint"}>Impressum</Link>
-            </Text>
-          </div>
         </div>
-        <div className={"block max-w-[50%] max-h-[420px] absolute bottom-0 z-10 right-0"}>
+        <div
+          className={
+            "block max-w-[50%] max-h-[420px] absolute bottom-0 z-10 right-0"
+          }
+        >
           <Image
             src={munich}
             alt={"Munich"}

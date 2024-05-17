@@ -7,7 +7,7 @@ const Statistic = () => {
         "w-full flex flex-col lg:flex-row justify-center items-center xl:items-start gap-12"
       }
     >
-      <div className={"lg:w-[50%] flex flex-col mt-12"}>
+      <div className={"lg:w-[50%] lg:items-end flex flex-col mt-12"}>
         <Text textType={"sub_title"} className={""}>
           Last Year Statistic
         </Text>

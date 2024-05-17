@@ -9,17 +9,19 @@ import { Button } from "@/app/components/button";
 import { Header } from "@/app/components/header";
 import { Container } from "@/app/components/container";
 import Statistic from "@/app/sections/Statistic";
+import Sparkle from "@/app/components/Sparkle";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <main className={"w-full flex justify-center pt-[25px] lg:pt-0"}>
+      <Sparkle />
+      <main className={"w-full flex justify-center pt-[25px] lg:pt-0 z-20"}>
         <Container>
           <div className={"flex flex-col max-w-7xl"}>
             <Hero />
             <div className={"flex flex-col pb-24 gap-32"}>
-              <Statistic/>
+              <Statistic />
               <Manifesto />
               <div
                 className={

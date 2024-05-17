@@ -2,30 +2,44 @@ import { Text } from "@/app/components/text";
 
 const Statistic = () => {
   return (
-    <section className={"w-full flex justify-start items-start gap-12"}>
+    <section
+      className={
+        "w-full flex flex-col lg:flex-row justify-center items-center xl:items-start gap-12"
+      }
+    >
       <div className={"lg:w-[50%] flex flex-col mt-12"}>
-        <Text textType={"sub_title"} className={""}>Last Year Statistic</Text>
+        <Text textType={"sub_title"} className={""}>
+          Last Year Statistic
+        </Text>
       </div>
       <div className={"lg:w-[50%] flex flex-col gap-12"}>
-        <div className={"flex flex-col gap-2"}>
-          <Text className={""} textType={"hero"}>1000+</Text>
+        <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+          <Text className={""} textType={"hero"}>
+            1000+
+          </Text>
           <Text textType={"sub_title"}>Attendees</Text>
         </div>
-        <div className={"flex flex-col gap-2"}>
-          <Text className={""} textType={"hero"}>100+</Text>
+        <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+          <Text className={""} textType={"hero"}>
+            100+
+          </Text>
           <Text textType={"sub_title"}>Speakers</Text>
         </div>
-        <div className={"flex flex-col gap-2"}>
-          <Text className={""} textType={"hero"}>40+</Text>
+        <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+          <Text className={""} textType={"hero"}>
+            40+
+          </Text>
           <Text textType={"sub_title"}>Talks</Text>
         </div>
-        <div className={"flex flex-col gap-2"}>
-          <Text className={""} textType={"hero"}>20+</Text>
+        <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+          <Text className={""} textType={"hero"}>
+            20+
+          </Text>
           <Text textType={"sub_title"}>Sponsors</Text>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Statistic;

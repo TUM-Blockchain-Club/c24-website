@@ -18,7 +18,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
         {...propRest}
         className={classNames(
           className,
-          "fixed z-[9999] bg-black/75 w-full py-6 flex justify-center items-center px-6 md:px-12 lg:px-24 backdrop-blur-md",
+          "fixed z-[9999] scroll:bg-black/75 w-full py-6 flex justify-center items-center px-6 md:px-12 lg:px-24 backdrop-blur-md",
         )}
         ref={ref}
       >

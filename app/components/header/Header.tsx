@@ -35,22 +35,14 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
           </div>
           <nav className={"lg:flex h-full justify-center gap-8 items-center"}>
             <Text asChild className={"hidden lg:flex"}>
-              <Link href={"https://google.com"}>Agenda</Link>
+              <Link href="#speaker">Speaker</Link>
             </Text>
             <Text asChild className={"hidden lg:flex"}>
-              <Link href={"https://google.com"}>Schedule</Link>
+              <Link href="#sponsor">Sponsor</Link>
             </Text>
             <Text asChild className={"hidden lg:flex"}>
-              <Link href={"https://google.com"}>Speakers</Link>
+              <Link href="#manifesto">Manifesto</Link>
             </Text>
-            <Text asChild className={"hidden lg:flex"}>
-              <Link href={"https://google.com"}>Sponsors</Link>
-            </Text>
-            <Button asChild className={""} buttonType={"cta"}>
-              <Text asChild>
-                <Link href={"https://google.com"}>Ticket</Link>
-              </Text>
-            </Button>
           </nav>
         </div>
       </header>

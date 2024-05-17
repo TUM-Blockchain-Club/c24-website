@@ -1,15 +1,15 @@
 "use client";
 
-import Navbar from "./components/Navbar";
 import { Footer } from "@/app/components/footer/Footer";
 import Canvas from "./components/Canvas";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
-import { Button } from "@/app/components/button";
 import { Header } from "@/app/components/header";
 import { Container } from "@/app/components/container";
 import Statistic from "@/app/sections/Statistic";
 import Sparkle from "@/app/components/Sparkle";
+import { Button } from "@/app/components/button";
+import Speaker from "./sections/Speaker";
 
 export default function Home() {
   return (
@@ -32,6 +32,7 @@ export default function Home() {
                   <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
                 </Button>
               </div>
+              <Speaker />
             </div>
           </div>
         </Container>

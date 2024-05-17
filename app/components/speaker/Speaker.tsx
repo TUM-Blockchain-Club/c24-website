@@ -20,7 +20,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
       <div
         className={classNames(
           className,
-          "flex w-[275px] h-[375px] flex-col gap-4 items-start shrink-0",
+          "flex w-[275px] min-h-[375px] flex-col gap-4 items-start shrink-0",
         )}
         ref={ref}
         {...restProps}

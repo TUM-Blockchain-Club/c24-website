@@ -18,7 +18,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
         {...propRest}
         className={classNames(
           className,
-          "fixed z-[9999] dark:bg-black/50 scroll:bg-black/75 w-full py-6 flex justify-center items-center px-6 md:px-12 lg:px-24 backdrop-blur-md",
+          "fixed z-[9999] dark:bg-black/50 scroll:bg-black/75 w-full py-4 flex justify-center items-center px-6 md:px-12 lg:px-24 backdrop-blur-md",
         )}
         ref={ref}
       >
@@ -28,8 +28,8 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Image
                 src={confLogo}
                 alt={"TUM Blockchain Conference 2024 Logo"}
-                width={64}
-                height={64}
+                width={48}
+                height={48}
               />
             </NextLink>
           </div>

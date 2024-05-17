@@ -3,7 +3,7 @@ import { Text } from "@/app/components/text";
 
 const Manifesto = () => {
   return (
-    <div className="w-full px-12 2xl:px-0">
+    <section className="w-full px-12 2xl:px-0" id="manifesto">
       <div className="w-full flex justify-center">
         <Text textType={"sub_hero"} className="text-gradient">
           Manifesto
@@ -47,7 +47,7 @@ const Manifesto = () => {
           <br />- TUM Blockchain Club
         </Text>
       </div>
-    </div>
+    </section>
   );
 };
 

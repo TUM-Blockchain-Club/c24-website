@@ -3,14 +3,14 @@ import { Text } from "@/app/components/text";
 
 const Manifesto = () => {
   return (
-    <div className="w-full px-12 2xl:px-0">
+    <section className="w-full flex flex-col gap-12">
       <div className="w-full flex justify-center">
         <Text textType={"sub_hero"} className="text-gradient">
           Manifesto
         </Text>
       </div>
       <div className="w-full flex justify-center">
-        <Text className="mt-20 text-sm max-w-[42rem]">
+        <Text as={"p"} className="text-sm max-w-[42rem]">
           Europe's biggest student-run blockchain event is back! Hosted again at
           the historic Deutsches Museum in Munich, the{" "}
           <b>TUM Blockchain Conference</b> is bringing together the next
@@ -47,7 +47,7 @@ const Manifesto = () => {
           <br />- TUM Blockchain Club
         </Text>
       </div>
-    </div>
+    </section>
   );
 };
 

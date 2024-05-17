@@ -20,8 +20,7 @@ const Hero = () => {
         <div className="w-full flex justify-center">
           <video
             className="glow"
-            autoPlay
-            muted
+            controls
             width={850}
             height={480}
             style={{ objectFit: "cover" }}

@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "@/app/components/text";
 import { Speaker as SpeakerComponent } from "../components/speaker";
 import { Button } from "@/app/components/button";
+import classNames from "classnames";
 
 const Speaker = () => {
   return (
@@ -9,7 +10,7 @@ const Speaker = () => {
       <Text textType={"sub_hero"} className="text-gradient">
         Speakers
       </Text>
-      <div className={"flex flex-wrap justify-center gap-x-4 gap-y-12"}>
+      <div className={"grid grid-cols-1 lg:grid-cols-4 gap-20"}>
       <SpeakerComponent imageSrc={"https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"} name="Hilmar M. Orth" position="Founder" company="Gelato and Arrakis"/>
       <SpeakerComponent imageSrc={"https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"} name="Leonardo Alt" position="Formal Verification Lead. Compiler Engineer" company="Ethereum Foundation"/>
       <SpeakerComponent imageSrc={"https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"} name="Sarah Gramberg" position="Supervisory Expert Crypto-Assets" company="European Banking Authority"/>

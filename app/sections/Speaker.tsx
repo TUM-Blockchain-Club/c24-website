@@ -2,18 +2,20 @@ import React from "react";
 import { Text } from "@/app/components/text";
 import { Speaker as SpeakerComponent } from "../components/speaker";
 import { Button } from "@/app/components/button";
-import classNames from "classnames";
 
 const Speaker = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-32" id="speaker">
+    <section
+      className="w-full flex flex-col items-center gap-12 lg:gap-20"
+      id="speaker"
+    >
       <Text textType={"sub_hero"} className="text-gradient">
-        Speakers
+        Previous Speakers
       </Text>
       <div className={"grid grid-cols-1 lg:grid-cols-4 gap-20"}>
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/hilmar_orth.webp"
           }
           name="Hilmar M. Orth"
           position="Founder"
@@ -21,7 +23,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/leonardo_alt.webp"
           }
           name="Leonardo Alt"
           position="Formal Verification Lead. Compiler Engineer"
@@ -29,7 +31,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/sarah_gramberg.webp"
           }
           name="Sarah Gramberg"
           position="Supervisory Expert Crypto-Assets"
@@ -37,7 +39,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/marina_khaustova.webp"
           }
           name="Marina Khaustova"
           position="Chief Executive Officer"
@@ -45,7 +47,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/andri_rabatanety.webp"
           }
           name="Andri Rabetanety"
           position="Chief Operating Officer"
@@ -53,7 +55,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/alessandro_capellato.webp"
           }
           name="Alessandro Ferrari"
           position="Head of Product"
@@ -61,7 +63,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/philipp_maume.webp"
           }
           name="Prof. Dr. Philipp Maume"
           position="Professor of Corporate Governance and Capital Markets Law"
@@ -69,7 +71,7 @@ const Speaker = () => {
         />
         <SpeakerComponent
           imageSrc={
-            "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg"
+            "/speakers/philipp_lesche.webp"
           }
           name="Philipp Lesche"
           position="Advisor"

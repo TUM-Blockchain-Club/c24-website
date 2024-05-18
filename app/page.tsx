@@ -23,15 +23,6 @@ export default function Home() {
             <div className={"flex flex-col pb-24 gap-32"}>
               <Statistic />
               <Manifesto />
-              <div
-                className={
-                  "w-full mt-20 mb-40 px-12 2xl:px-0 flex justify-center"
-                }
-              >
-                <Button buttonType={"primary"} asChild>
-                  <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
-                </Button>
-              </div>
               <Speaker />
             </div>
           </div>

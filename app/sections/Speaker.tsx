@@ -6,10 +6,10 @@ import { Button } from "@/app/components/button";
 const Speaker = () => {
   return (
     <section
-      className="w-full flex flex-col items-center gap-12 lg:gap-20"
+      className="w-full flex flex-col items-center justify-center gap-12 lg:gap-20"
       id="speaker"
     >
-      <Text textType={"sub_hero"} className="text-gradient">
+      <Text textType={"sub_hero"} className="text-gradient text-center">
         Previous Speakers
       </Text>
       <div className={"grid grid-cols-1 lg:grid-cols-4 gap-20"}>

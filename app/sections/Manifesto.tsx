@@ -3,7 +3,10 @@ import { Text } from "@/app/components/text";
 
 const Manifesto = () => {
   return (
-    <section className="w-full flex flex-col gap-12 px-6 lg:px-0" id="manifesto">
+    <section
+      className="w-full flex flex-col gap-12 px-6 lg:px-0"
+      id="manifesto"
+    >
       <div className="w-full flex justify-center">
         <Text textType={"sub_hero"} className="text-gradient">
           Manifesto

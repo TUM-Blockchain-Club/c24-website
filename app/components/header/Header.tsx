@@ -53,8 +53,9 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Image
                 src={logoUrl || "/logos/tbc-conference-logo.png"}
                 alt={"TUM Blockchain Conference 2024 Logo"}
-                width={48}
-                height={48}
+                className={"transition-all duration-300"}
+                width={isScrolled ? 36 : 64}
+                height={isScrolled ? 36 : 64}
               />
             </NextLink>
           </div>

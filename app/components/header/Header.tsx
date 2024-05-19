@@ -69,7 +69,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Link href="#manifesto">Manifesto</Link>
             </Text>
             <Text asChild className={"hidden lg:flex"}>
-              <Link href="#speaker">Speaker</Link>
+              <Link href="#speaker">Previous Speakers</Link>
             </Text>
           </nav>
         </div>

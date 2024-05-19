@@ -60,14 +60,16 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             </NextLink>
           </div>
           <nav className={"lg:flex h-full justify-center gap-8 items-center"}>
-            <Text asChild className={"hidden lg:flex"}>
-              <Link href="#speaker">Speaker</Link>
-            </Text>
-            <Text asChild className={"hidden lg:flex"}>
-              <Link href="#sponsor">Sponsor</Link>
-            </Text>
+            {false && (
+              <Text asChild className={"hidden lg:flex"}>
+                <Link href="#sponsor">Sponsor</Link>
+              </Text>
+            )}
             <Text asChild className={"hidden lg:flex"}>
               <Link href="#manifesto">Manifesto</Link>
+            </Text>
+            <Text asChild className={"hidden lg:flex"}>
+              <Link href="#speaker">Speaker</Link>
             </Text>
           </nav>
         </div>

@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { Link } from "@/app/components/link";
+import { Text } from "@/app/components/text";
 import classNames from "classnames";
 import Image from "next/image";
-import { Text } from "@/app/components/text";
-import { Button } from "@/app/components/button";
-import { Link } from "@/app/components/link";
 import NextLink from "next/link";
+import React, { useEffect, useState } from "react";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
@@ -59,17 +58,19 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               />
             </NextLink>
           </div>
-          <nav className={"lg:flex h-full justify-center gap-8 items-center"}>
-            {false && (
-              <Text asChild className={"hidden lg:flex"}>
-                <Link href="#sponsor">Sponsor</Link>
-              </Text>
-            )}
-            <Text asChild className={"hidden lg:flex"}>
+          <nav
+            className={
+              "hidden sm:flex h-full justify-center gap-8 items-center"
+            }
+          >
+            <Text asChild>
               <Link href="#manifesto">Manifesto</Link>
             </Text>
-            <Text asChild className={"hidden lg:flex"}>
+            <Text asChild>
               <Link href="#speaker">Previous Speakers</Link>
+            </Text>
+            <Text asChild>
+              <Link href="#sponsors">Previous Sponsors</Link>
             </Text>
           </nav>
         </div>

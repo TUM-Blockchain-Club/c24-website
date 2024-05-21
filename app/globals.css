@@ -20,7 +20,35 @@ body {
 }
 
 .glow {
-  box-shadow: 0px 0px 100px 10px rgba(92, 21, 103, 0.26);
+  box-shadow: 0px 0px 100px 10px rgba(92, 21, 103, 0.3);
+}
+
+.sponsor-gold {
+  animation: sponsor-gold-shadow 5s infinite;
+}
+
+.sponsor-bronze {
+  box-shadow: 0px 0px 100px 10px rgba(92, 21, 103, 0.5);
+  background-color: rgba(92, 21, 103, 0.5);
+}
+
+@keyframes sponsor-gold-shadow {
+  0% {
+    background-color: rgba(255, 203, 109, 0.5);
+    box-shadow: 0px 0px 100px 10px rgba(255, 203, 109, 0.8);
+  }
+  33.3% {
+    background-color: rgba(228, 52, 165, 0.5);
+    box-shadow: 0px 0px 100px 10px rgba(228, 52, 165, 0.8);
+  }
+  66.6% {
+    background-color: rgba(52, 138, 235, 0.5);
+    box-shadow: 0px 0px 100px 10px rgba(52, 138, 235, 0.8);
+  }
+  100% {
+    background-color: rgba(255, 203, 109, 0.5);
+    box-shadow: 0px 0px 100px 10px rgba(255, 203, 109, 0.8);
+  }
 }
 
 .text-gradient {

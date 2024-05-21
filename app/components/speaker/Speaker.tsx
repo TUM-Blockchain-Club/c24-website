@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
-import classNames from "classnames";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Text } from "@/app/components/text";
+import classNames from "classnames";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+import React from "react";
 
 type SpeakerElement = React.ElementRef<"div">;
 export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -22,7 +22,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
       <div
         className={classNames(
           className,
-          "flex w-[200px] min-h-[300px] flex-col gap-4 items-start shrink-0",
+          "flex w-[120px] md:w-[200px] min-h-[160px] md:min-h-[300px] flex-col gap-4 items-start shrink-0",
         )}
         ref={ref}
         {...restProps}

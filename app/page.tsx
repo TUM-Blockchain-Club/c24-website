@@ -6,6 +6,7 @@ import { Footer } from "@/app/components/footer/Footer";
 import { Header } from "@/app/components/header";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
+import { Button } from "./components/button";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
@@ -26,6 +27,17 @@ export default function Home() {
               <Manifesto />
               <Speaker />
               <Sponsors />
+              <div className="w-full flex justify-center">
+                <Button buttonType={"primary"} asChild>
+                  <a
+                    href={"https://www.tum-blockchain.com/conference2023"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Throwback 2023
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </Container>

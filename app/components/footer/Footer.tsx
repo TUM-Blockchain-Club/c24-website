@@ -54,30 +54,46 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                   />
                 </div>
                 <div className="flex space-x-4 mt-2">
-                  <a href="https://discord.gg/7V7KG8SESF" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://discord.gg/7V7KG8SESF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
-                        src={dcLogo}
-                        alt={"TUM Blockchain Club Logo"}
-                        width={25}
-                      />
-                  </a>
-                  <a href="https://www.linkedin.com/company/tum-blockchain-club/" target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src={liLogo }
+                      src={dcLogo}
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />
                   </a>
-                  <a href="https://t.me/+6SMYu7pub0E1MGUy" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.linkedin.com/company/tum-blockchain-club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
-                        src={telLogo }
-                        alt={"TUM Blockchain Club Logo"}
-                        width={25}
-                      />
+                      src={liLogo}
+                      alt={"TUM Blockchain Club Logo"}
+                      width={25}
+                    />
                   </a>
-                  <a href="https://x.com/tbc_munich" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://t.me/+6SMYu7pub0E1MGUy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
-                      src={xLogo }
+                      src={telLogo}
+                      alt={"TUM Blockchain Club Logo"}
+                      width={25}
+                    />
+                  </a>
+                  <a
+                    href="https://x.com/tbc_munich"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={xLogo}
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />

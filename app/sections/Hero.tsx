@@ -1,12 +1,10 @@
-import React from "react";
+import { Text } from "@/app/components/text";
 import Image from "next/image";
 import c24Wordmark from "../../public/logos/c24-wordmark.svg";
-import { Text } from "@/app/components/text";
-import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
   return (
-    <section className="h-screen w-full flex justify-center items-center overflow-visible">
+    <section className="mt-32 lg:mt-[calc(25vh)] w-full flex justify-center items-center overflow-visible">
       <div>
         <div className="flex flex-col w-full justify-between items-center gap-8">
           <div className="relative w-full max-w-[80vw] xl:max-w-[50vw] min-h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">

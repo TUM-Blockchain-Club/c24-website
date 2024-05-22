@@ -73,13 +73,13 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Link href="#sponsors">Previous Sponsors</Link>
             </Text>
             <Text asChild>
-              <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+              <Link href="https://tally.so/r/wAlAek">
                 Join waitlist
               </Link>
             </Text>
           </nav>
           <Text asChild className="sm:hidden">
-            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+            <Link href="https://tally.so/r/wAlAek">
               Join waitlist
             </Link>
           </Text>

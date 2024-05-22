@@ -72,7 +72,17 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             <Text asChild>
               <Link href="#sponsors">Previous Sponsors</Link>
             </Text>
+            <Text asChild>
+              <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+                Join waitlist
+              </Link>
+            </Text>
           </nav>
+          <Text asChild className="sm:hidden">
+            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+              Join waitlist
+            </Link>
+          </Text>
         </div>
       </header>
     );

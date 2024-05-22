@@ -1,7 +1,6 @@
-import React from "react";
+import { Button } from "@/app/components/button";
 import { Text } from "@/app/components/text";
 import { Speaker as SpeakerComponent } from "../components/speaker";
-import { Button } from "@/app/components/button";
 
 const Speaker = () => {
   return (
@@ -10,9 +9,10 @@ const Speaker = () => {
       id="speaker"
     >
       <Text textType={"sub_hero"} className="text-gradient text-center">
-        Previous Speakers
+        Previous
+        <br className="sm:hidden" /> Speakers
       </Text>
-      <div className={"grid grid-cols-1 lg:grid-cols-4 gap-20"}>
+      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-20"}>
         <SpeakerComponent
           imageSrc={"/speakers/hilmar_orth.webp"}
           name="Hilmar M. Orth"

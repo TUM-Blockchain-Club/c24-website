@@ -1,4 +1,3 @@
-import React from "react";
 import { Text } from "@/app/components/text";
 
 const Manifesto = () => {
@@ -11,7 +10,7 @@ const Manifesto = () => {
           </Text>
         </div>
         <div className="w-full flex justify-center">
-          <Text as={"p"} className="max-w-[42rem]">
+          <Text as={"p"} className="text-left max-w-[14rem] sm:max-w-[42rem]">
             Europe's biggest student-run blockchain event is back! Hosted again
             at the historic Deutsches Museum in Munich, the{" "}
             <b>TUM Blockchain Conference</b> is bringing together the next

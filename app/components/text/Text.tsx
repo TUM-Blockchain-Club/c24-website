@@ -1,8 +1,8 @@
-import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
-import { Montserrat, Space_Grotesk } from "next/font/google";
 import classNames from "classnames";
+import { Montserrat, Space_Grotesk } from "next/font/google";
+import React from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,14 +14,14 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
-const textVariants = cva("dark:text-white text-black", {
+const textVariants = cva("text-white", {
   variants: {
     textType: {
-      hero: "text-8xl font-display",
-      sub_hero: "text-7xl font-display",
-      title: "text-5xl font-sans",
-      sub_title: "text-2xl font-sans",
-      paragraph: "text-base font-sans",
+      hero: "text-6xl lg:text-8xl font-display",
+      sub_hero: "text-5xl lg:text-7xl font-display",
+      title: "text-2xl lg:text-5xl font-sans",
+      sub_title: "text-md lg:text-2xl font-sans",
+      paragraph: "text-sm lg:text-base font-sans",
       small: "text-xs font-sans",
     },
   },

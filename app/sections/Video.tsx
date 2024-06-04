@@ -1,14 +1,11 @@
 const Video = () => {
   return (
-    <section
-      className={
-        "w-full flex flex-col lg:flex-row justify-center items-center mt-20"
-      }
-    >
-      <div className="w-full flex justify-center xl:mt-20 max-w-[275px] sm:max-w-[500px] xl:max-w-full">
+    <section className="w-full flex flex-col lg:flex-row justify-center items-center lg:mt-[-125px]">
+      <div className="w-full flex justify-center max-w-[275px] sm:max-w-[500px] xl:max-w-full">
         <video
-          className="glow"
+          className="glow cta-border"
           controls
+          id="vid-hero"
           width={850}
           height={480}
           style={{ objectFit: "cover" }}

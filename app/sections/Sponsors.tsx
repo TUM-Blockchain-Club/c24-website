@@ -12,7 +12,7 @@ const Sponsors = () => {
         <br className="sm:hidden" /> Sponsors
       </Text>
       <Text textType={"title"}>Gold</Text>
-      <div className="grid grid-cols-2 gap-2 sponsor-gold">
+      <div className="grid grid-cols-2 gap-4 sponsor-gold">
         <Sponsor
           alt="Hedera"
           link="https://hedera.com/"
@@ -35,7 +35,7 @@ const Sponsors = () => {
         />
       </div>
       <Text textType={"title"}>Silver</Text>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sponsor-bronze">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sponsor-bronze">
         <Sponsor
           alt="Arbitrum"
           link="https://arbitrum.io/"
@@ -68,7 +68,7 @@ const Sponsors = () => {
         />
       </div>
       <Text textType={"title"}>Bronze</Text>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <Sponsor
           alt="Ethereum Ecosystem Support Program"
           link="#"

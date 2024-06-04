@@ -11,12 +11,21 @@ body {
 }
 
 .cta-border {
-  background: linear-gradient(
+  /*background: linear-gradient(
     135deg,
     rgba(255, 203, 109, 1) 0%,
     rgba(228, 52, 165, 1) 50%,
     rgba(52, 138, 235, 1) 100%
-  );
+  );*/
+  border-image: linear-gradient(
+      135deg,
+      rgba(255, 203, 109, 1) 0%,
+      rgba(228, 52, 165, 1) 50%,
+      rgba(52, 138, 235, 1) 100%
+    )
+    1;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .glow {

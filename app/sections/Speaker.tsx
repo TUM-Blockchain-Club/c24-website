@@ -12,7 +12,7 @@ const Speaker = () => {
         Previous
         <br className="sm:hidden" /> Speakers
       </Text>
-      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-20"}>
+      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6"}>
         <SpeakerComponent
           imageSrc={"/speakers/hilmar_orth.webp"}
           name="Hilmar M. Orth"

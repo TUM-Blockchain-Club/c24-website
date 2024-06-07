@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
@@ -16,6 +17,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {
     const { className, logoUrl, ...propRest } = props;
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
       const handleScroll = () => {
@@ -80,6 +82,30 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>
             </div>
           </nav>
+          <div className="sm:hidden py-2 px-4">
+            <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+              <DropdownMenuTrigger asChild>
+                <button className="cta-border py-2 px-4">Menu</button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="cta-border bg-black shadow-lg rounded-md mt-2 mx-4">
+                <DropdownMenuItem className="my-2 mx-2">
+                  <Text asChild>
+                    <Link href="#manifesto">Manifesto</Link>
+                  </Text>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="my-2 mx-2">
+                  <Text asChild>
+                    <Link href="#speaker">Previous Speakers</Link>
+                  </Text>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="my-2 mx-2">
+                  <Text asChild>
+                    <Link href="#sponsors">Previous Sponsors</Link>
+                  </Text>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
           <div className="cta-border sm:hidden py-2 px-4">
             <Text asChild>
               <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">

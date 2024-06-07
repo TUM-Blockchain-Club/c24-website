@@ -13,11 +13,42 @@ export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
   logoUrl?: string;
 };
 
+export type SidebarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  return (
+    <div className={classNames("fixed inset-0 z-[9999] transition-transform transform", {
+      "translate-x-0": isOpen,
+      "translate-x-full": !isOpen,
+    })}>
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="fixed right-0 top-0 h-full w-64 bg-black p-6 shadow-lg">
+        <button className="cta-border py-2 px-4 mb-8" onClick={onClose}>Close</button>
+        <nav className="flex flex-col gap-8">
+          <Text asChild>
+            <Link href="#manifesto">Manifesto</Link>
+          </Text>
+          <Text asChild>
+            <Link href="#speaker">Previous Speakers</Link>
+          </Text>
+          <Text asChild>
+            <Link href="#sponsors">Previous Sponsors</Link>
+          </Text>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
 export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {
     const { className, logoUrl, ...propRest } = props;
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const handleSidebarClose = () => setIsSidebarOpen(false);
 
     useEffect(() => {
       const handleScroll = () => {
@@ -36,6 +67,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
     }, []);
 
     return (
+    <>
       <header
         {...propRest}
         className={classNames(
@@ -82,30 +114,6 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>
             </div>
           </nav>
-          <div className="sm:hidden py-2 px-4">
-            <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-              <DropdownMenuTrigger asChild>
-                <button className="cta-border py-2 px-4">Menu</button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="cta-border bg-black shadow-lg rounded-md mt-2 mx-4">
-                <DropdownMenuItem className="my-2 mx-2">
-                  <Text asChild>
-                    <Link href="#manifesto">Manifesto</Link>
-                  </Text>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="my-2 mx-2">
-                  <Text asChild>
-                    <Link href="#speaker">Previous Speakers</Link>
-                  </Text>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="my-2 mx-2">
-                  <Text asChild>
-                    <Link href="#sponsors">Previous Sponsors</Link>
-                  </Text>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
           <div className="cta-border sm:hidden py-2 px-4">
             <Text asChild>
               <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
@@ -113,8 +121,15 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Link>
             </Text>
           </div>
+          <div className="sm:hidden py-2 px-4">
+            <button className="cta-border py-2 px-4" onClick={() => setIsSidebarOpen(true)}>             
+                Menu
+            </button>
+          </div> 
         </div>
       </header>
+      <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+    </>
     );
   },
 );

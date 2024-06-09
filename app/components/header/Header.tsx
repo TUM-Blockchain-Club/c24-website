@@ -6,7 +6,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
@@ -26,7 +26,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     })}>
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="fixed right-0 top-0 h-full w-64 bg-black p-6 shadow-lg">
-        <button className="cta-border py-2 px-4 mb-8" onClick={onClose}>Close</button>
+        <Cross1Icon height={25} width={25} onClick={onClose} className="mb-8"></Cross1Icon>
         <nav className="flex flex-col gap-8">
           <Text asChild>
             <Link href="#manifesto">Manifesto</Link>
@@ -38,6 +38,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link href="#sponsors">Previous Sponsors</Link>
           </Text>
         </nav>
+        <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
+          <Text asChild>
+            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+              Join waitlist
+            </Link>
+          </Text>
+        </div>
       </div>
     </div>
   );
@@ -114,18 +121,9 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>
             </div>
           </nav>
-          <div className="cta-border sm:hidden py-2 px-4">
-            <Text asChild>
-              <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
-                Join waitlist
-              </Link>
-            </Text>
-          </div>
           <div className="sm:hidden py-2 px-4">
-            <button className="cta-border py-2 px-4" onClick={() => setIsSidebarOpen(true)}>             
-                Menu
-            </button>
-          </div> 
+            <HamburgerMenuIcon height={"25"} width={"25"} onClick={() => setIsSidebarOpen(true)}/>
+          </div>
         </div>
       </header>
       <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />

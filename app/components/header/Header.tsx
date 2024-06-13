@@ -2,7 +2,6 @@
 
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
-import { Cross1Icon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -18,7 +17,7 @@ export type SidebarProps = {
   onClose: () => void;
 };
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+/*export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className={classNames(
@@ -61,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};
+};*/
 
 export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {

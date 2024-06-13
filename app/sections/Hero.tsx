@@ -4,6 +4,12 @@ import c24Wordmark from "../../public/logos/c24-wordmark.svg";
 
 const Hero = () => {
   return (
+    <>
+    <div className="absolute w-full h-full left-0 top-0">
+      <div className="absolute right-10 bottom-10">
+        <p>Knowledge Partner<br/><b>IEEE Blockchain</b></p>
+      </div>
+    </div>
     <section className="relative mt-[50vh] translate-y-[-50%] w-full flex justify-center items-center overflow-visible">
       <div>
         <div className="flex flex-col w-full justify-between items-center gap-8">
@@ -20,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

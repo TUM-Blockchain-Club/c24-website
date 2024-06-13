@@ -4,7 +4,13 @@ import c24Wordmark from "../../public/logos/c24-wordmark.svg";
 
 const Hero = () => {
   return (
-    <section className="mt-32 lg:mt-[calc(20vh)] w-full flex justify-center items-center overflow-visible">
+    <>
+    <div className="absolute w-full h-full left-0 top-0">
+      <div className="absolute right-10 bottom-10">
+        <p>Knowledge Partner<br/><b>IEEE Blockchain</b></p>
+      </div>
+    </div>
+    <section className="relative mt-[50vh] translate-y-[-50%] w-full flex justify-center items-center overflow-visible">
       <div>
         <div className="flex flex-col w-full justify-between items-center gap-8">
           <div className="relative w-full max-w-[80vw] xl:max-w-[50vw] min-h-[150px] sm:w-[400px] sm:h-[175px] sm:mt-10 md:w-[500px] md:h-[200px] lg:w-[700px] lg:h-[350px]">
@@ -20,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

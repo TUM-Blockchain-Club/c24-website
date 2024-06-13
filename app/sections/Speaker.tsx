@@ -12,7 +12,7 @@ const Speaker = () => {
         Previous
         <br className="sm:hidden" /> Speakers
       </Text>
-      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-20"}>
+      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6"}>
         <SpeakerComponent
           imageSrc={"/speakers/hilmar_orth.webp"}
           name="Hilmar M. Orth"
@@ -61,6 +61,10 @@ const Speaker = () => {
           position="Advisor"
           company="Digital Technologies & Head of Bavarian Center for Blockchain"
         />
+        <SpeakerComponent imageSrc={"/speakers/jens_strueker.png"} name="Prof. Jens Strüker" position="Director @ Fraunhofer Blockchain Lab & Prof. @ University of Bayreuth" company=""/>
+      <SpeakerComponent imageSrc={"/speakers/bart_preneel.png"} name="Prof. Bart Preneel" position="Prof. for Cryptology & Cybersecurity @ KU Leuven, ex-president @ IACR" company=""/>
+      <SpeakerComponent imageSrc={"/speakers/yvonne_anne_pignolet.png"} name="Dr. Yvonne-Anne Pignolet" position="Director of Research @ DFINITY" company=""/>
+      <SpeakerComponent imageSrc={"/speakers/sebastian_banescu.png"} name="Dr. Sebastian Banescu" position="CEO @ Chainproof & Head of Quantstamp Germany" company=""/>
       </div>
       <div className="w-full flex justify-center">
         <Button buttonType={"primary"} asChild>

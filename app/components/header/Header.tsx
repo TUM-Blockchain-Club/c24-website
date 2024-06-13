@@ -6,16 +6,56 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
   logoUrl?: string;
 };
 
+export type SidebarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  return (
+    <div className={classNames("fixed inset-0 z-[9999] transition-transform transform", {
+      "translate-x-0": isOpen,
+      "translate-x-full": !isOpen,
+    })}>
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="fixed right-0 top-0 h-full w-64 bg-black p-6 shadow-lg">
+        <Cross1Icon height={25} width={25} onClick={onClose} className="mb-8"></Cross1Icon>
+        <nav className="flex flex-col gap-8">
+          <Text asChild>
+            <Link href="#manifesto">Manifesto</Link>
+          </Text>
+          <Text asChild>
+            <Link href="#speaker">Previous Speakers</Link>
+          </Text>
+          <Text asChild>
+            <Link href="#sponsors">Previous Sponsors</Link>
+          </Text>
+        </nav>
+        <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
+          <Text asChild>
+            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+              Join waitlist
+            </Link>
+          </Text>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {
     const { className, logoUrl, ...propRest } = props;
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const handleSidebarClose = () => setIsSidebarOpen(false);
 
     useEffect(() => {
       const handleScroll = () => {
@@ -34,6 +74,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
     }, []);
 
     return (
+    <>
       <header
         {...propRest}
         className={classNames(
@@ -72,19 +113,21 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             <Text asChild>
               <Link href="#sponsors">Previous Sponsors</Link>
             </Text>
-            <Text asChild>
-              <Link href="https://tally.so/r/wAlAek">
-                Join waitlist
-              </Link>
-            </Text>
+            <div className="cta-border py-2 px-4">
+              <Text asChild>
+                <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+                  Join waitlist
+                </Link>
+              </Text>
+            </div>
           </nav>
-          <Text asChild className="sm:hidden">
-            <Link href="https://tally.so/r/wAlAek">
-              Join waitlist
-            </Link>
-          </Text>
+          <div className="sm:hidden py-2 px-4">
+            <HamburgerMenuIcon height={"25"} width={"25"} onClick={() => setIsSidebarOpen(true)}/>
+          </div>
         </div>
       </header>
+      <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+    </>
     );
   },
 );

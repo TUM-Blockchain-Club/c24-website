@@ -65,25 +65,25 @@ const Speaker = () => {
           imageSrc={"/speakers/jens_strueker.png"}
           name="Prof. Jens Strüker"
           position="Director @ Fraunhofer Blockchain Lab & Prof. @ University of Bayreuth"
-          company=""
+          // company=""
         />
         <SpeakerComponent
           imageSrc={"/speakers/bart_preneel.png"}
           name="Prof. Bart Preneel"
           position="Prof. for Cryptology & Cybersecurity @ KU Leuven, ex-president @ IACR"
-          company=""
+          // company=""
         />
         <SpeakerComponent
           imageSrc={"/speakers/yvonne_anne_pignolet.png"}
           name="Dr. Yvonne-Anne Pignolet"
           position="Director of Research @ DFINITY"
-          company=""
+          // company=""
         />
         <SpeakerComponent
           imageSrc={"/speakers/sebastian_banescu.png"}
           name="Dr. Sebastian Banescu"
           position="CEO @ Chainproof & Head of Quantstamp Germany"
-          company=""
+          // company=""
         />
       </div>
       <div className="w-full flex justify-center">

@@ -18,7 +18,7 @@ export type SidebarProps = {
   onClose: () => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+/*export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div className={classNames("fixed inset-0 z-[9999] transition-transform transform", {
       "translate-x-0": isOpen,
@@ -48,7 +48,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};
+};*/
 
 export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {
@@ -126,7 +126,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
           </div>
         </div>
       </header>
-      <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+      {/*<Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />*/}
     </>
     );
   },

@@ -17,7 +17,7 @@ export type SidebarProps = {
   onClose: () => void;
 };
 
-/*export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className={classNames(
@@ -60,7 +60,7 @@ export type SidebarProps = {
       </div>
     </div>
   );
-};*/
+};
 
 export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   (props, ref) => {
@@ -130,16 +130,15 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                   Join waitlist
                 </Link>
               </Text>
-            </nav>
-            <Text asChild className="sm:hidden">
-              <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
-                Join waitlist
-              </Link>
-            </Text>
+            </div>
+          </nav>
+          <div className="sm:hidden py-2 px-4">
+            <HamburgerMenuIcon height={"25"} width={"25"} onClick={() => setIsSidebarOpen(true)}/>
           </div>
-        </header>
-        <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
-      </>
+        </div>
+      </header>
+      <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+    </>
     );
   },
 );

@@ -11,7 +11,7 @@ export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> & {
   imageSrc: string | StaticImport;
   name: string;
   position: string;
-  company: string;
+  company?: string;
 };
 
 export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
@@ -40,7 +40,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
             {name}
           </Text>
           <Text textType={"paragraph"}>
-            {position}, {company}
+            {position}{company && <>, {company}</>}
           </Text>
         </div>
       </div>

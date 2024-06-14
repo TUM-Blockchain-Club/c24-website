@@ -2,6 +2,7 @@
 
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -52,9 +53,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
         <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
           <Text asChild>
-            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
-              Join waitlist
-            </Link>
+            <a href="https://www.eventbrite.de/e/tum-blockchain-conference-24-tickets-922315539607">
+              Buy Ticket
+            </a>
           </Text>
         </div>
       </div>
@@ -125,20 +126,25 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Text asChild>
                 <Link href="#sponsors">Previous Sponsors</Link>
               </Text>
-              <Text asChild>
-                <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
-                  Join waitlist
-                </Link>
-              </Text>
+              <div className="cta-border py-2 px-4">
+                <Text asChild>
+                  <a href="https://www.eventbrite.de/e/tum-blockchain-conference-24-tickets-922315539607">
+                    Buy Ticket
+                  </a>
+                </Text>
+              </div>
+            </nav>
+            <div className="sm:hidden py-2 px-4">
+              <HamburgerMenuIcon
+                height={"25"}
+                width={"25"}
+                onClick={() => setIsSidebarOpen(true)}
+              />
             </div>
-          </nav>
-          <div className="sm:hidden py-2 px-4">
-            <HamburgerMenuIcon height={"25"} width={"25"} onClick={() => setIsSidebarOpen(true)}/>
           </div>
-        </div>
-      </header>
-      <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
-    </>
+        </header>
+        <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+      </>
     );
   },
 );

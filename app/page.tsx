@@ -10,6 +10,7 @@ import { Button } from "./components/button";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
+import Tickets from "./sections/Tickets";
 import Video from "./sections/Video";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
               <Statistic />
               <Manifesto />
               <Speaker />
+              <Tickets />
               <Sponsors />
               <div className="w-full flex justify-center">
                 <Button buttonType={"primary"} asChild>

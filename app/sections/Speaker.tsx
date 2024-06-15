@@ -86,10 +86,25 @@ const Speaker = () => {
           // company=""
         />
       </div>
-      <div className="w-full flex justify-center">
-        <Button buttonType={"primary"} asChild>
-          <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
-        </Button>
+      <div className="md:flex space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+        <div>
+          <div className="w-full flex justify-center">
+            <Button buttonType={"primary"} asChild>
+              <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
+            </Button>
+          </div>
+        </div>
+        <div>
+          <div className="w-full flex justify-center">
+            <Button buttonType={"primary"} asChild>
+              <a
+                href={"https://www.tum-blockchain.com/conference2023/speakers"}
+              >
+                All speakers
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

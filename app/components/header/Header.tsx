@@ -40,7 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
         <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
           <Text asChild>
-            <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+            <Link href="https://tally.so/r/wAlAek">
               Join waitlist
             </Link>
           </Text>
@@ -115,7 +115,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             </Text>
             <div className="cta-border py-2 px-4">
               <Text asChild>
-                <Link href="#tally-open=meMOdl&tally-emoji-text=👋&tally-emoji-animation=wave">
+                <Link href="https://tally.so/r/wAlAek">
                   Join waitlist
                 </Link>
               </Text>

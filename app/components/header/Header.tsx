@@ -8,7 +8,6 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
-import { Button } from "@/app/components/button";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {

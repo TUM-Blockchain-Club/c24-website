@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/button";
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -7,7 +8,6 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
-import { Button } from "@/app/components/button";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {

@@ -7,6 +7,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { Button } from "@/app/components/button";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
@@ -38,13 +39,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link href="#sponsors">Previous Sponsors</Link>
           </Text>
         </nav>
-        <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
-          <Text asChild>
-            <Link href="https://tally.so/r/wAlAek">
-              Join waitlist
-            </Link>
-          </Text>
-        </div>
+        <Button className={"sm:hidden mt-8 mr-4"} buttonType={"cta"} data-tally-open="wAlAek" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="2000">
+            Join waitlist
+        </Button>
       </div>
     </div>
   );
@@ -113,13 +110,9 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             <Text asChild>
               <Link href="#sponsors">Previous Sponsors</Link>
             </Text>
-            <div className="cta-border py-2 px-4">
-              <Text asChild>
-                <Link href="https://tally.so/r/wAlAek">
-                  Join waitlist
-                </Link>
-              </Text>
-            </div>
+            <Button buttonType={"cta"} data-tally-open="wAlAek" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="2000">
+                Join waitlist
+            </Button>
           </nav>
           <div className="sm:hidden py-2 px-4">
             <HamburgerMenuIcon height={"25"} width={"25"} onClick={() => setIsSidebarOpen(true)}/>

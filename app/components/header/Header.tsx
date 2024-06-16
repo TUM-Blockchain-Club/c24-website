@@ -149,3 +149,11 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
   },
 );
 Header.displayName = "Header";
+
+/*
+
+<Button buttonType={"cta"} data-tally-open="wAlAek" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="2000">
+                Join waitlist
+            </Button>
+
+            */

@@ -7,6 +7,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
+import { Button } from "@/app/components/button";
 
 type HeaderElement = React.ElementRef<"header">;
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {
@@ -51,13 +52,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link href="#sponsors">Previous Sponsors</Link>
           </Text>
         </nav>
-        <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
-          <Text asChild>
-            <a href="https://tum-blockchain-conference-24.eventbrite.de/">
-              Buy Ticket
-            </a>
-          </Text>
-        </div>
+        <Button asChild className={"sm:hidden mt-8 mr-4"}>
+          <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+            Buy Ticket
+          </NextLink>
+        </Button>
       </div>
     </div>
   );
@@ -126,13 +125,11 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Text asChild>
                 <Link href="#sponsors">Previous Sponsors</Link>
               </Text>
-              <div className="cta-border py-2 px-4">
-                <Text asChild>
-                  <a href="https://tum-blockchain-conference-24.eventbrite.de/">
-                    Buy Ticket
-                  </a>
-                </Text>
-              </div>
+              <Button asChild buttonType={"cta"}>
+                <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+                  Buy Ticket
+                </NextLink>
+              </Button>
             </nav>
             <div className="sm:hidden py-2 px-4">
               <HamburgerMenuIcon

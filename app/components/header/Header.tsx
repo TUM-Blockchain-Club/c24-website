@@ -53,7 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
         <div className="cta-border sm:hidden py-2 px-4 mt-8 mr-4">
           <Text asChild>
-            <a href="https://www.eventbrite.de/e/tum-blockchain-conference-24-tickets-922315539607">
+            <a href="https://tum-blockchain-conference-24.eventbrite.de/">
               Buy Ticket
             </a>
           </Text>
@@ -128,7 +128,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>
               <div className="cta-border py-2 px-4">
                 <Text asChild>
-                  <a href="https://www.eventbrite.de/e/tum-blockchain-conference-24-tickets-922315539607">
+                  <a href="https://tum-blockchain-conference-24.eventbrite.de/">
                     Buy Ticket
                   </a>
                 </Text>

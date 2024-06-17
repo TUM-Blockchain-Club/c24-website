@@ -1,12 +1,16 @@
+import { Text } from "@/app/components/text";
+
 const Video = () => {
   return (
     <>
       <div className="relative w-full flex justify-end items-center overflow-visible">
         <div className="relative w-full mr-[4vh] max-w-[100vw] xl:max-w-[50vw] sm:max-w-[30vw] min-h-[10px] text-right">
           <p className="text-xs sm:text-base">
-            Knowledge Partner
+            <Text>Knowledge Partner</Text>
             <br />
-            <b>IEEE Blockchain</b>
+            <b>
+              <Text>IEEE Blockchain</Text>
+            </b>
           </p>
         </div>
       </div>

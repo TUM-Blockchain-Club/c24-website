@@ -48,12 +48,18 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
           <Text textType={"title"} className="mt-4">
             {price}€<br />
           </Text>
-          <Text textType={"small"} className="text-center mt-4">
+          <Text
+            textType={"small"}
+            className={
+              (ticketType == "student" ? "" : "hidden") + " text-center mt-4"
+            }
+          >
             Valid only with Student
             <br />
             ID (any university)
             <br />
           </Text>
+          <div className={ticketType == "student" ? "" : "mb-12"}></div>
         </div>
         <div
           className={

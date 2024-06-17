@@ -26,15 +26,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="relative md:mb-[20vh]  w-full flex justify-end items-center overflow-visible">
-        <div className="relative w-full max-w-[100vw] xl:max-w-[50vw] min-h-[10px] text-right">
-          <p className="text-xs sm:text-base">
-            Knowledge Partner
-            <br />
-            <b>IEEE Blockchain</b>
-          </p>
-        </div>
-      </div>
     </>
   );
 };

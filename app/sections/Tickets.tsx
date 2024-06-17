@@ -21,7 +21,7 @@ const Tickets = () => {
         <Button buttonType={"cta"} asChild>
           <a
             href={
-              "https://www.eventbrite.de/e/tum-blockchain-conference-24-tickets-922315539607"
+              "https://tum-blockchain-conference-24.eventbrite.de/"
             }
           >
             Buy Ticket

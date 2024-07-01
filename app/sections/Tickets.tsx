@@ -12,18 +12,14 @@ const Tickets = () => {
       </div>
       <div className="w-full flex justify-center">
         <div className="sm:flex mt-20 justify-center sm:space-x-10 space-y-10 sm:space-y-0 w-[175px] sm:w-full">
-          <Ticket price={5} ticketType={"student"} title="Student" />
-          <Ticket price={89} ticketType={"regular"} title="Regular" />
-          <Ticket price={399} ticketType={"vip"} title="VIP" />
+          <Ticket price={10} ticketType={"student"} title="Student" />
+          <Ticket price={129} ticketType={"regular"} title="Regular" />
+          <Ticket price={499} ticketType={"vip"} title="VIP" />
         </div>
       </div>
       <div className="w-full flex justify-center mt-20">
         <Button buttonType={"cta"} asChild>
-          <a
-            href={
-              "https://tum-blockchain-conference-24.eventbrite.de/"
-            }
-          >
+          <a href={"https://tum-blockchain-conference-24.eventbrite.de/"}>
             Buy Ticket
           </a>
         </Button>

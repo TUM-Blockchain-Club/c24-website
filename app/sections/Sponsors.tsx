@@ -8,16 +8,10 @@ const Sponsors = () => {
       id="sponsors"
     >
       <Text textType={"sub_hero"} className="text-gradient text-center">
-        Previous
-        <br className="sm:hidden" /> Sponsors
+        Sponsors
       </Text>
       <Text textType={"title"}>Gold</Text>
-      <div className="grid grid-cols-2 gap-4 sponsor-gold">
-        <Sponsor
-          alt="Hedera"
-          link="https://hedera.com/"
-          imageSrc={"/sponsors/hedera_logo.png"}
-        />
+      <div className="grid grid-cols-3 gap-4 sponsor-gold">
         <Sponsor
           alt="Dfinity"
           link="https://dfinity.org/"
@@ -29,17 +23,17 @@ const Sponsors = () => {
           imageSrc={"/sponsors/solana_logo.png"}
         />
         <Sponsor
-          alt="XRP Ledger"
-          link="https://www.xrpl-commons.org/"
-          imageSrc={"/sponsors/xrp_ledger_logo.png"}
+          alt="1Inch"
+          link="https://1inch.io"
+          imageSrc={"/sponsors/1inch_logo.png"}
         />
       </div>
       <Text textType={"title"}>Silver</Text>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sponsor-bronze">
         <Sponsor
-          alt="Arbitrum"
-          link="https://arbitrum.io/"
-          imageSrc={"/sponsors/arbitrum_logo.png"}
+          alt="XRP Ledger"
+          link="https://www.xrpl-commons.org/"
+          imageSrc={"/sponsors/xrp_ledger_logo.png"}
         />
         <Sponsor
           alt="Staking Facilities"
@@ -47,74 +41,42 @@ const Sponsors = () => {
           imageSrc={"/sponsors/staking_facilities_logo.png"}
         />
         <Sponsor
-          alt="Near Foundation"
-          link="https://near.org/"
-          imageSrc={"/sponsors/near_foundation_logo.png"}
-        />
-        <Sponsor
-          alt="Ammer WEB3 Ecosystem"
-          link="https://ammer.group/"
-          imageSrc={"/sponsors/ammer_logo.png"}
-        />
-        <Sponsor
-          alt="Aeternity Blockchain"
-          link="https://aeternity.com/"
-          imageSrc={"/sponsors/aeternity_logo.png"}
-        />
-        <Sponsor
-          alt="Metabrew"
-          link="https://www.metabrewsociety.com/en"
-          imageSrc={"/sponsors/metabrew_logo.png"}
+          alt="Arcium"
+          link="https://arcium.com"
+          imageSrc={"/sponsors/arcium_logo.png"}
         />
       </div>
       <Text textType={"title"}>Bronze</Text>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <Sponsor
           alt="Ethereum Ecosystem Support Program"
-          link="#"
+          link="https://ethereum.org/"
           imageSrc={"/sponsors/ethereum_esp_logo.png"}
         />
         <Sponsor
-          alt="Algorand"
-          link="#"
-          imageSrc={"/sponsors/algorand_logo.png"}
-        />
-        <Sponsor alt="Elusiv" link="#" imageSrc={"/sponsors/elusiv_logo.png"} />
-        <Sponsor
-          alt="Avalanche"
-          link="#"
-          imageSrc={"/sponsors/avalanche_logo.png"}
-        />
-        <Sponsor
-          alt="Holoride"
-          link="#"
-          imageSrc={"/sponsors/holoride_logo.png"}
-        />
-        <Sponsor
-          alt="Gateway.fm"
-          link="#"
-          imageSrc={"/sponsors/gateway_fm_logo.png"}
-        />
-        <Sponsor
-          alt="UnternehmerTUM"
-          link="#"
-          imageSrc={"/sponsors/unternehmertum_logo.png"}
-        />
-        <Sponsor
-          alt="UnternehmerTUM Venture Labs"
-          link="#"
-          imageSrc={"/sponsors/utum_venturelabs_logo.png"}
-        />
-        <Sponsor
           alt="Filecoin Foundation"
-          link="#"
+          link="https://fil.org"
           imageSrc={"/sponsors/filecoin_foundation_logo.png"}
         />
-        <Sponsor alt="Li.Fi" link="#" imageSrc={"/sponsors/li_fi_logo.png"} />
         <Sponsor
-          alt="Landeshauptsadt München"
-          link="#"
-          imageSrc={"/sponsors/lhs_munchen_logo.png"}
+          alt="API3"
+          link="https://api3.org"
+          imageSrc={"/sponsors/api3_logo.png"}
+        />
+        <Sponsor
+          alt="Lido"
+          link="https://lido.fi"
+          imageSrc={"/sponsors/lido_logo.png"}
+        />
+        <Sponsor
+          alt="Scroll"
+          link="https://scroll.io"
+          imageSrc={"/sponsors/scroll_logo.png"}
+        />
+        <Sponsor
+          alt="WM Datenservice"
+          link="https://www.wmdatenservice.com/en/"
+          imageSrc={"/sponsors/wm_datenservice_logo.jpg"}
         />
       </div>
     </section>

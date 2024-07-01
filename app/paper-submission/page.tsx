@@ -23,33 +23,41 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
-                Knowledge Partner: <b>IEEE Blockchain</b>
-              </Text>
-            </div>
-            <div className="mt-20">
-              <Text textType={"title"}>Important information</Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>Status: Open for Submissions</Text>
-            </div>
-            <div className="mt-2">
-              <Text textType={"paragraph"}>
-                Submission Deadline: July 31, 2024
+                <b>Status:</b> Open for Submissions
               </Text>
             </div>
             <div className="mt-2">
-              <Text textType={"paragraph"}>Conference: September 13, 2024</Text>
+              <Text textType={"paragraph"}>
+                <b>Paper Submission Deadline:</b> July 31, 2024
+              </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                Venue: Forum der Zukunft, Munich, Germany
+                <b>Notification of Acceptance:</b> August 14, 2024
+              </Text>
+            </div>
+            <div className="mt-2">
+              <Text textType={"paragraph"}>
+                <b>Camera-Ready Submission:</b> September 1, 2024
+              </Text>
+            </div>
+            <div className="mt-2">
+              <Text textType={"paragraph"}>
+                <b>Conference:</b> September 13, 2024
+              </Text>
+            </div>
+            <div className="mt-2">
+              <Text textType={"paragraph"}>
+                <b>Venue:</b> Forum der Zukunft, Munich, Germany
               </Text>
             </div>
             <Button buttonType={"cta"} className="mt-6">
               Submit Paper
             </Button>
             <div className="mt-20">
-              <Text textType={"title"}>Description</Text>
+              <Text textType={"title"} className="text-gradient">
+                Description
+              </Text>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
@@ -72,7 +80,9 @@ export default function PaperSubmission() {
               </Text>
             </div>
             <div className="mt-20">
-              <Text textType={"title"}>Call for Papers</Text>
+              <Text textType={"title"} className="text-gradient">
+                Call for Papers
+              </Text>
             </div>
             <div className="mt-6">
               <Text textType={"sub_title"}>Topics of Interest</Text>
@@ -82,81 +92,87 @@ export default function PaperSubmission() {
                 Topics of interest include, but are not limited to:
               </Text>
             </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Network Architecture & Consensus Mechanisms</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>Peer-to-Peer (P2P) Protocols</li>
-                  <li>Distributed Network Resilience and Fault Tolerance</li>
-                  <li>Security Analysis of Blockchain Protocols</li>
-                  <li>Consensus Algorithm Design and Optimization</li>
-                </ul>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <Text textType={"paragraph"}>
+                  <b>Network Architecture & Consensus Mechanisms</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>Peer-to-Peer (P2P) Protocols</li>
+                    <li>Distributed Network Resilience and Fault Tolerance</li>
+                    <li>Security Analysis of Blockchain Protocols</li>
+                    <li>Consensus Algorithm Design and Optimization</li>
+                  </ul>
+                </Text>
+              </div>
+              <div className="mt-6">
+                <Text textType={"paragraph"}>
+                  <b>Cryptography</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>Zero-Knowledge Cryptography</li>
+                    <li>Secure Multi-Party Computation</li>
+                    <li>Fully Homomorphic Encryption</li>
+                    <li>Post-Quantum Cryptography</li>
+                  </ul>
+                </Text>
+              </div>
+              <div className="mt-6">
+                <Text textType={"paragraph"}>
+                  <b>Hardware</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>Hardware Secure Modules (HSMs)</li>
+                    <li>Trusted Execution Environments (TEEs)</li>
+                    <li>Hardware Acceleration for Cryptography</li>
+                    <li>Blockchain Infrastructure</li>
+                  </ul>
+                </Text>
+              </div>
+              <div className="mt-6">
+                <Text textType={"paragraph"}>
+                  <b>Security and Formal Methods</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>
+                      Formal Verification of Cryptography and Blockchain
+                      Protocols
+                    </li>
+                    <li>Security Testing Methodologies</li>
+                    <li>Vulnerability Analysis and Mitigation</li>
+                    <li>Secure Smart Contract Development and Verification</li>
+                  </ul>
+                </Text>
+              </div>
+              <div className="mt-6">
+                <Text textType={"paragraph"}>
+                  <b>Cryptoeconomics</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>
+                      Game Theory and Mechanism Design for Decentralized
+                      Protocols
+                    </li>
+                    <li>Maximally Extractable Value (MEV)</li>
+                    <li>Economic Analysis of Decentralized Protocols</li>
+                    <li>Governance Models and Economic Impact</li>
+                  </ul>
+                </Text>
+              </div>
+              <div className="mt-6">
+                <Text textType={"paragraph"}>
+                  <b>Advanced Applications</b>
+                  <ul style={{ listStyleType: "circle" }} className="pl-5">
+                    <li>Privacy Protocols</li>
+                    <li>Federated Machine Learning</li>
+                    <li>Self-Sovereign Digital Identities</li>
+                    <li>Voting</li>
+                    <li>Oracles</li>
+                  </ul>
+                </Text>
+              </div>
+            </div>
+            <div className="mt-20">
+              <Text textType={"title"} className="text-gradient">
+                Submission Guidelines
               </Text>
             </div>
             <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Cryptography</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>Zero-Knowledge Cryptography</li>
-                  <li>Secure Multi-Party Computation</li>
-                  <li>Fully Homomorphic Encryption</li>
-                  <li>Post-Quantum Cryptography</li>
-                </ul>
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Hardware</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>Hardware Secure Modules (HSMs)</li>
-                  <li>Trusted Execution Environments (TEEs)</li>
-                  <li>Hardware Acceleration for Cryptography</li>
-                  <li>Blockchain Infrastructure</li>
-                </ul>
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Security and Formal Methods</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>
-                    Formal Verification of Cryptography and Blockchain Protocols
-                  </li>
-                  <li>Security Testing Methodologies</li>
-                  <li>Vulnerability Analysis and Mitigation</li>
-                  <li>Secure Smart Contract Development and Verification</li>
-                </ul>
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Cryptoeconomics</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>
-                    Game Theory and Mechanism Design for Decentralized Protocols
-                  </li>
-                  <li>Maximally Extractable Value (MEV)</li>
-                  <li>Economic Analysis of Decentralized Protocols</li>
-                  <li>Governance Models and Economic Impact</li>
-                </ul>
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"paragraph"}>
-                <b>Advanced Applications</b>
-                <ul style={{ listStyleType: "circle" }} className="pl-5">
-                  <li>Privacy Protocols</li>
-                  <li>Federated Machine Learning</li>
-                  <li>Self-Sovereign Digital Identities</li>
-                  <li>Voting</li>
-                  <li>Oracles</li>
-                </ul>
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"sub_title"}>Submission Guidelines</Text>
-            </div>
-            <div className="mt-2">
               <Text textType={"paragraph"}>
                 <ul
                   style={{ listStyleType: "decimal" }}
@@ -164,8 +180,15 @@ export default function PaperSubmission() {
                 >
                   <li>
                     <b>Paper Format:</b> Papers must be submitted in PDF format
-                    and follow the [IEEE conference
-                    template](https://www.ieee.org/conferences/publishing/templates.html).
+                    and follow the{" "}
+                    <a
+                      className="underline"
+                      href="https://www.ieee.org/conferences/publishing/templates.html"
+                      target="_blank"
+                    >
+                      <b>IEEE conference template</b>
+                    </a>
+                    .
                   </li>
                   <li>
                     <b>Length:</b> Full papers should be between 6-8 pages,
@@ -184,7 +207,7 @@ export default function PaperSubmission() {
                   </li>
                   <li>
                     <b>Submission System:</b> All papers must be submitted
-                    through our online submission system: Submit Paper
+                    through our online submission system.
                   </li>
                 </ul>
               </Text>
@@ -192,19 +215,20 @@ export default function PaperSubmission() {
             <Button buttonType={"cta"} className="mt-6">
               Submit Paper
             </Button>
-            <div className="mt-6">
-              <b>Important Dates:</b>
-              <ul style={{ listStyleType: "circle" }} className="pl-5">
-                <li>
-                  <b>Paper Submission Deadline:</b> July 31, 2024
-                </li>
-                <li>
-                  <b>Notification of Acceptance:</b> August 14, 2024
-                </li>
-                <li>
-                  <b>Camera-Ready Submission:</b> September 1, 2024
-                </li>
-              </ul>
+            <div className="mt-8">
+              <Text textType={"paragraph"}>
+                <b>Paper Submission Deadline:</b> July 31, 2024
+              </Text>
+            </div>
+            <div className="mt-2">
+              <Text textType={"paragraph"}>
+                <b>Notification of Acceptance:</b> August 14, 2024
+              </Text>
+            </div>
+            <div className="mt-2">
+              <Text textType={"paragraph"}>
+                <b>Camera-Ready Submission:</b> September 1, 2024
+              </Text>
             </div>
             <div className="mt-6">
               <Text textType={"sub_title"}>Review Process and Proceedings</Text>

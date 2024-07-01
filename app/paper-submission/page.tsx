@@ -51,9 +51,6 @@ export default function PaperSubmission() {
                 <b>Venue:</b> Forum der Zukunft, Munich, Germany
               </Text>
             </div>
-            <Button buttonType={"cta"} className="mt-6">
-              Submit Paper
-            </Button>
             <div className="mt-20">
               <Text textType={"title"} className="text-gradient">
                 Description
@@ -220,10 +217,13 @@ export default function PaperSubmission() {
                 <b>Paper Submission Deadline:</b> July 31, 2024
               </Text>
             </div>
-            <div className="mt-2">
+            <div className="mt-6">
               <Text textType={"paragraph"}>
                 <b>Notification of Acceptance:</b> August 14, 2024
               </Text>
+            </div>
+            <div className="mt-6">
+              <Text textType={"sub_title"}>Submission Guidelines</Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>

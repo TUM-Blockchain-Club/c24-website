@@ -101,7 +101,7 @@ export default function PaperSubmission() {
                   </ul>
                 </Text>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 lg:mt-0">
                 <Text textType={"paragraph"}>
                   <b>Cryptography</b>
                   <ul style={{ listStyleType: "circle" }} className="pl-5">

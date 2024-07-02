@@ -20,9 +20,10 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
     return (
       <footer
         {...restProps}
+        id={"footer"}
         className={classNames(
           className,
-          "flex z-10 justify-center items-center justify-items-center",
+          "flex z-10 justify-center items-center justify-items-center bg-gradient-to-b from-black from-10% to-[rgba(0,0,0,0.66)] to-80%",
         )}
         ref={ref}
       >
@@ -121,28 +122,6 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                   </Link>
                 </Text>
               </div>
-            </div>
-          </div>
-          <div className={"self-end block max-w-7xl w-full h-[420px] lg:h-fit"}>
-            <div className={"absolute bottom-0 z-10 right-0"}>
-              <Image
-                src={munich}
-                alt={"Munich"}
-                height={420}
-                className={"mix-blend-screen"}
-              />
-            </div>
-            <div
-              className={
-                "lg:absolute bottom-0 z-10 right-0 translate-x-[100%] -scale-x-[100%] hidden xl:block"
-              }
-            >
-              <Image
-                src={munich}
-                alt={"Munich"}
-                height={420}
-                className={"mix-blend-screen"}
-              />
             </div>
           </div>
         </div>

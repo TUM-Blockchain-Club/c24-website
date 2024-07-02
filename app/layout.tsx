@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Inter, Montserrat, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import classNames from "classnames";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const raleway = Raleway({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
@@ -36,6 +36,7 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.className} bg-black text-white`}>
         {children}
+        <SpeedInsights />
       </body>
       <Script
         defer

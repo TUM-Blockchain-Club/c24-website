@@ -2,6 +2,7 @@
 
 import { Footer } from "@/app/components/footer/Footer";
 import { Header } from "@/app/components/header";
+import Image from "next/image";
 import { Button } from "../components/button";
 import { Container } from "../components/container";
 import { Text } from "../components/text";
@@ -10,16 +11,36 @@ export default function PaperSubmission() {
   return (
     <div className={"overflow-x-hidden"}>
       <Header />
-      <main className={"w-full pt-[25px] lg:pt-0 z-20 px-[225px] pb-40"}>
+      <main className={"w-full pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"}>
         <Container>
-          <div className={"mt-[20vh] z-10"}>
-            <div>
+          <div className={"mt-[100px] md:mt-[20vh] z-10"}>
+            <div className="lg:flex items-center">
               <Text
                 textType={"sub_hero"}
                 className="w-full text-gradient text-left"
               >
-                Paper Submission
+                Academic
+                <br className="md:hidden" /> track
               </Text>
+              <div className="flex mt-8 lg:mt-0 space-x-8 max-w-[200px] md:max-w-full">
+                <div className="h-full">
+                  <Image
+                    src={"/papers/tum_logo.png"}
+                    alt={"TUM Logo"}
+                    width={125}
+                    height={125}
+                  />
+                </div>
+                <div className="h-full">
+                  <Image
+                    className=""
+                    src={"/papers/ieee_logo.png"}
+                    alt={"TUM Logo"}
+                    width={125}
+                    height={125}
+                  />
+                </div>
+              </div>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
@@ -51,6 +72,9 @@ export default function PaperSubmission() {
                 <b>Venue:</b> Forum der Zukunft, Munich, Germany
               </Text>
             </div>
+            <Button buttonType={"cta"} className="mt-6">
+              Submit Abstract
+            </Button>
             <div className="mt-20">
               <Text textType={"title"} className="text-gradient">
                 Description
@@ -210,7 +234,7 @@ export default function PaperSubmission() {
               </Text>
             </div>
             <Button buttonType={"cta"} className="mt-6">
-              Submit Paper
+              Submit Abstract
             </Button>
             <div className="mt-8">
               <Text textType={"paragraph"}>

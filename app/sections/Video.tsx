@@ -18,6 +18,7 @@ const Video = () => {
         <div className="w-full flex justify-center max-w-[275px] sm:max-w-[500px] xl:max-w-full">
           <video
             className="glow cta-border"
+            poster="/hero/thumbnail.png"
             controls
             id="vid-hero"
             width={850}

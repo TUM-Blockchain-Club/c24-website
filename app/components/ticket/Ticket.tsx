@@ -41,10 +41,6 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
             {title}
             <br />
           </Text>
-          <Text textType={"paragraph"} className="text-center">
-            Early Bird
-            <br />
-          </Text>
           <Text textType={"title"} className="mt-4">
             {price}€<br />
           </Text>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { FAQ, FAQProps } from "./grantFAQ";
+import { FAQ, FAQProps } from "./FAQ";
 import { faqItems } from "../../constants/FAQData";
 
 const meta: Meta<typeof FAQ> = {
@@ -18,5 +18,6 @@ type Story = StoryObj<typeof FAQ>;
 export const Default: Story = {
   args: {
     items: faqItems,
+    contactEmail: "conference@tum-blockchain.com",
   },
 };

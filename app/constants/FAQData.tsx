@@ -11,8 +11,16 @@ export const faqItems = [
   },
   {
     question: "How can I apply for the travel grant?",
-    answer:
-      "You can apply by submitting an online application form, which includes a motivation statement, proof of enrollment, and any documentation demonstrating financial need. All applications must be submitted by 11:59 August 4, 2024.",
+    answer: (
+      <>
+        <br />
+        You can apply by submitting an online application form, which includes a
+        motivation statement, proof of enrollment, and any documentation
+        demonstrating financial need.
+        <br />
+        All applications must be submitted by 11:59 August 4, 2024.
+      </>
+    ),
   },
   {
     question: "What is the deadline for applying for the travel grant?",
@@ -26,13 +34,17 @@ export const faqItems = [
   },
   {
     question: "What expenses are covered by the travel grant?",
-    answer: `The travel grant provides specific amounts based on the location of the student's university, verified through a student ID. The grants are categorised as follows:
-
-        Category A**: Germany and neighboring countries - 100 EUR
-
-        Category B**: Europe except Category A - 200 EUR
-
-        Category C**: Outside Europe - 500 EUR`,
+    answer: (
+      <>
+        The travel grant provides specific amounts based on the location of the
+        student's university, verified through a student ID. The grants are
+        categorised as follows:
+        <br />
+        <br /> Category A: Germany and neighboring countries - 100 EUR
+        <br /> Category B: Europe except Category A - 200 EUR
+        <br /> Category C: Outside Europe - 500 EUR
+      </>
+    ),
   },
   {
     question: "When will I receive the reimbursement?",

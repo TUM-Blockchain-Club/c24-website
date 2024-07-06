@@ -54,6 +54,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Text asChild>
             <Link href="#grants">Student Grants</Link>
           </Text>
+          <Text asChild>
+            <Link href="#faq">FAQ</Link>
+          </Text>
+          <Text asChild>
+            <Link href="#faq">FAQ</Link>
+          </Text>
         </nav>
         <Button asChild className={"sm:hidden mt-8 mr-4"}>
           <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
@@ -130,6 +136,9 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>
               <Text asChild>
                 <Link href="#grants">Student Grants</Link>
+              </Text>
+              <Text asChild>
+                <Link href="#faq">FAQ</Link>
               </Text>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">

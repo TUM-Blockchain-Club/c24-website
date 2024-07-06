@@ -12,6 +12,7 @@ import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
 import Tickets from "./sections/Tickets";
 import Video from "./sections/Video";
+import StudentGrants from "./sections/StudentGrants";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
               <Speaker />
               <Tickets />
               <Sponsors />
+              <StudentGrants />
               <div className="w-full flex justify-center">
                 <Button buttonType={"primary"} asChild>
                   <a

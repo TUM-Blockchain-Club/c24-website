@@ -7,15 +7,14 @@ import { Header } from "@/app/components/header";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
 import { Button } from "./components/button";
+import FAQSection from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
 import Tickets from "./sections/Tickets";
-import Video from "./sections/Video";
-import StudentGrants from "./sections/StudentGrants";
-import FAQSection from "./sections/FAQ";
 import Tracks from "./sections/Tracks";
 import Venue from "./sections/Venue";
+import Video from "./sections/Video";
 
 export default function Home() {
   return (
@@ -34,7 +33,7 @@ export default function Home() {
               <Tracks />
               <Venue />
               <Tickets />
-              <StudentGrants />
+              {/*<StudentGrants />*/}
               <Sponsors />
 
               <div className="w-full flex justify-center">

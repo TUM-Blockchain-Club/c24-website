@@ -134,9 +134,9 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Text asChild>
                 <Link href="#sponsors">Sponsors</Link>
               </Text>
-              <Text asChild>
+              {/*<Text asChild>
                 <Link href="#grants">Student Grants</Link>
-              </Text>
+              </Text>*/}
               <Text asChild>
                 <Link href="#faq">FAQ</Link>
               </Text>

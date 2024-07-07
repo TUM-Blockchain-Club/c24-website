@@ -33,7 +33,7 @@ export const Track = React.forwardRef<TrackElement, TrackProps>(
         {...restProps}
       >
         <Image
-          className={"object-contain mx-auto md:mx-0"}
+          className={"object-contain mx-auto"}
           src={imageSrc}
           alt={imageAlt}
           width={dimension}

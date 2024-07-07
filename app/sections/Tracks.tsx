@@ -11,12 +11,14 @@ const Tracks = () => {
       </Text>
       <div className="md:flex justify-center md:gap-x-8 mt-20">
         <Track
+          imageAlt="hat"
           imageSrc={trackItems[0].img}
           title={trackItems[0].title}
           desc={trackItems[0].description}
           dimension={70}
         />
         <Track
+          imageAlt="globe"
           className="mt-10 md:mt-0"
           imageSrc={trackItems[1].img}
           title={trackItems[1].title}
@@ -24,6 +26,7 @@ const Tracks = () => {
           dimension={60}
         />
         <Track
+          imageAlt="lab"
           className="mt-10 md:mt-0"
           imageSrc={trackItems[2].img}
           title={trackItems[2].title}
@@ -33,6 +36,7 @@ const Tracks = () => {
       </div>
       <div className="md:flex justify-center md:gap-x-8 md:mt-20">
         <Track
+          imageAlt="paragraph"
           className="mt-10 md:mt-0"
           imageSrc={trackItems[3].img}
           title={trackItems[3].title}
@@ -40,6 +44,7 @@ const Tracks = () => {
           dimension={35}
         />
         <Track
+          imageAlt="objects"
           className="mt-10 md:mt-0"
           imageSrc={trackItems[4].img}
           title={trackItems[4].title}

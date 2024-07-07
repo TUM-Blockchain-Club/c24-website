@@ -66,6 +66,6 @@ export const faqItems = [
     question:
       "What should I do if I have more questions about the travel grant?",
     answer:
-      "If you have any additional questions, please contact the TUM Blockchain Conference organizing committee at [email address] or [phone number].",
+      "If you have any additional questions, please contact the TUM Blockchain Conference organizing committee at conference@tum-blockchain.com.",
   },
 ];

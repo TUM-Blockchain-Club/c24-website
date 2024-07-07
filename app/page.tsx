@@ -46,7 +46,7 @@ export default function Home() {
                   </a>
                 </Button>
               </div>
-              {/*<FAQSection />*/}
+              {/*<FAQSection />**/}
             </div>
           </div>
         </Container>

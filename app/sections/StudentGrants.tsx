@@ -37,7 +37,7 @@ const StudentGrants = () => {
         <Button buttonType={"cta"} asChild>
           <a
             href={
-              "https://apply.tum-blockchain.com/student-grant-conference-24"
+              "https://apply.tum-blockchain.com/student-travel-grant-conference-24"
             }
           >
             Apply for Travel Grant

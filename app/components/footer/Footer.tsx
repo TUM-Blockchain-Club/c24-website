@@ -118,7 +118,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                 </Text>
                 <Text asChild>
                   <Link href={"https://www.tum-blockchain.com/imprint"}>
-                    Impressum
+                    Imprint
                   </Link>
                 </Text>
               </div>

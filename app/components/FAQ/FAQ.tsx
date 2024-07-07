@@ -51,7 +51,11 @@ export const FAQ: React.FC<FAQProps> = ({ items, contactEmail }) => {
               </button>
               {openIndex === index && (
                 <div className="text-gray-400 mt-2 text-sm transition-all duration-300 ease-in-out overflow-auto max-h-60">
-                  {typeof item.answer === "string" ? item.answer : item.answer}
+                  {typeof item.answer === "string"
+                    ? item.answer
+                    : React.cloneElement(item.answer as React.ReactElement, {
+                        className: "text-gray-400 text-sm",
+                      })}
                 </div>
               )}
             </div>

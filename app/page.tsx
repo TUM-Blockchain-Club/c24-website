@@ -7,7 +7,6 @@ import { Header } from "@/app/components/header";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
 import { Button } from "./components/button";
-import FAQSection from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
@@ -47,7 +46,7 @@ export default function Home() {
                   </a>
                 </Button>
               </div>
-              <FAQSection />
+              {/*<FAQSection />*/}
             </div>
           </div>
         </Container>

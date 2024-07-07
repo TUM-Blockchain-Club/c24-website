@@ -14,7 +14,10 @@ const StudentGrants = () => {
         <br className="sm:hidden" /> Grants
       </Text>
       <div className="w-full flex flex-col items-center">
-        <Text textType={"paragraph"} className="text-left sm:max-w-[42rem]">
+        <Text
+          textType={"paragraph"}
+          className="text-left max-w-[250px] sm:max-w-[42rem]"
+        >
           <br />
           <br />
           We are committed to creating an inclusive environment where everyone

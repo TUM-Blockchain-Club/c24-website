@@ -127,3 +127,16 @@ body {
     theme("colors.tbc-blue")
   );
 }
+
+.line-anim {
+  animation: lineAnim 4s linear infinite;
+}
+
+@keyframes lineAnim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

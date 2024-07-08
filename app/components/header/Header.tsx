@@ -52,7 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link href="#sponsors">Sponsors</Link>
           </Text>
           <Text asChild>
-            <Link href="/paper-submission">Abstracts</Link>
+            <Link href="/academic-track">Abstracts Submission</Link>
           </Text>
           {/*<Text asChild>
             <Link href="#grants">Student Grants</Link>

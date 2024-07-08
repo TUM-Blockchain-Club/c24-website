@@ -6,7 +6,8 @@ import { Footer } from "@/app/components/footer/Footer";
 import { Header } from "@/app/components/header";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
-import { Button } from "./components/button";
+import { Link } from "./components/link";
+import { Text } from "./components/text";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
@@ -36,15 +37,26 @@ export default function Home() {
               <Sponsors />
 
               <div className="w-full flex justify-center">
-                <Button buttonType={"primary"} asChild>
-                  <a
-                    href={"https://www.tum-blockchain.com/conference2023"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Text className="border border-white px-6 py-4">
+                  <Link href={"https://www.tum-blockchain.com/conference2023"}>
                     Throwback 2023
-                  </a>
-                </Button>
+                  </Link>
+                </Text>
+              </div>
+              <div className="w-full flex justify-center">
+                <div>
+                  <Text textType={"sub_title"} as="p">
+                    Call for extended abstract
+                  </Text>
+                  <div className="w-full flex justify-center">
+                    <Text
+                      className="inline-block mt-6 border border-white px-8 py-4"
+                      as="p"
+                    >
+                      <Link href="/paper-submission">View</Link>
+                    </Text>
+                  </div>
+                </div>
               </div>
               {/*<FAQSection />**/}
             </div>

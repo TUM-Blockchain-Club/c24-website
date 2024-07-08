@@ -139,7 +139,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               </Text>*/}
               <Text asChild>
                 <Link href="#faq">FAQ</Link>
-              </Text>
+              </Text>*/}
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Buy Ticket

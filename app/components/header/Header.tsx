@@ -138,7 +138,11 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 <Link href="#sponsors">Sponsors</Link>
               </Text>
               <Text asChild>
-                <Link href="/paper-submission">Abstracts</Link>
+                <Link href="/academic-track" className="text-center">
+                  Abstracts
+                  <br />
+                  Submission
+                </Link>
               </Text>
               {/*<Text asChild>
                 <Link href="#grants">Student Grants</Link>

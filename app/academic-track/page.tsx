@@ -14,36 +14,29 @@ export default function PaperSubmission() {
       <Header />
       <main className={"w-full pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"}>
         <Container className="flex justify-center">
-          <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-[1300px]"}>
+          <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
             <div className="lg:flex items-center">
-              <Text
-                textType={"sub_hero"}
-                className="w-full text-gradient text-left"
-              >
-                Call for
-                <br className="md:hidden" /> extended abstract
+              <Text textType={"sub_hero"} className="text-gradient text-left">
+                Academic Track
               </Text>
+              <div className="flex-grow" />
               <div className="flex mt-8 lg:mt-0 space-x-8 max-w-[200px] md:max-w-full">
                 <div className="h-full">
                   <Image
                     src={"/papers/tum_logo.png"}
                     alt={"TUM Logo"}
-                    width={125}
-                    height={125}
-                  />
-                </div>
-                <div className="h-full">
-                  <Image
-                    className=""
-                    src={"/papers/ieee_logo.png"}
-                    alt={"TUM Logo"}
-                    width={125}
-                    height={125}
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
+              <Text textType={"paragraph"}>
+                Knowledge Partner: <b>IEEE Blockchain</b>
+              </Text>
+            </div>
+            <div className="mt-12">
               <Text textType={"paragraph"}>
                 <b>Status:</b> Open for Submissions
               </Text>
@@ -112,7 +105,7 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-20">
               <Text textType={"title"} className="text-gradient">
-                Call for Papers
+                Call for Extended Abstracts
               </Text>
             </div>
             <div className="mt-6">
@@ -198,10 +191,8 @@ export default function PaperSubmission() {
                 </Text>
               </div>
             </div>
-            <div className="mt-20">
-              <Text textType={"title"} className="text-gradient">
-                Submission Guidelines
-              </Text>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Submission Guidelines</Text>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
@@ -221,14 +212,7 @@ export default function PaperSubmission() {
                   </li>
                   <li>
                     <b>Submission System:</b> All papers must be submitted
-                    through our{" "}
-                    <a
-                      className="underline"
-                      href="https://apply.tum-blockchain.com/conference24-abstract-submission"
-                      target="_blank"
-                    >
-                      online submission system.
-                    </a>
+                    through our online submission system.
                   </li>
                 </ul>
               </Text>
@@ -242,10 +226,8 @@ export default function PaperSubmission() {
                 Submit Abstract
               </Button>
             </Link>
-            <div className="mt-20">
-              <Text textType={"title"} className="text-gradient">
-                Review Process and Proceedings
-              </Text>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Review Process and Proceedings</Text>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
@@ -254,8 +236,8 @@ export default function PaperSubmission() {
                 their work to IEEE Blockchain Technical Briefs.
               </Text>
             </div>
-            <div className="mt-20">
-              <Text textType={"title"} className="text-gradient">
+            <div className="mt-12">
+              <Text textType={"sub_title"}>
                 On-Site Presentation Guidelines
               </Text>
             </div>
@@ -288,7 +270,7 @@ export default function PaperSubmission() {
                 Organization
               </Text>
             </div>
-            <div className="mt-20">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Program Chairs</Text>
             </div>
             <div className="mt-6">
@@ -304,7 +286,7 @@ export default function PaperSubmission() {
                 </ul>
               </Text>
             </div>
-            <div className="mt-20">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Program Committee</Text>
             </div>
             <div className="mt-6">
@@ -319,7 +301,7 @@ export default function PaperSubmission() {
                 </ul>
               </Text>
             </div>
-            <div className="mt-20">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Organizing Committee</Text>
             </div>
             <div className="mt-6">
@@ -336,13 +318,20 @@ export default function PaperSubmission() {
                 </ul>
               </Text>
             </div>
-            <div className="mt-20">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Contact</Text>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
                 For any inquiries regarding the poster presentation, reach out
-                to academic-track@tum-blockchain.com
+                to{" "}
+                <a
+                  href="mailto:academic-track@tum-blockchain.com"
+                  className="underline"
+                >
+                  academic-track@tum-blockchain.com
+                </a>
+                .
               </Text>
             </div>
           </div>

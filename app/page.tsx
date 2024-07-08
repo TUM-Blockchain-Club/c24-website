@@ -43,21 +43,6 @@ export default function Home() {
                   </Link>
                 </Text>
               </div>
-              <div className="w-full flex justify-center">
-                <div>
-                  <Text textType={"sub_title"} as="p">
-                    Call for extended abstract
-                  </Text>
-                  <div className="w-full flex justify-center">
-                    <Text
-                      className="inline-block mt-6 border border-white px-8 py-4"
-                      as="p"
-                    >
-                      <Link href="/paper-submission">View</Link>
-                    </Text>
-                  </div>
-                </div>
-              </div>
               {/*<FAQSection />**/}
             </div>
           </div>

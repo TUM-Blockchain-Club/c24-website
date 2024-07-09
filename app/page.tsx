@@ -15,6 +15,7 @@ import Tickets from "./sections/Tickets";
 import Tracks from "./sections/Tracks";
 import Venue from "./sections/Venue";
 import Video from "./sections/Video";
+import AcademicTrack from "./sections/AcademicTrack";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
               <Statistic />
               <Manifesto />
               <Speaker />
+              <AcademicTrack />
               <Tracks />
               <Venue />
               <Tickets />

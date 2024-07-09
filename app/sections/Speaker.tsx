@@ -105,32 +105,6 @@ const Speaker = () => {
           </div>
         </div>
       </div>
-      <div className={"w-full flex flex-col gap-8 lg:gap-12 px-2 lg:px-0"}>
-        <div className={"w-full flex justify-center"}>
-          <Text textType={"sub_title"} className="">
-            Academic Track
-          </Text>
-        </div>
-        <div className="w-full flex justify-center">
-          <Text as={"p"} className="text-left sm:max-w-[42rem]">
-            We are delighted to announce the Call for Extended Abstracts for the
-            academic track at the 2024 TUM Blockchain Conference. This track is
-            part of the research track and hosted in collaboration with the TUM
-            Chair of Network Architectures and Services and IEEE Blockchain as a
-            Knowledge partner.
-            <br />
-            <br />
-            We invite researchers, academics, and industry professionals to
-            present their latest work in the topics related to the Science of
-            Blockchains.
-          </Text>
-        </div>
-        <div className="w-full flex justify-center">
-          <Button buttonType={"cta"} asChild>
-            <a href={"/academic-track"}>Learn More</a>
-          </Button>
-        </div>
-      </div>
     </section>
   );
 };

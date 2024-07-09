@@ -81,7 +81,7 @@ export default function PaperSubmission() {
                 Description
               </Text>
             </div>
-            <div className="mt-6">
+            <div className="mt-12">
               <Text textType={"paragraph"}>
                 We are delighted to announce the Call for Extended Abstracts for
                 the academic track at the 2024 TUM Blockchain Conference. The
@@ -108,7 +108,7 @@ export default function PaperSubmission() {
                 Call for Extended Abstracts
               </Text>
             </div>
-            <div className="mt-6">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Topics of Interest</Text>
             </div>
             <div className="mt-6">

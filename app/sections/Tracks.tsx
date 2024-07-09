@@ -23,7 +23,7 @@ const Tracks = () => {
           imageSrc={trackItems[1].img}
           title={trackItems[1].title}
           desc={trackItems[1].description}
-          dimension={60}
+          dimension={70}
         />
         <Track
           imageAlt="lab"
@@ -31,7 +31,7 @@ const Tracks = () => {
           imageSrc={trackItems[2].img}
           title={trackItems[2].title}
           desc={trackItems[2].description}
-          dimension={45}
+          dimension={70}
         />
       </div>
       <div className="md:flex justify-center md:gap-x-8 md:mt-20">
@@ -41,7 +41,7 @@ const Tracks = () => {
           imageSrc={trackItems[3].img}
           title={trackItems[3].title}
           desc={trackItems[3].description}
-          dimension={35}
+          dimension={70}
         />
         <Track
           imageAlt="objects"
@@ -49,7 +49,7 @@ const Tracks = () => {
           imageSrc={trackItems[4].img}
           title={trackItems[4].title}
           desc={trackItems[4].description}
-          dimension={60}
+          dimension={70}
         />
       </div>
     </section>

@@ -16,6 +16,7 @@ import Tracks from "./sections/Tracks";
 import Venue from "./sections/Venue";
 import Video from "./sections/Video";
 import AcademicTrack from "./sections/AcademicTrack";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -37,7 +38,19 @@ export default function Home() {
               <Tickets />
               {/*<StudentGrants />*/}
               <Sponsors />
-
+              <Text className="w-full text-center" textType={"sub_title"}>
+                Knowledge Partner
+              </Text>
+              <div className="w-full flex justify-center mt-[-150px]">
+                <div className="relative w-[150px] h-[200px]">
+                  <Image
+                    alt="IEEE Blockchain"
+                    src="/papers/ieee_logo.png"
+                    fill={true}
+                    style={{ objectFit: "contain" }}
+                  ></Image>
+                </div>
+              </div>
               <div className="w-full flex justify-center">
                 <Text className="border border-white px-6 py-4">
                   <Link href={"https://www.tum-blockchain.com/conference2023"}>

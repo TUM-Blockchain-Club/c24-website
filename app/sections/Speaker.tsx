@@ -11,7 +11,11 @@ const Speaker = () => {
       <Text textType={"sub_hero"} className="text-gradient text-center">
         Speakers
       </Text>
-      <div className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6"}>
+      <div
+        className={
+          "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6"
+        }
+      >
         <SpeakerComponent
           imageSrc={"/speakers/kostas_chalkias.png"}
           name="Kostas Chalkias"

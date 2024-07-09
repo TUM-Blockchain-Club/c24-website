@@ -22,7 +22,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
       <div
         className={classNames(
           className,
-          "flex w-[120px] md:w-[200px] min-h-[160px] md:min-h-[300px] flex-col gap-4 items-start shrink-0",
+          "flex w-[150px] xs:w-[180px] sm:w-[200px] min-h-[200px] xs:min-h-[270px] sm:min-h-[300px] flex-col gap-4 items-start shrink-0",
         )}
         ref={ref}
         {...restProps}
@@ -40,7 +40,8 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
             {name}
           </Text>
           <Text textType={"paragraph"}>
-            {position}{company && <>, {company}</>}
+            {position}
+            {company && <>, {company}</>}
           </Text>
         </div>
       </div>

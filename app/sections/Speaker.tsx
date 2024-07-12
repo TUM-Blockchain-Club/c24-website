@@ -29,7 +29,7 @@ const Speaker = async () => {
       <div className="md:flex space-x-0 md:space-x-4 space-y-4 md:space-y-0">
         <div>
           <div className="w-full flex justify-center">
-            <Button buttonType={"primary"} asChild>
+            <Button buttonType={"cta"} asChild>
               <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
             </Button>
           </div>

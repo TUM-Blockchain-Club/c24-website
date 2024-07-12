@@ -12,7 +12,7 @@ export const Link = React.forwardRef<LinkElement, LinkProps>((props, ref) => {
       {...restProps}
       className={classNames(
         className,
-        "hover:decoration-wavy dark:hover:decoration-white hover:underline hover:decoration hover:underline-offset-4",
+        "hover:decoration-dotted dark:hover:decoration-white hover:underline hover:decoration hover:underline-offset-4",
       )}
       ref={ref}
     />

@@ -6,95 +6,98 @@ import Image from "next/image";
 import { Button } from "../components/button";
 import { Container } from "../components/container";
 import { Text } from "../components/text";
+import { Link } from "../components/link";
 
 export default function PaperSubmission() {
   return (
     <div className={"overflow-x-hidden"}>
       <Header />
       <main className={"w-full pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"}>
-        <Container>
-          <div className={"mt-[100px] md:mt-[20vh] z-10"}>
+        <Container className="flex justify-center">
+          <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
             <div className="lg:flex items-center">
-              <Text
-                textType={"sub_hero"}
-                className="w-full text-gradient text-left"
-              >
-                Academic
-                <br className="md:hidden" /> track
+              <Text textType={"sub_hero"} className="text-gradient text-left">
+                Academic Track
               </Text>
+              <div className="flex-grow" />
               <div className="flex mt-8 lg:mt-0 space-x-8 max-w-[200px] md:max-w-full">
                 <div className="h-full">
                   <Image
                     src={"/papers/tum_logo.png"}
                     alt={"TUM Logo"}
-                    width={125}
-                    height={125}
-                  />
-                </div>
-                <div className="h-full">
-                  <Image
-                    className=""
-                    src={"/papers/ieee_logo.png"}
-                    alt={"TUM Logo"}
-                    width={125}
-                    height={125}
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
+              <Text textType={"paragraph"}>
+                Knowledge Partner: <b>IEEE Blockchain</b>
+              </Text>
+            </div>
+            <div className="mt-12">
               <Text textType={"paragraph"}>
                 <b>Status:</b> Open for Submissions
               </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Paper Submission Deadline:</b> July 31, 2024
+                <b>Submission Deadline:</b> August 2, 2024
               </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Notification of Acceptance:</b> August 14, 2024
+                <b>Acceptance Notification:</b> August 16, 2024
               </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Camera-Ready Submission:</b> September 1, 2024
+                <b>Conference Dates:</b> September 12-13, 2024
               </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Conference:</b> September 13, 2024
+                <b>Academic Track Date:</b> September 13, 2024
               </Text>
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Venue:</b> Forum der Zukunft, Munich, Germany
+                <b>Venue:</b> Forum der Zukunft (Deutsches Museum), Munich,
+                Germany
               </Text>
             </div>
-            <Button buttonType={"cta"} className="mt-6">
-              Submit Abstract
-            </Button>
+            <Link
+              href={
+                "https://apply.tum-blockchain.com/conference24-abstract-submission"
+              }
+            >
+              <Button buttonType={"cta"} className="mt-6">
+                Submit Abstract
+              </Button>
+            </Link>
             <div className="mt-20">
               <Text textType={"title"} className="text-gradient">
                 Description
               </Text>
             </div>
-            <div className="mt-6">
+            <div className="mt-12">
               <Text textType={"paragraph"}>
-                We are delighted to announce the Call for Papers for the 2024
-                TUM Blockchain Conference. As part of the research track, we are
-                hosting, in collaboration with the TUM Chair of Network
-                Architectures and Services and IEEE Blockchain, a poster
-                presentation. This event invites researchers, academics, and
-                industry professionals worldwide to connect and present their
-                latest work in blockchain & distributed systems, cryptography,
-                secure computing, cryptoeconomics, and software security.
+                We are delighted to announce the Call for Extended Abstracts for
+                the academic track at the 2024 TUM Blockchain Conference. The
+                academic track is hosted in collaboration with the TUM Chair of
+                Network Architectures and Services. We are happy to have IEEE
+                Blockchain as a Knowledge partner inviting selected works for a
+                submission to IEEE Blockchain Technical Briefs. In addition, the
+                selected abstracts will be offered to present their work in form
+                of a short talk and/or a poster presentation.
                 <br />
                 <br />
-                Accepted papers will be showcased through a 15-20 minute
-                presentation at the conference and displayed as posters in the
-                conference area, alongside our conference partners. The posters
+                This event invites researchers, academics, and industry
+                professionals to connect and present their latest work in the
+                topics related to the Science of Blockchains. Accepted talks
+                will be showcased through a short presentation at the conference
+                and displayed as posters in the conference area. The posters
                 will remain on display for the entire day of the event, offering
                 an excellent platform for in-depth discussions and networking
                 opportunities.
@@ -102,10 +105,10 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-20">
               <Text textType={"title"} className="text-gradient">
-                Call for Papers
+                Call for Extended Abstracts
               </Text>
             </div>
-            <div className="mt-6">
+            <div className="mt-12">
               <Text textType={"sub_title"}>Topics of Interest</Text>
             </div>
             <div className="mt-6">
@@ -188,9 +191,60 @@ export default function PaperSubmission() {
                 </Text>
               </div>
             </div>
-            <div className="mt-20">
-              <Text textType={"title"} className="text-gradient">
-                Submission Guidelines
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Submission Guidelines</Text>
+            </div>
+            <div className="mt-6">
+              <Text textType={"paragraph"}>
+                <ul
+                  style={{ listStyleType: "decimal" }}
+                  className="pl-5 space-y-2"
+                >
+                  <li>
+                    <b>Length:</b> Extended Abstracts should not be longer than
+                    6000 chars (~ 1 DIN-A4 page). If applicable you may submit
+                    the accompanying publication.
+                  </li>
+                  <li>
+                    <b>Submission:</b> (Optional) If you have already published
+                    your work previusly, please submit the PDF along with the
+                    Extended Abstract.
+                  </li>
+                  <li>
+                    <b>Submission System:</b> All papers must be submitted
+                    through our online submission system.
+                  </li>
+                </ul>
+              </Text>
+            </div>
+            <Link
+              href={
+                "https://apply.tum-blockchain.com/conference24-abstract-submission"
+              }
+            >
+              <Button buttonType={"cta"} className="mt-6">
+                Submit Abstract
+              </Button>
+            </Link>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Review Process and Proceedings</Text>
+            </div>
+            <div className="mt-6">
+              <Text textType={"paragraph"}>
+                Abstracts will be reviewed by the listed committee in a single
+                blind review process. Accepted papers will be invited to submit
+                their work to IEEE Blockchain Technical Briefs.
+              </Text>
+            </div>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>
+                On-Site Presentation Guidelines
+              </Text>
+            </div>
+            <div className="mt-6">
+              <Text textType={"paragraph"}>
+                Accepted submissions will be offered to present their work in
+                form of a shot talk and/or a poster presentation.
               </Text>
             </div>
             <div className="mt-6">
@@ -200,69 +254,84 @@ export default function PaperSubmission() {
                   className="pl-5 space-y-2"
                 >
                   <li>
-                    <b>Paper Format:</b> Papers must be submitted in PDF format
-                    and follow the{" "}
-                    <a
-                      className="underline"
-                      href="https://www.ieee.org/conferences/publishing/templates.html"
-                      target="_blank"
-                    >
-                      <b>IEEE conference template</b>
-                    </a>
-                    .
-                  </li>
-                  <li>
-                    <b>Length:</b> Full papers should be between 6-8 pages,
-                    including references. Short papers (4 pages) and poster
-                    abstracts (2 pages) are also accepted.
-                  </li>
-                  <li>
-                    <b>Resubmission:</b> Papers that have been previously
-                    accepted or published to other conferences or journals are
-                    also welcome.
+                    <b>Talk:</b> Accepted Abstracts will be able to present
+                    their talk on the 13 September.
                   </li>
                   <li>
                     <b>Poster:</b> Posters may be submitted later with the
                     Camera-Ready Submission and should be A0 size (841 x 1189
                     mm) in portrait orientation.
                   </li>
+                </ul>
+              </Text>
+            </div>
+            <div className="mt-20">
+              <Text textType={"title"} className="text-gradient">
+                Organization
+              </Text>
+            </div>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Program Chairs</Text>
+            </div>
+            <div className="mt-6">
+              <Text textType={"paragraph"}>
+                <ul
+                  style={{ listStyleType: "circle" }}
+                  className="pl-5 space-y-2"
+                >
+                  <li>Georg Carle, TUM, Chair of Architectures and Services</li>
                   <li>
-                    <b>Submission System:</b> All papers must be submitted
-                    through our online submission system.
+                    Filip Rezabek, TUM, Chair of Architectures and Services
                   </li>
                 </ul>
               </Text>
             </div>
-            <Button buttonType={"cta"} className="mt-6">
-              Submit Abstract
-            </Button>
-            <div className="mt-8">
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Program Committee</Text>
+            </div>
+            <div className="mt-6">
               <Text textType={"paragraph"}>
-                <b>Paper Submission Deadline:</b> July 31, 2024
+                <ul
+                  style={{ listStyleType: "circle" }}
+                  className="pl-5 space-y-2"
+                >
+                  <li>Jens Ernstberger, a16z Research</li>
+                  <li>Revanth Airre, IEEE Silicon Valley Blockchain Chapter</li>
+                  <li>Manjiri Birajdar, IEEE Blockchain</li>
+                </ul>
               </Text>
             </div>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Organizing Committee</Text>
+            </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
-                <b>Notification of Acceptance:</b> August 14, 2024
+                <ul
+                  style={{ listStyleType: "circle" }}
+                  className="pl-5 space-y-2"
+                >
+                  <li>
+                    Filip Rezabek, TUM, Chair of Architectures and Services
+                  </li>
+                  <li>Lucas Aschenbach, TUM Blockchain Club</li>
+                  <li>Luis Bahners, TUM Blockchain Club</li>
+                </ul>
               </Text>
             </div>
-            <div className="mt-6">
-              <Text textType={"sub_title"}>Submission Guidelines</Text>
-            </div>
-            <div className="mt-2">
-              <Text textType={"paragraph"}>
-                <b>Camera-Ready Submission:</b> September 1, 2024
-              </Text>
-            </div>
-            <div className="mt-6">
-              <Text textType={"sub_title"}>Review Process and Proceedings</Text>
+            <div className="mt-12">
+              <Text textType={"sub_title"}>Contact</Text>
             </div>
             <div className="mt-6">
               <Text textType={"paragraph"}>
-                Papers will be reviewed by the listed program committee in a
-                double blind review process. Accepted papers will be published
-                in the TBC 2024 Conference Proceedings, which will be available
-                online through the IEEE Xplore Digital Library.
+                For any inquiries regarding the poster presentation, reach out
+                to{" "}
+                <a
+                  href="mailto:academic-track@tum-blockchain.com"
+                  className="underline"
+                >
+                  academic-track@tum-blockchain.com
+                </a>
+                .
               </Text>
             </div>
           </div>

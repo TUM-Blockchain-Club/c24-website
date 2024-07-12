@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Text } from "../components/text";
 import { trackItems } from "@/app/constants/TrackData";
 import { Track } from "../components/track";
+import { VenueImage } from "../components/venue/VenueImage";
 
 const Venue = () => {
   const scroll = (node: any) => {
@@ -27,41 +28,26 @@ const Venue = () => {
             className="flex relative duration-500 ease-in-out"
             ref={(node) => scroll(node)}
           >
-            <div className="min-w-[280px] sm:min-w-[600px] xl:min-w-[800px] min-h-[200px] md:h-[350px] xl:h-[500px] relative">
-              <Image
-                src="/venue/venue_1.jpg"
-                alt="Deutsches Museum"
-                fill={true}
-              />
-            </div>
-            <div className="min-w-[280px] sm:min-w-[600px] xl:min-w-[800px] min-h-[200px] md:h-[350px] xl:h-[500px] relative">
-              <Image
-                src="/venue/venue_2.jpg"
-                alt="Deutsches Museum"
-                fill={true}
-              />
-            </div>
-            <div className="min-w-[280px] sm:min-w-[600px] xl:min-w-[800px] min-h-[200px] md:h-[350px] xl:h-[500px] relative">
-              <Image
-                src="/venue/venue_3.jpg"
-                alt="Deutsches Museum"
-                fill={true}
-              />
-            </div>
-            <div className="min-w-[280px] sm:min-w-[600px] xl:min-w-[800px] min-h-[200px] md:h-[350px] xl:h-[500px] relative">
-              <Image
-                src="/venue/venue_4.jpg"
-                alt="Deutsches Museum"
-                fill={true}
-              />
-            </div>
-            <div className="min-w-[280px] sm:min-w-[600px] xl:min-w-[800px] min-h-[200px] md:h-[350px] xl:h-[500px] relative">
-              <Image
-                src="/venue/venue_5.jpg"
-                alt="Deutsches Museum"
-                fill={true}
-              />
-            </div>
+            <VenueImage
+              imageSrc={"/venue/venue_1.jpg"}
+              imageAlt="Deutsches Museum"
+            />
+            <VenueImage
+              imageSrc={"/venue/venue_2.jpg"}
+              imageAlt="Deutsches Museum"
+            />
+            <VenueImage
+              imageSrc={"/venue/venue_3.jpg"}
+              imageAlt="Deutsches Museum"
+            />
+            <VenueImage
+              imageSrc={"/venue/venue_4.jpg"}
+              imageAlt="Deutsches Museum"
+            />
+            <VenueImage
+              imageSrc={"/venue/venue_5.jpg"}
+              imageAlt="Deutsches Museum"
+            />
           </div>
           <div id="line-anim" className="w-full h-[2px] bg-gradient-tbc"></div>
         </div>

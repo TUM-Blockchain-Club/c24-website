@@ -8,7 +8,7 @@ import React from "react";
 
 type SpeakerElement = React.ElementRef<"div">;
 export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> & {
-  imageSrc?: string | StaticImport;
+  imageSrc: string | StaticImport;
   name: string;
   position: string;
   company?: string;
@@ -29,7 +29,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
       >
         <Image
           className={"object-cover"}
-          src={imageSrc || "/speakers/placeholder.webp"}
+          src={imageSrc}
           alt={name}
           title={name}
           width={275}

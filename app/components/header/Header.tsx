@@ -46,7 +46,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link href="#manifesto">Manifesto</Link>
           </Text>
           <Text asChild>
-            <Link href="/speakers">Speakers</Link>
+            <Link href="#speaker">Speakers</Link>
           </Text>
           <Text asChild>
             <Link href="#sponsors">Sponsors</Link>
@@ -132,7 +132,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 <Link href="#manifesto">Manifesto</Link>
               </Text>
               <Text asChild>
-                <Link href="/speakers">Speakers</Link>
+                <Link href="#speaker">Speakers</Link>
               </Text>
               <Text asChild>
                 <Link href="#sponsors">Sponsors</Link>

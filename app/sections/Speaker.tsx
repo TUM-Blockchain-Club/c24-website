@@ -5,7 +5,7 @@ import { useSpeaker } from "@/app/hooks/useSpeaker";
 import { Asset } from "contentful";
 
 const Speaker = async () => {
-  const speakers = await useSpeaker();
+  const speakers = await useSpeaker(12);
 
   return (
     <section

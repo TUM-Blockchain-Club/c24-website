@@ -16,8 +16,9 @@ const Speaker = async () => {
         Speakers
       </Text>
       <div className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6"}>
-        {speakers.items.map((speaker) => (
+        {speakers.items.map((speaker, index) => (
           <SpeakerComponent
+            key={index}
             imageSrc={
               (speaker.fields.profilePhoto as Asset)?.fields.file?.url as string
             }

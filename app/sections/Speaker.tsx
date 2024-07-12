@@ -5,7 +5,7 @@ import { useSpeaker } from "@/app/hooks/useSpeaker";
 import { Asset } from "contentful";
 
 const Speaker = async () => {
-  const speakers = await useSpeaker(1);
+  const speakers = await useSpeaker();
 
   return (
     <section
@@ -38,11 +38,7 @@ const Speaker = async () => {
         <div>
           <div className="w-full flex justify-center">
             <Button buttonType={"primary"} asChild>
-              <a
-                href={"https://www.tum-blockchain.com/conference2023/speakers"}
-              >
-                All speakers
-              </a>
+              <a href={"/speakers"}>All speakers</a>
             </Button>
           </div>
         </div>

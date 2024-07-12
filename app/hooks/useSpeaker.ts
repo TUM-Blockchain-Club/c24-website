@@ -2,7 +2,7 @@ import * as contentful from "contentful";
 import Speaker from "@/app/model/speaker";
 
 export const useSpeaker = async (
-  priority?: number,
+  count?: number,
 ): Promise<contentful.EntryCollection<Speaker>> => {
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
@@ -11,6 +11,7 @@ export const useSpeaker = async (
 
   return client.getEntries<Speaker>({
     content_type: "speaker",
-    ...(priority ? { "fields.priority": priority } : {}),
+    order: ["fields.priority", "sys.createdAt"],
+    ...(count ? { limit: count } : {}),
   });
 };

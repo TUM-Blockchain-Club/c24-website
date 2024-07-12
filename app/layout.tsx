@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -34,7 +33,6 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.className} bg-black text-white`}>
         {children}
-        <SpeedInsights />
       </body>
       <Script
         defer

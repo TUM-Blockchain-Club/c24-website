@@ -10,10 +10,10 @@ const Sponsors = () => {
       <Text textType={"sub_hero"} className="text-gradient text-center">
         Sponsors
       </Text>
-      <Text textType={"title"} className="text-gradient font-bold">
+      <Text textType={"title"} className="hidden text-gradient font-bold">
         Platinum
       </Text>
-      <div className="sponsor-gold">
+      <div className="hidden sponsor-gold">
         <Sponsor
           alt="Sui"
           sponsorType={"platinum"}

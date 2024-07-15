@@ -28,19 +28,20 @@ export const faqItems = [
     question: "What expenses are covered by the travel grant?",
     answer: (
       <>
-        The travel grant provides specific amounts based on the location of the
-        student's university, verified through a student ID. The grants are
-        categorised as follows:
+        The travel grant reimburses either the travel cost or is capped to a
+        maximum amount based on the location of the student’s university
+        (whichever is lower). The grants are categorized as follows:
         <br />
         <br />
-        <b>Category A:</b> Germany (except Bavaria): 100 EUR + free student
+        <b>Category A:</b> Germany (except Bavaria): Max 100 EUR + free student
         ticket
         <br />
         <b>Category B:</b> European Union UK, Switzerland, Iceland,
-        Liechtenstein, Norway, except Category A: 200 EUR + free student ticket
+        Liechtenstein, Norway, except Category A: Max 200 EUR + free student
+        ticket
         <br />
-        <b>Category C:</b> Outside of Category A and Category B: 500 EUR + free
-        student ticket
+        <b>Category C:</b> Outside of Category A and Category B: Max 500 EUR +
+        free student ticket
       </>
     ),
   },
@@ -51,8 +52,21 @@ export const faqItems = [
   },
   {
     question: "What is required to receive the reimbursement?",
-    answer:
-      "To receive the reimbursement, you must attend both days of the conference (September 12-13, 2024).",
+    answer: (
+      <>
+        1. You need to be registered as a student in a university outside of
+        Munich.
+        <br />
+        2. Interest in learning about web3 or experience in web3.
+        <br />
+        3. Applicants need to attend both the days of the TUM Blockchain
+        Conference.
+        <br />
+        4. If selected for the travel grant, the applicant must submit a valid
+        invoice for their tickets, including their name and travel dates before
+        September 16th.
+      </>
+    ),
   },
   {
     question:

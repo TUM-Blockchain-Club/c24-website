@@ -99,6 +99,13 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
 
     return (
       <>
+        <div className="z-[999999999] md:hidden fixed bottom-10 left-[50%] -translate-x-[50%]">
+          <Button asChild buttonType={"cta"}>
+            <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+              Buy Ticket
+            </NextLink>
+          </Button>
+        </div>
         <header
           {...propRest}
           className={classNames(

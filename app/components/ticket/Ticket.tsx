@@ -37,7 +37,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
           ticketType,
         })}
       >
-        <div className="p-4 md:p-10 flex-col flex items-center">
+        <div className="p-3 md:p-10 flex-col flex items-center">
           <Text textType={"sub_title"}>
             {title}
             <br />
@@ -65,7 +65,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
           }
         ></div>
         <div className="p-6 space-y-2">
-          <Text textType={"small"}>
+          <Text textType={"paragraph"}>
             Grant access to:
             <br />
           </Text>
@@ -79,7 +79,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                 height={100}
               />
             </div>
-            <Text textType={"small"} className="ml-2">
+            <Text textType={"paragraph"} className="ml-2">
               2-day Conference
               <br />
             </Text>
@@ -94,7 +94,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                 height={100}
               />
             </div>
-            <Text textType={"small"} className="ml-2">
+            <Text textType={"paragraph"} className="ml-2">
               Workshops
               <br />
             </Text>
@@ -109,7 +109,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                 height={100}
               />
             </div>
-            <Text textType={"small"} className="ml-2">
+            <Text textType={"paragraph"} className="ml-2">
               Ecosystem Night
               <br />
             </Text>
@@ -126,7 +126,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                 />
               </div>
             </div>
-            <Text textType={"small"} className="ml-2">
+            <Text textType={"paragraph"} className="ml-2">
               Student Initiative Night
               <br />
             </Text>
@@ -141,7 +141,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                 height={100}
               />
             </div>
-            <Text textType={"small"} className="ml-2">
+            <Text textType={"paragraph"} className="ml-2">
               After-Party
               <br />
             </Text>
@@ -163,7 +163,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                   />
                 </div>
               </div>
-              <Text textType={"small"} className="ml-2 text-[#DE9E31]">
+              <Text textType={"paragraph"} className="ml-2 text-[#DE9E31]">
                 VIP-Speaker Lounge
                 <br />
               </Text>
@@ -178,7 +178,7 @@ export const Ticket = React.forwardRef<TicketElement, TicketProps>(
                   height={100}
                 />
               </div>
-              <Text textType={"small"} className="ml-2 text-[#DE9E31]">
+              <Text textType={"paragraph"} className="ml-2 text-[#DE9E31]">
                 VIP-Entrance
                 <br />
               </Text>

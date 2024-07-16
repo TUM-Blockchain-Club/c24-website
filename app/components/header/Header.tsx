@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { Button } from "@/app/components/button";
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
@@ -20,6 +21,8 @@ export type SidebarProps = {
 };
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const pathName = usePathname();
+
   return (
     <div
       className={classNames(
@@ -42,15 +45,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           className="mb-8"
         ></Cross1Icon>
         <nav className="flex flex-col gap-8">
-          <Text asChild>
-            <Link href="#manifesto">Manifesto</Link>
-          </Text>
+          {pathName === "/" && (
+            <Text asChild>
+              <Link href="#manifesto">Manifesto</Link>
+            </Text>
+          )}
           <Text asChild>
             <Link href="/speakers">Speakers</Link>
           </Text>
-          <Text asChild>
-            <Link href="#sponsors">Sponsors</Link>
-          </Text>
+          {pathName === "/" && (
+            <Text asChild>
+              <Link href="#sponsors">Sponsors</Link>
+            </Text>
+          )}
           <Text asChild>
             <Link href="/academic-track">Abstracts Submission</Link>
           </Text>
@@ -59,10 +66,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </Text>
           <Text asChild>
             <Link href="#faq">FAQ</Link>
-          </Text>*/}
+          </Text>
           <Text asChild>
             <Link href="#faq">FAQ</Link>
-          </Text>
+          </Text>*/}
           <Button buttonType={"cta"} asChild className={"sm:hidden mr-4 w-fit"}>
             <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
               Buy Ticket
@@ -80,6 +87,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
     const [isScrolled, setIsScrolled] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const handleSidebarClose = () => setIsSidebarOpen(false);
+    const pathName = usePathname();
 
     useEffect(() => {
       const handleScroll = () => {
@@ -128,15 +136,19 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 "hidden sm:flex h-full justify-center gap-8 items-center"
               }
             >
-              <Text asChild>
-                <Link href="#manifesto">Manifesto</Link>
-              </Text>
+              {pathName === "/" && (
+                <Text asChild>
+                  <Link href="#manifesto">Manifesto</Link>
+                </Text>
+              )}
               <Text asChild>
                 <Link href="/speakers">Speakers</Link>
               </Text>
-              <Text asChild>
-                <Link href="#sponsors">Sponsors</Link>
-              </Text>
+              {pathName === "/" && (
+                <Text asChild>
+                  <Link href="#sponsors">Sponsors</Link>
+                </Text>
+              )}
               <Text asChild>
                 <Link href="/academic-track" className="text-center">
                   Abstracts Submission

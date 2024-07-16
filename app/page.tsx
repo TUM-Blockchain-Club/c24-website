@@ -1,5 +1,3 @@
-"use client";
-
 import Sparkle from "@/app/components/Sparkle";
 import { Container } from "@/app/components/container";
 import { Footer } from "@/app/components/footer/Footer";

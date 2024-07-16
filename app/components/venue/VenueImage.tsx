@@ -1,6 +1,5 @@
 "use client";
 
-import { Text } from "@/app/components/text";
 import classNames from "classnames";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";

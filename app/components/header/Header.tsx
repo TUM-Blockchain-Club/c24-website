@@ -8,7 +8,6 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
-import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 type HeaderElement = React.ElementRef<"header">;

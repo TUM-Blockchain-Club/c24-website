@@ -31,7 +31,7 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
 
   const jsonRes = await res.json();
 
-  const speakers = jsonRes.items.map((item: any): Speaker => {
+  const speakers = jsonRes.items?.map((item: any): Speaker => {
     return {
       name: item.fields.name,
       description: item.fields.description,
@@ -45,5 +45,9 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     };
   });
 
-  return speakers;
+  if (!speakers) {
+    console.log("Speakers is undefined");
+  }
+
+  return speakers || [];
 };

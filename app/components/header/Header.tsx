@@ -137,7 +137,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 />
               </NextLink>
             </div>
-            <div>
+            <div className={"flex sm:hidden"}>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Buy Ticket
@@ -146,7 +146,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             </div>
             <nav
               className={
-                "hidden sm:hidden h-full justify-center gap-8 items-center"
+                "hidden sm:flex h-full justify-center gap-8 items-center"
               }
             >
               {pathName !== "/" && (

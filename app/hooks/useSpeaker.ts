@@ -1,17 +1,49 @@
-import * as contentful from "contentful";
 import Speaker from "@/app/model/speaker";
 
-export const useSpeaker = async (
-  count?: number,
-): Promise<contentful.EntryCollection<Speaker>> => {
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+const findAssetURL = (
+  assetsArray: any[],
+  assetId: string,
+): string | undefined => {
+  const asset = assetsArray.find((assetObj) => assetObj.sys.id == assetId);
+
+  return asset ? `https:${asset.fields.file.url}` : undefined;
+};
+
+export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
+  const spaceId = process.env.CONTENTFUL_SPACE_ID!;
+  const environment = process.env.CONTENTFUL_ENV!;
+  const url = new URL(
+    `https://cdn.contentful.com/spaces/${spaceId}/environments/${environment}/entries`,
+  );
+  url.search = new URLSearchParams({
+    content_type: "speaker",
+    access_token: process.env.CONTENTFUL_ACCESS_TOKEN!,
+    order: "fields.priority,fields.name",
+    ...(count && { limit: count + "" }),
+  }).toString();
+
+  const res = await fetch(url, {
+    method: "GET",
+    headers: {
+      Authorization: process.env.CONTENTFUL_ACCESS_TOKEN!,
+    },
   });
 
-  return client.getEntries<Speaker>({
-    content_type: "speaker",
-    order: ["fields.priority", "sys.createdAt"],
-    ...(count ? { limit: count } : {}),
+  const jsonRes = await res.json();
+
+  const speakers = jsonRes.items.map((item: any): Speaker => {
+    return {
+      name: item.fields.name,
+      description: item.fields.description,
+      profilePhoto: findAssetURL(
+        jsonRes.includes.Asset,
+        item.fields.profilePhoto.sys.id,
+      ),
+      linkedin: item.fields.linkedin,
+      x: item.fields.x,
+      priority: item.fields.priority,
+    };
   });
+
+  return speakers;
 };

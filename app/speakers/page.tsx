@@ -24,14 +24,15 @@ const SpeakersPage = async () => {
           <div
             className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6 mt-24"}
           >
-            {speakers.map((speaker, index) => (
-              <SpeakerComponent
-                key={index}
-                imageSrc={speaker.profilePhoto}
-                name={speaker.name}
-                position={speaker.description}
-              />
-            ))}
+            {speakers &&
+              speakers.map((speaker, index) => (
+                <SpeakerComponent
+                  key={index}
+                  imageSrc={speaker.profilePhoto}
+                  name={speaker.name}
+                  position={speaker.description}
+                />
+              ))}
           </div>
         </Container>
       </main>

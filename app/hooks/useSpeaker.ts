@@ -29,6 +29,8 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     },
   });
 
+  console.log(res.headers);
+
   const jsonRes = await res.json();
 
   const speakers = jsonRes.items?.map((item: any): Speaker => {

@@ -2,17 +2,19 @@ import Sparkle from "@/app/components/Sparkle";
 import { Container } from "@/app/components/container";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
+import Image from "next/image";
 import { Link } from "./components/link";
 import { Text } from "./components/text";
+import AcademicTrack from "./sections/AcademicTrack";
+import FAQSection from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Speaker from "./sections/Speaker";
+import StudentGrants from "./sections/StudentGrants";
 import Tickets from "./sections/Tickets";
 import Tracks from "./sections/Tracks";
 import Venue from "./sections/Venue";
 import Video from "./sections/Video";
-import AcademicTrack from "./sections/AcademicTrack";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,7 +33,7 @@ export default function Home() {
               <Tracks />
               <Venue />
               <Tickets />
-              {/*<StudentGrants />*/}
+              <StudentGrants />
               <Sponsors />
               <Text className="w-full text-center" textType={"sub_title"}>
                 Knowledge Partner
@@ -53,7 +55,7 @@ export default function Home() {
                   </Link>
                 </Text>
               </div>
-              {/*<FAQSection />**/}
+              <FAQSection />
             </div>
           </div>
         </Container>

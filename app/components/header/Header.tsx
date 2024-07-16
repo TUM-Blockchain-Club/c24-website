@@ -61,7 +61,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Text asChild>
             <Link href="/academic-track">Abstracts Submission</Link>
           </Text>
-          {/*<Text asChild>
+          <Text asChild>
             <Link href="#grants">Student Grants</Link>
           </Text>
           <Text asChild>
@@ -107,6 +107,13 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
 
     return (
       <>
+        <div className="z-[999999999] md:hidden fixed bottom-10 left-[50%] -translate-x-[50%]">
+          <Button asChild buttonType={"cta"}>
+            <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+              Buy Ticket
+            </NextLink>
+          </Button>
+        </div>
         <header
           {...propRest}
           className={classNames(
@@ -154,12 +161,12 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                   Abstracts Submission
                 </Link>
               </Text>
-              {/*<Text asChild>
+              <Text asChild>
                 <Link href="#grants">Student Grants</Link>
               </Text>
               <Text asChild>
                 <Link href="#faq">FAQ</Link>
-              </Text>*/}
+              </Text>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Buy Ticket

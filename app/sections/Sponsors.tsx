@@ -10,7 +10,20 @@ const Sponsors = () => {
       <Text textType={"sub_hero"} className="text-gradient text-center">
         Sponsors
       </Text>
-      <Text textType={"title"}>Gold</Text>
+      <Text textType={"title"} className="text-gradient font-bold">
+        Platinum
+      </Text>
+      <div className="sponsor-gold">
+        <Sponsor
+          alt="Sui"
+          sponsorType={"platinum"}
+          link="https://sui.io/"
+          imageSrc={"/sponsors/sui_logo.png"}
+        ></Sponsor>
+      </div>
+      <Text textType={"title"} className="text-gradient font-medium">
+        Gold
+      </Text>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sponsor-gold">
         <Sponsor
           alt="Dfinity"

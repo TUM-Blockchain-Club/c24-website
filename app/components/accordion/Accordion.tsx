@@ -3,7 +3,6 @@
 import React from "react";
 import * as RadixAccordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
-import { type } from "doctrine";
 
 type AccordionRootElement = React.ElementRef<typeof RadixAccordion.Root>;
 export type AccordionRootProps = React.ComponentPropsWithoutRef<
@@ -80,3 +79,10 @@ export const AccordionContent = React.forwardRef<
   );
 });
 AccordionContent.displayName = "AccordionContent";
+
+export default {
+  Root: AccordionRoot,
+  Item: AccordionItem,
+  Trigger: AccordionTrigger,
+  Content: AccordionContent,
+};

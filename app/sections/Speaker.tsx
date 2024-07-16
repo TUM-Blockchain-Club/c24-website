@@ -2,7 +2,6 @@ import { Button } from "@/app/components/button";
 import { Text } from "@/app/components/text";
 import { Speaker as SpeakerComponent } from "../components/speaker";
 import { useSpeaker } from "@/app/hooks/useSpeaker";
-import { Asset } from "contentful";
 
 const Speaker = async () => {
   const speakers = await useSpeaker(12);
@@ -16,14 +15,12 @@ const Speaker = async () => {
         Speakers
       </Text>
       <div className={"grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6"}>
-        {speakers.items.map((speaker, index) => (
+        {speakers.map((speaker, index) => (
           <SpeakerComponent
             key={index}
-            imageSrc={
-              (speaker.fields.profilePhoto as Asset)?.fields.file?.url as string
-            }
-            name={speaker.fields.name as string}
-            position={speaker.fields.description as string}
+            imageSrc={speaker.profilePhoto}
+            name={speaker.name as string}
+            position={speaker.description as string}
           />
         ))}
       </div>

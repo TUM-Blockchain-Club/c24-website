@@ -1,3 +1,5 @@
+"use client";
+
 import { Text } from "@/app/components/text";
 
 const Video = () => {

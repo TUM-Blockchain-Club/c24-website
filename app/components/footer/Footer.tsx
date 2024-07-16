@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
 import confLogo from "@/public/logos/c24-wordmark.svg";
@@ -6,7 +8,6 @@ import liLogo from "@/public/logos/linkedin-logo.png";
 import tbcLogo from "@/public/logos/tbc-wordmark.svg";
 import telLogo from "@/public/logos/telegram-logo.png";
 import xLogo from "@/public/logos/x-logo.png";
-import munich from "@/public/munich.png";
 import classNames from "classnames";
 import Image from "next/image";
 import React from "react";

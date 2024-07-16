@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import * as RadixAccordion from "@radix-ui/react-accordion";
 import classNames from "classnames";

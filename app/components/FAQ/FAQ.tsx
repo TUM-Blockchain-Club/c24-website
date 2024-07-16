@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Link } from "@/app/components/link";
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";

@@ -22,6 +22,8 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     ...(count && { limit: count + "" }),
   }).toString();
 
+  console.log(url);
+
   const res = await fetch(url, {
     method: "GET",
     headers: {

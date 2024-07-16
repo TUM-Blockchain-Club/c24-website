@@ -8,11 +8,7 @@ const SpeakersPage = async () => {
 
   return (
     <div className={"flex justify-center"}>
-      <main
-        className={
-          "w-full max-w-7xl pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"
-        }
-      >
+      <main className={"w-full max-w-7xl pt-[25px] lg:pt-0 z-20 pb-40"}>
         <Container>
           <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
             <div className="lg:flex items-center">

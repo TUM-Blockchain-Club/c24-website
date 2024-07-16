@@ -1,5 +1,3 @@
-import { Footer } from "@/app/components/footer/Footer";
-import { Header } from "@/app/components/header";
 import Image from "next/image";
 import { Button } from "../components/button";
 import { Container } from "../components/container";

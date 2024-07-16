@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Header } from "@/app/components/header";
+import { Footer } from "@/app/components/footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -32,9 +34,13 @@ export default function RootLayout({
         ></Script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${montserrat.className} bg-black text-white`}>
+      <body
+        className={`${montserrat.className} bg-black text-white overflow-x-hidden`}
+      >
+        <Header />
         {children}
         <SpeedInsights />
+        <Footer />
       </body>
       <Script
         defer

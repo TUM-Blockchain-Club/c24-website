@@ -9,7 +9,6 @@ import { Link } from "../components/link";
 export default function PaperSubmission() {
   return (
     <div className={"overflow-x-hidden"}>
-      <Header />
       <main className={"w-full pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"}>
         <Container className="flex justify-center">
           <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
@@ -335,7 +334,6 @@ export default function PaperSubmission() {
           </div>
         </Container>
       </main>
-      <Footer />
     </div>
   );
 }

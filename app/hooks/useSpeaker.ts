@@ -49,5 +49,5 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     console.log("Speakers is undefined");
   }
 
-  return speakers || [];
+  return speakers ?? [];
 };

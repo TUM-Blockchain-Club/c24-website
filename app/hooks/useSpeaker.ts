@@ -30,6 +30,8 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
   });
 
   console.log(res.headers);
+  console.log(res.status);
+  console.log(res.body);
 
   const jsonRes = await res.json();
 

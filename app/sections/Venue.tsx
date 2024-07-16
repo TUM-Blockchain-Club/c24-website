@@ -1,21 +1,32 @@
-import Image from "next/image";
+"use client";
+
 import { Text } from "../components/text";
-import { trackItems } from "@/app/constants/TrackData";
-import { Track } from "../components/track";
 import { VenueImage } from "../components/venue/VenueImage";
+import { useEffect, useRef, useState } from "react";
 
 const Venue = () => {
-  const scroll = (node: any) => {
-    if (node == null) return;
-    let counter = 1;
-    let num = node.children.length;
-    setInterval(() => {
-      document.getElementById("line-anim")?.classList.add("line-anim");
-      node.style.transform = `translateX(-${100 * counter}%)`;
-      counter++;
-      if (counter == num) counter = 0;
-    }, 4000);
-  };
+  const [slide, setSlide] = useState(1);
+  const slideRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+
+    if (slideRef.current !== null && timerRef.current !== null) {
+      const slideCount = slideRef.current.children.length;
+      timerRef.current.classList.add("line-anim");
+      interval = setInterval(() => {
+        slideRef.current!.style.transform = `translateX(-${100 * slide}%)`;
+        setSlide((slide + 1) % slideCount);
+      }, 4000);
+    }
+
+    return () => {
+      if (interval != null) {
+        clearInterval(interval);
+      }
+    };
+  }, [slide]);
 
   return (
     <section className="w-full flex flex-col items-center" id="tracks">
@@ -26,7 +37,7 @@ const Venue = () => {
         <div className="overflow-x-hidden w-[280px] sm:w-[600px] xl:w-[800px]">
           <div
             className="flex relative duration-500 ease-in-out"
-            ref={(node) => scroll(node)}
+            ref={slideRef}
           >
             <VenueImage
               imageSrc={"/venue/venue_1.jpg"}
@@ -49,7 +60,11 @@ const Venue = () => {
               imageAlt="Deutsches Museum"
             />
           </div>
-          <div id="line-anim" className="w-full h-[2px] bg-gradient-tbc"></div>
+          <div
+            id="line-anim"
+            className="w-full h-[2px] bg-gradient-tbc"
+            ref={timerRef}
+          ></div>
         </div>
         <div className="relative -translate-y-[50%] bg-black mx-auto border-gradient-tbc border-2 text-center max-w-[250px] sm:max-w-[400px] py-4 sm:py-8">
           <Text as="p" textType={"sub_title"}>

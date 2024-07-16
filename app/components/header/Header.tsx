@@ -8,6 +8,7 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 type HeaderElement = React.ElementRef<"header">;
@@ -144,9 +145,16 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 />
               </NextLink>
             </div>
+            <div>
+              <Button asChild buttonType={"cta"}>
+                <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+                  Buy Ticket
+                </NextLink>
+              </Button>
+            </div>
             <nav
               className={
-                "hidden sm:flex h-full justify-center gap-8 items-center"
+                "hidden sm:hidden h-full justify-center gap-8 items-center"
               }
             >
               {pathName !== "/" && (
@@ -188,7 +196,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 </NextLink>
               </Button>
             </nav>
-            <div className="sm:hidden py-2 px-4">
+            <div className="hidden py-2 px-4">
               <HamburgerMenuIcon
                 height={"25"}
                 width={"25"}

@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prettier": "npx prettier . --write",
+    "format": "npx prettier . --write",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -23,8 +23,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
-    "contentful": "^10.12.8",
-    "next": "^14.2.4",
+    "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18"
   },

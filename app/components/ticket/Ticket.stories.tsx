@@ -33,7 +33,7 @@ const meta: Meta<TextPropAndCustomArgs> = {
 export default meta;
 type Story = StoryObj<TextPropAndCustomArgs>;
 
-export const regular: Story = {
+export const Regular: Story = {
   args: {
     label: "400€",
   },
@@ -42,7 +42,7 @@ export const regular: Story = {
   ),
 };
 
-export const vip: Story = {
+export const Vip: Story = {
   args: {
     label: "120€",
   },
@@ -51,7 +51,7 @@ export const vip: Story = {
   ),
 };
 
-export const student: Story = {
+export const Student: Story = {
   args: {
     label: "12€",
   },

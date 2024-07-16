@@ -1,3 +1,4 @@
+"use client";
 import { Text } from "@/app/components/text";
 import { cva, VariantProps } from "class-variance-authority";
 import classNames from "classnames";

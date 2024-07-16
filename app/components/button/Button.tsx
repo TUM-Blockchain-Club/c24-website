@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "hover:no-underline font-sans button text-white p-4 bg-black",
+  "hover:no-underline font-sans button text-white p-3 bg-black",
   {
     variants: {
       buttonType: {

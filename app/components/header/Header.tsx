@@ -61,15 +61,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Text asChild>
             <Link href="/academic-track">Abstracts Submission</Link>
           </Text>
-          <Text asChild>
-            <Link href="#grants">Student Grants</Link>
-          </Text>
-          <Text asChild>
-            <Link href="#faq">FAQ</Link>
-          </Text>
-          <Text asChild>
-            <Link href="#faq">FAQ</Link>
-          </Text>*/}
+          {pathName === "/" && (
+            <>
+              <Text asChild>
+                <Link href="#grants">Student Grants</Link>
+              </Text>
+              <Text asChild>
+                <Link href="#faq">FAQ</Link>
+              </Text>
+            </>
+          )}
           <Button buttonType={"cta"} asChild className={"sm:hidden mr-4 w-fit"}>
             <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
               Buy Ticket
@@ -161,12 +162,16 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                   Abstracts Submission
                 </Link>
               </Text>
-              <Text asChild>
-                <Link href="#grants">Student Grants</Link>
-              </Text>
-              <Text asChild>
-                <Link href="#faq">FAQ</Link>
-              </Text>
+              {pathName === "/" && (
+                <>
+                  <Text asChild>
+                    <Link href="#grants">Student Grants</Link>
+                  </Text>
+                  <Text asChild>
+                    <Link href="#faq">FAQ</Link>
+                  </Text>
+                </>
+              )}
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Buy Ticket

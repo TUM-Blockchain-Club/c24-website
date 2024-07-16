@@ -45,6 +45,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           className="mb-8"
         ></Cross1Icon>
         <nav className="flex flex-col gap-8">
+          {pathName !== "/" && (
+            <Text asChild>
+              <Link href="/">Home</Link>
+            </Text>
+          )}
           {pathName === "/" && (
             <Text asChild>
               <Link href="#manifesto">Manifesto</Link>
@@ -144,6 +149,11 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 "hidden sm:flex h-full justify-center gap-8 items-center"
               }
             >
+              {pathName !== "/" && (
+                <Text asChild>
+                  <Link href="/">Home</Link>
+                </Text>
+              )}
               {pathName === "/" && (
                 <Text asChild>
                   <Link href="#manifesto">Manifesto</Link>

@@ -7,6 +7,7 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 type HeaderElement = React.ElementRef<"header">;
@@ -20,6 +21,8 @@ export type SidebarProps = {
 };
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const pathName = usePathname();
+
   return (
     <div
       className={classNames(
@@ -42,33 +45,43 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           className="mb-8"
         ></Cross1Icon>
         <nav className="flex flex-col gap-8">
+          {pathName !== "/" && (
+            <Text asChild>
+              <Link href="/">Home</Link>
+            </Text>
+          )}
+          {pathName === "/" && (
+            <Text asChild>
+              <Link href="#manifesto">Manifesto</Link>
+            </Text>
+          )}
           <Text asChild>
-            <Link href="#manifesto">Manifesto</Link>
+            <Link href="/speakers">Speakers</Link>
           </Text>
-          <Text asChild>
-            <Link href="#speaker">Speakers</Link>
-          </Text>
-          <Text asChild>
-            <Link href="#sponsors">Sponsors</Link>
-          </Text>
+          {pathName === "/" && (
+            <Text asChild>
+              <Link href="#sponsors">Sponsors</Link>
+            </Text>
+          )}
           <Text asChild>
             <Link href="/academic-track">Abstracts Submission</Link>
           </Text>
-          <Text asChild>
-            <Link href="#grants">Student Grants</Link>
-          </Text>
-          <Text asChild>
-            <Link href="#faq">FAQ</Link>
-          </Text>
-          <Text asChild>
-            <Link href="#faq">FAQ</Link>
-          </Text>
+          {pathName === "/" && (
+            <>
+              <Text asChild>
+                <Link href="#grants">Student Grants</Link>
+              </Text>
+              <Text asChild>
+                <Link href="#faq">FAQ</Link>
+              </Text>
+            </>
+          )}
+          <Button buttonType={"cta"} asChild className={"sm:hidden mr-4 w-fit"}>
+            <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+              Buy Ticket
+            </NextLink>
+          </Button>
         </nav>
-        <Button asChild className={"sm:hidden mt-8 mr-4"}>
-          <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-            Buy Ticket
-          </NextLink>
-        </Button>
       </div>
     </div>
   );
@@ -80,6 +93,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
     const [isScrolled, setIsScrolled] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const handleSidebarClose = () => setIsSidebarOpen(false);
+    const pathName = usePathname();
 
     useEffect(() => {
       const handleScroll = () => {
@@ -125,45 +139,63 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                   src={logoUrl || "/logos/tbc-conference-logo.png"}
                   alt={"TUM Blockchain Conference 2024 Logo"}
                   className={"transition-all duration-300"}
-                  width={isScrolled ? 36 : 64}
-                  height={isScrolled ? 36 : 64}
+                  width={isScrolled ? 48 : 64}
+                  height={isScrolled ? 48 : 64}
                 />
               </NextLink>
             </div>
+            <div>
+              <Button asChild buttonType={"cta"}>
+                <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
+                  Buy Ticket
+                </NextLink>
+              </Button>
+            </div>
             <nav
               className={
-                "hidden sm:flex h-full justify-center gap-8 items-center"
+                "hidden sm:hidden h-full justify-center gap-8 items-center"
               }
             >
+              {pathName !== "/" && (
+                <Text asChild>
+                  <Link href="/">Home</Link>
+                </Text>
+              )}
+              {pathName === "/" && (
+                <Text asChild>
+                  <Link href="#manifesto">Manifesto</Link>
+                </Text>
+              )}
               <Text asChild>
-                <Link href="#manifesto">Manifesto</Link>
+                <Link href="/speakers">Speakers</Link>
               </Text>
-              <Text asChild>
-                <Link href="#speaker">Speakers</Link>
-              </Text>
-              <Text asChild>
-                <Link href="#sponsors">Sponsors</Link>
-              </Text>
+              {pathName === "/" && (
+                <Text asChild>
+                  <Link href="#sponsors">Sponsors</Link>
+                </Text>
+              )}
               <Text asChild>
                 <Link href="/academic-track" className="text-center">
-                  Abstracts
-                  <br />
-                  Submission
+                  Abstracts Submission
                 </Link>
               </Text>
-              <Text asChild>
-                <Link href="#grants">Student Grants</Link>
-              </Text>
-              <Text asChild>
-                <Link href="#faq">FAQ</Link>
-              </Text>
+              {pathName === "/" && (
+                <>
+                  <Text asChild>
+                    <Link href="#grants">Student Grants</Link>
+                  </Text>
+                  <Text asChild>
+                    <Link href="#faq">FAQ</Link>
+                  </Text>
+                </>
+              )}
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Buy Ticket
                 </NextLink>
               </Button>
             </nav>
-            <div className="sm:hidden py-2 px-4">
+            <div className="hidden py-2 px-4">
               <HamburgerMenuIcon
                 height={"25"}
                 width={"25"}

@@ -29,7 +29,7 @@ jobs:
         run: npm i -g vercel
       - name: Install Dependencies
         shell: bash
-        run: yarn install
+        run: npm install
       - name: Vercel Build
         shell: bash
         run: |
@@ -65,7 +65,7 @@ jobs:
         run: npm i -g vercel
       - name: Install Dependencies
         shell: bash
-        run: yarn install
+        run: npm install
       - name: Vercel Deploy
         shell: bash
         run: vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}

@@ -50,12 +50,11 @@ jobs:
     needs:
       - build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: web_build
+          path: .vercel/output
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -63,9 +62,6 @@ jobs:
       - name: Install Vercel CLI
         shell: bash
         run: npm i -g vercel
-      - name: Install Dependencies
-        shell: bash
-        run: npm install
       - name: Vercel Deploy
         shell: bash
         run: vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}

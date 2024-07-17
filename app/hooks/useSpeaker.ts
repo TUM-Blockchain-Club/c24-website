@@ -22,18 +22,12 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     ...(count && { limit: count + "" }),
   }).toString();
 
-  console.log("URL: " + url);
-
   const res = await fetch(url, {
     method: "GET",
     headers: {
       Authorization: process.env.CONTENTFUL_ACCESS_TOKEN!,
     },
   });
-
-  console.log(res.headers);
-  console.log(res.status);
-  console.log(res.body);
 
   const jsonRes = await res.json();
 

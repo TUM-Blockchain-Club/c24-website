@@ -20,7 +20,7 @@ const Tickets = () => {
       <div className="w-full flex justify-center mt-20">
         <Button buttonType={"cta"} asChild>
           <a href={"https://tum-blockchain-conference-24.eventbrite.de/"}>
-            Buy Ticket
+            Tickets
           </a>
         </Button>
       </div>

@@ -64,4 +64,10 @@ jobs:
         run: npm i -g vercel
       - name: Vercel Deploy
         shell: bash
-        run: vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}
+        run: |
+          if [ "${{ inputs.environment }}" = "prod" ]; then 
+            vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}
+          else
+            vercel deploy --yes --prebuilt --logs --token=${{ secrets.vercel_token }}
+          fi
+          

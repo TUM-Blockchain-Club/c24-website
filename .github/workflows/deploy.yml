@@ -32,9 +32,9 @@ jobs:
         shell: bash
         run: |
           if [ "${{ inputs.environment }}" = "prod" ]; then 
-            vercel build --yes --prod --logs --token=${{ secrets.vercel_token }}
+            vercel build --yes --prod --token=${{ secrets.vercel_token }}
           else
-            vercel build --yes --logs --token=${{ secrets.vercel_token }}
+            vercel build --yes --token=${{ secrets.vercel_token }}
           fi
       - name: Create Build Artifact
         uses: actions/upload-artifact@v4

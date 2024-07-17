@@ -66,8 +66,8 @@ jobs:
         shell: bash
         run: |
           if [ "${{ inputs.environment }}" = "prod" ]; then 
-            vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}
+            vercel deploy --public --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}
           else
-            vercel deploy --yes --prebuilt --logs --token=${{ secrets.vercel_token }}
+            vercel deploy --public --yes --prebuilt --logs --token=${{ secrets.vercel_token }}
           fi
           

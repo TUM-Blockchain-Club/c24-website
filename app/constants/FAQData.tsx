@@ -27,7 +27,7 @@ export const faqItems = [
   {
     question: "What expenses are covered by the travel grant?",
     answer: (
-      <>
+      <p>
         The travel grant reimburses either the travel cost or is capped to a
         maximum amount based on the location of the student’s university
         (whichever is lower). The grants are categorized as follows:
@@ -42,7 +42,7 @@ export const faqItems = [
         <br />
         <b>Category C:</b> Outside of Category A and Category B: Max 500 EUR +
         free student ticket
-      </>
+      </p>
     ),
   },
   {
@@ -53,7 +53,7 @@ export const faqItems = [
   {
     question: "What is required to receive the reimbursement?",
     answer: (
-      <>
+      <p>
         1. You need to be registered as a student in a university outside of
         Munich.
         <br />
@@ -65,7 +65,7 @@ export const faqItems = [
         4. If selected for the travel grant, the applicant must submit a valid
         invoice for their tickets, including their name and travel dates before
         September 16th.
-      </>
+      </p>
     ),
   },
   {

@@ -62,4 +62,4 @@ jobs:
         run: yarn install
       - name: Vercel Deploy
         shell: bash
-        run: vercel deploy --yes --prebuilt --prod --token=${{ secrets.vercel_token }}
+        run: vercel deploy --yes --prebuilt --prod --logs --token=${{ secrets.vercel_token }}

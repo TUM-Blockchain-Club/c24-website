@@ -7,15 +7,59 @@ import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+const description =
+  "Germany's leading student-run conference exploring the frontiers of blockchain technology";
+const ogImages = [
+  {
+    // URL hosted on Google Drive
+    url: "https://drive.usercontent.google.com/download?id=1vOSFZIUcPwqOgp84waig_99eeN7QLjp2&authuser=0",
+    width: 1200,
+    height: 630,
+  },
+];
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
-  description:
-    "Germany's leading student-run conference exploring the frontiers of blockchain technology",
+  authors: [
+    {
+      name: "Yudhistira Arief Wibowo",
+      url: "https://github.com/itsmeyaw",
+    },
+    {
+      name: "Luis Kameter",
+      url: "https://github.com/KameterLuis",
+    },
+    {
+      name: "Xiyue Zhang",
+      url: "https://github.com/LUOJIUzxy",
+    },
+    {
+      name: "TUM Blockchain Club",
+      url: "https://tum-blockchain.com",
+    },
+  ],
+  publisher: "TUM Blockchain Club",
+  category: "technology",
+  keywords: ["conference", "blockchain"],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  description: description,
   openGraph: {
     title: "TUM Blockchain Conference 24",
-    description:
-      "Germany's leading student-run conference exploring the frontiers of blockchain technology",
+    description: description,
+    images: ogImages,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TUM Blockchain Conference",
+    description: description,
+    site: "@tbc_munich",
+    creator: "@tbc_munich",
+    images: ogImages,
   },
 };
 

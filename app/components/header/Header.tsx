@@ -78,7 +78,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           )}
           <Button buttonType={"cta"} asChild className={"sm:hidden mr-4 w-fit"}>
             <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-              Buy Ticket
+              Tickets
             </NextLink>
           </Button>
         </nav>
@@ -140,7 +140,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             <div className={"flex sm:hidden"}>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-                  Buy Ticket
+                  Tickets
                 </NextLink>
               </Button>
             </div>
@@ -184,7 +184,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               )}
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-                  Buy Ticket
+                  Tickets
                 </NextLink>
               </Button>
             </nav>
@@ -197,7 +197,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             </div>
           </div>
         </header>
-        <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
+        {/*<Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />*/}
       </>
     );
   },

@@ -295,6 +295,10 @@ export default function PaperSubmission() {
                   <li>Manjiri Birajdar, IEEE Blockchain</li>
                   <li>Burak Öz, TUM, Sebis Chair</li>
                   <li>Felix Hoops, TUM, Sebis Chair</li>
+                  <li>
+                    Valentin Zieglmeier, TUM, Chair for Software and Systems
+                    Engineering
+                  </li>
                 </ul>
               </Text>
             </div>

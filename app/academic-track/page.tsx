@@ -38,7 +38,7 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Submission Deadline:</b> August 2, 2024
+                <b>Submission Deadline:</b> August 2, 2024 (23:59 CEST)
               </Text>
             </div>
             <div className="mt-2">

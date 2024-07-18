@@ -293,6 +293,8 @@ export default function PaperSubmission() {
                   <li>Jens Ernstberger, a16z Research</li>
                   <li>Revanth Airre, IEEE Silicon Valley Blockchain Chapter</li>
                   <li>Manjiri Birajdar, IEEE Blockchain</li>
+                  <li>Burak Öz, TUM, Sebis Chair</li>
+                  <li>Felix Hoops, TUM, Sebis Chair</li>
                 </ul>
               </Text>
             </div>

@@ -6,7 +6,7 @@ import SuiLogo from "@/public/grants/sui-logo-grants.svg";
 const StudentGrants = () => {
   return (
     <section
-      className="w-full flex flex-col items-center justify-center gap-12 lg:gap-20"
+      className="w-full flex flex-col items-center justify-center gap-8 lg:gap-12"
       id="grants"
     >
       <Text textType={"sub_hero"} className="text-gradient text-center">
@@ -18,8 +18,6 @@ const StudentGrants = () => {
           textType={"paragraph"}
           className="text-left max-w-[250px] sm:max-w-[42rem]"
         >
-          <br />
-          <br />
           We are committed to creating an inclusive environment where everyone
           has the opportunity to participate. To ensure that finances do not
           prevent you from attending, we are excited to announce, in partnership
@@ -36,7 +34,7 @@ const StudentGrants = () => {
           height={100}
         />
       </div>
-      <div className="w-full flex justify-center mt-10">
+      <div className="w-full flex justify-center">
         <Button buttonType={"cta"} asChild>
           <a
             href={

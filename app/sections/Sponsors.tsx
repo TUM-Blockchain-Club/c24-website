@@ -24,12 +24,18 @@ const Sponsors = () => {
       <Text textType={"title"} className="text-gradient font-medium">
         Gold
       </Text>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sponsor-gold">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sponsor-gold">
         <Sponsor
           alt="Dfinity"
           sponsorType="gold"
           link="https://dfinity.org/"
           imageSrc={"/sponsors/icp_logo.png"}
+        />
+        <Sponsor
+          alt="Verus"
+          sponsorType="gold"
+          link="https://verus.io"
+          imageSrc={"/sponsors/verus_logo.png"}
         />
         <Sponsor
           alt="Solana"
@@ -51,6 +57,18 @@ const Sponsors = () => {
           sponsorType="silver"
           link="https://www.xrpl-commons.org/"
           imageSrc={"/sponsors/xrp_ledger_logo.png"}
+        />
+        <Sponsor
+          alt="Starknet"
+          sponsorType="silver"
+          link="https://www.starknet.io"
+          imageSrc={"/sponsors/starknet_logo.png"}
+        />
+        <Sponsor
+          alt="Wormhole"
+          sponsorType="silver"
+          link="https://wormhole.com"
+          imageSrc={"/sponsors/wormhole_logo.png"}
         />
         <Sponsor
           alt="Staking Facilities"

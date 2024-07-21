@@ -92,6 +92,12 @@ const Sponsors = () => {
           imageSrc={"/sponsors/ethereum_esp_logo.png"}
         />
         <Sponsor
+          alt="Obol labs"
+          sponsorType="bronze"
+          link="https://obol.org"
+          imageSrc={"/sponsors/obol_logo.png"}
+        />
+        <Sponsor
           alt="Filecoin Foundation"
           sponsorType="bronze"
           link="https://fil.org"

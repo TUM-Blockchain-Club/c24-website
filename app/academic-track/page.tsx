@@ -202,7 +202,7 @@ export default function PaperSubmission() {
                   </li>
                   <li>
                     <b>Submission:</b> (Optional) If you have already published
-                    your work previusly, please submit the PDF along with the
+                    your work previously, please submit the PDF along with the
                     Extended Abstract.
                   </li>
                   <li>
@@ -293,6 +293,14 @@ export default function PaperSubmission() {
                   <li>Jens Ernstberger, a16z Research</li>
                   <li>Revanth Airre, IEEE Silicon Valley Blockchain Chapter</li>
                   <li>Manjiri Birajdar, IEEE Blockchain</li>
+                  <li>Kilian Glas, TUM, Chair of Architectures and Services</li>
+                  <li>
+                    Richard von Seck, TUM, Chair of Architectures and Services
+                  </li>
+                  <li>
+                    Jan Lauringer, TUM, Chair of Embedded Systems and Internet
+                    of Things
+                  </li>
                   <li>Burak Öz, TUM, Sebis Chair</li>
                   <li>Felix Hoops, TUM, Sebis Chair</li>
                   <li>

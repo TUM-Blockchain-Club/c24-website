@@ -51,7 +51,7 @@ const Sponsors = () => {
         />
       </div>
       <Text textType={"title"}>Silver</Text>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sponsor-bronze">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <Sponsor
           alt="XRP Ledger"
           sponsorType="silver"
@@ -95,6 +95,7 @@ const Sponsors = () => {
           alt="Obol labs"
           sponsorType="bronze"
           link="https://obol.org"
+          className={"!p-10"} // Calm down the logo size
           imageSrc={"/sponsors/obol_logo.png"}
         />
         <Sponsor

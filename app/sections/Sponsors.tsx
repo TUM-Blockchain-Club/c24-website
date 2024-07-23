@@ -26,16 +26,16 @@ const Sponsors = () => {
       </Text>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sponsor-gold">
         <Sponsor
+          alt="1Inch"
+          sponsorType="gold"
+          link="https://1inch.io"
+          imageSrc={"/sponsors/1inch_logo.png"}
+        />
+        <Sponsor
           alt="Dfinity"
           sponsorType="gold"
           link="https://dfinity.org/"
           imageSrc={"/sponsors/icp_logo.png"}
-        />
-        <Sponsor
-          alt="Verus"
-          sponsorType="gold"
-          link="https://verus.io"
-          imageSrc={"/sponsors/verus_logo.png"}
         />
         <Sponsor
           alt="Solana"
@@ -44,10 +44,10 @@ const Sponsors = () => {
           imageSrc={"/sponsors/solana_logo.png"}
         />
         <Sponsor
-          alt="1Inch"
+          alt="Verus"
           sponsorType="gold"
-          link="https://1inch.io"
-          imageSrc={"/sponsors/1inch_logo.png"}
+          link="https://verus.io"
+          imageSrc={"/sponsors/verus_logo.png"}
         />
       </div>
       <Text textType={"title"}>Silver</Text>

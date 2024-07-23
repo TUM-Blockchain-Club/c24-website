@@ -95,7 +95,6 @@ const Sponsors = () => {
           alt="Obol labs"
           sponsorType="bronze"
           link="https://obol.org"
-          className={"!p-10"} // Calm down the logo size
           imageSrc={"/sponsors/obol_logo.png"}
         />
         <Sponsor

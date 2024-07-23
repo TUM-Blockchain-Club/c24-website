@@ -18,6 +18,7 @@ const Sponsors = () => {
           alt="Sui"
           sponsorType={"platinum"}
           link="https://sui.io/"
+          className={"!p-0"}
           imageSrc={"/sponsors/sui_logo.png"}
         ></Sponsor>
       </div>

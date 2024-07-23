@@ -45,7 +45,7 @@ export const Sponsor = React.forwardRef<SponsorElement, SponsorProps>(
         {...restProps}
       >
         <a
-          className="w-full h-full flex items-center"
+          className="w-full h-full flex items-center justify-center"
           href={link}
           target="_blank"
           rel="noopener noreferrer"

@@ -62,7 +62,7 @@ const Sponsors = () => {
           alt="Starknet"
           sponsorType="silver"
           link="https://www.starknet.io"
-          imageSrc={"/sponsors/starknet_logo.png"}
+          imageSrc={"/sponsors/starknet_logo.jpg"}
         />
         <Sponsor
           alt="Wormhole"

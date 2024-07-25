@@ -38,7 +38,7 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-2">
               <Text textType={"paragraph"}>
-                <b>Submission Deadline:</b> August 2, 2024 (23:59 CEST)
+                <b>Submission Deadline:</b> August 9, 2024 (23:59 CEST)
               </Text>
             </div>
             <div className="mt-2">
@@ -203,7 +203,8 @@ export default function PaperSubmission() {
                   <li>
                     <b>Submission:</b> (Optional) If you have already published
                     your work previously, please submit the PDF along with the
-                    Extended Abstract.
+                    Extended Abstract. WIP ideas and unpublished work is also
+                    accepted.
                   </li>
                   <li>
                     <b>Submission System:</b> All papers must be submitted

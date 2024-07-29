@@ -11,7 +11,7 @@ const description =
   "Germany's leading student-run conference exploring the frontiers of blockchain technology";
 const ogImages = [
   {
-    url: "https://conference.tum-blockchain.com/og.webp",
+    url: "https://conference.tum-blockchain.com/opengraph-image.png",
     width: 1200,
     height: 630,
   },

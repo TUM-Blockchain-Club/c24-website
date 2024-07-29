@@ -9,16 +9,15 @@ import { Footer } from "@/app/components/footer";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const description =
   "Germany's leading student-run conference exploring the frontiers of blockchain technology";
-const ogImages = [
-  {
-    url: "https://conference.tum-blockchain.com/opengraph-image.png",
-    width: 1200,
-    height: 630,
-  },
-];
+const ogImages = {
+  url: new URL("https://conference.tum-blockchain.com/opengraph-image.png"),
+  width: 1200,
+  height: 630,
+};
 
 export const metadata: Metadata = {
   title: "TUM Blockchain Conference 24",
+  metadataBase: new URL("https://conference.tum-blockchain.com"),
   authors: [
     {
       name: "Yudhistira Arief Wibowo",

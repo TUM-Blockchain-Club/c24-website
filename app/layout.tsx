@@ -11,8 +11,7 @@ const description =
   "Germany's leading student-run conference exploring the frontiers of blockchain technology";
 const ogImages = [
   {
-    // URL hosted on Google Drive
-    url: "https://drive.usercontent.google.com/download?id=1vOSFZIUcPwqOgp84waig_99eeN7QLjp2&authuser=0",
+    url: "https://conference.tum-blockchain.com/og.webp",
     width: 1200,
     height: 630,
   },

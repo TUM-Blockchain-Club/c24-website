@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TUM Blockchain Conference",
+    title: "TUM Blockchain Conference 24",
     description: description,
     site: "@tbc_munich",
     creator: "@tbc_munich",

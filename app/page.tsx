@@ -2,13 +2,13 @@ import Sparkle from "@/app/components/Sparkle";
 import { Container } from "@/app/components/container";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
-import Image from "next/image";
 import { Link } from "./components/link";
 import { Text } from "./components/text";
 import AcademicTrack from "./sections/AcademicTrack";
 import FAQSection from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
+import Partners from "./sections/Partners";
 import Speaker from "./sections/Speaker";
 import StudentGrants from "./sections/StudentGrants";
 import Tickets from "./sections/Tickets";
@@ -35,19 +35,7 @@ export default function Home() {
               <Tickets />
               <StudentGrants />
               <Sponsors />
-              <Text className="w-full text-center" textType={"sub_title"}>
-                Knowledge Partner
-              </Text>
-              <div className="w-full flex justify-center mt-[-150px]">
-                <div className="relative w-[150px] h-[200px]">
-                  <Image
-                    alt="IEEE Blockchain"
-                    src="/papers/ieee_logo.png"
-                    fill={true}
-                    style={{ objectFit: "contain" }}
-                  ></Image>
-                </div>
-              </div>
+              <Partners />
               <div className="w-full flex justify-center">
                 <Text className="border border-white px-6 py-4">
                   <Link href={"https://www.tum-blockchain.com/conference2023"}>

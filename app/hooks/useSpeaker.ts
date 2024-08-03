@@ -39,8 +39,8 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
         jsonRes.includes.Asset,
         item.fields.profilePhoto.sys.id,
       ),
-      linkedin: item.fields.linkedin,
-      x: item.fields.x,
+      url: item.fields.url,
+      urlType: item.fields.urlType,
       priority: item.fields.priority,
     };
   });

@@ -22,12 +22,7 @@ const SpeakersPage = async () => {
           >
             {speakers &&
               speakers.map((speaker, index) => (
-                <SpeakerComponent
-                  key={index}
-                  imageSrc={speaker.profilePhoto}
-                  name={speaker.name}
-                  position={speaker.description}
-                />
+                <SpeakerComponent key={index} {...speaker} hasSocialLink />
               ))}
           </div>
         </Container>

@@ -12,12 +12,25 @@ const meta: Meta<typeof Speaker> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Normal: Story = {
+export const Default: Story = {
   args: {
-    imageSrc:
+    profilePhoto:
       "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg",
     name: "Vitalik Buterin",
-    position: "CEO",
-    company: "Ethereum Foundation",
+    description: "CEO @ Ethereum Foundation",
+    url: "https://google.com",
+    urlType: "website",
+  },
+};
+
+export const WithLink: Story = {
+  args: {
+    profilePhoto:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1c/Vitalik_Buterin_TechCrunch_London_2015_%28cropped%29.jpg",
+    name: "Vitalik Buterin",
+    description: "CEO @ Ethereum Foundation",
+    url: "https://google.com",
+    urlType: "website",
+    hasSocialLink: true,
   },
 };

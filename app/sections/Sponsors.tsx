@@ -13,7 +13,7 @@ const Sponsors = () => {
       <Text textType={"title"} className="text-gradient font-bold">
         Platinum
       </Text>
-      <div className="sponsor-gold">
+      <div className={"glow"}>
         <Sponsor
           alt="Sui"
           sponsorType={"platinum"}
@@ -25,7 +25,7 @@ const Sponsors = () => {
       <Text textType={"title"} className="text-gradient font-medium">
         Gold
       </Text>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sponsor-gold">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 glow">
         <Sponsor
           alt="1Inch"
           sponsorType="gold"

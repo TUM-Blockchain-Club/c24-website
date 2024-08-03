@@ -70,4 +70,3 @@ jobs:
           else
             vercel deploy --public --yes --prebuilt --logs --token=${{ secrets.vercel_token }}
           fi
-          

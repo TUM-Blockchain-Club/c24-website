@@ -2,22 +2,34 @@
 
 import { Text } from "@/app/components/text";
 import classNames from "classnames";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
+import { Speaker as SpeakerModel } from "@/app/model/speaker";
+import Link from "next/link";
+import {
+  GlobeIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 
 type SpeakerElement = React.ElementRef<"div">;
-export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> & {
-  imageSrc?: string | StaticImport;
-  name: string;
-  position: string;
-  company?: string;
-};
+export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> &
+  Omit<SpeakerModel, "priority"> & {
+    hasSocialLink?: true | undefined;
+  };
 
 export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
   (props, ref) => {
-    const { className, imageSrc, name, position, company, ...restProps } =
-      props;
+    const {
+      className,
+      profilePhoto,
+      name,
+      description,
+      hasSocialLink,
+      urlType,
+      url,
+      ...restProps
+    } = props;
     return (
       <div
         className={classNames(
@@ -29,7 +41,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
       >
         <Image
           className={"object-cover"}
-          src={imageSrc || "/speakers/placeholder.webp"}
+          src={profilePhoto || "/speakers/placeholder.webp"}
           alt={name}
           title={name}
           width={275}
@@ -39,10 +51,16 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
           <Text textType={"sub_title"} className={"font-bold"}>
             {name}
           </Text>
-          <Text textType={"paragraph"}>
-            {position}
-            {company && <>, {company}</>}
-          </Text>
+          <Text textType={"paragraph"}>{description}</Text>
+          {hasSocialLink && url && (
+            <div className={"w-fit"}>
+              <Link href={url} className={"text-inherit"}>
+                {urlType == "x" && <TwitterLogoIcon />}
+                {urlType == "website" && <GlobeIcon />}
+                {urlType == "linkedin" && <LinkedInLogoIcon />}
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     );

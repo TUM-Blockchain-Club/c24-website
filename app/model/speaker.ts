@@ -3,7 +3,7 @@ export interface Speaker {
   profilePhoto?: string;
   description: string;
   url?: string;
-  urlType?: "x" | "website" | "linkedin";
+  urlType?: "x" | "website" | "linkedin" | "github";
   priority: number;
 }
 

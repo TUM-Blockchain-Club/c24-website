@@ -7,6 +7,7 @@ import React from "react";
 import { Speaker as SpeakerModel } from "@/app/model/speaker";
 import Link from "next/link";
 import {
+  GitHubLogoIcon,
   GlobeIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
@@ -58,6 +59,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
                 {urlType == "x" && <TwitterLogoIcon />}
                 {urlType == "website" && <GlobeIcon />}
                 {urlType == "linkedin" && <LinkedInLogoIcon />}
+                {urlType == "github" && <GitHubLogoIcon />}
               </Link>
             </div>
           )}

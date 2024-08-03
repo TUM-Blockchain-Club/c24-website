@@ -1,9 +1,9 @@
-interface Speaker {
+export interface Speaker {
   name: string;
   profilePhoto?: string;
   description: string;
-  x: string;
-  linkedin: string;
+  url?: string;
+  urlType?: "x" | "website" | "linkedin";
   priority: number;
 }
 

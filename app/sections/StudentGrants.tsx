@@ -35,14 +35,8 @@ const StudentGrants = () => {
         />
       </div>
       <div className="w-full flex justify-center">
-        <Button buttonType={"cta"} asChild>
-          <a
-            href={
-              "https://apply.tum-blockchain.com/student-travel-grant-conference-24"
-            }
-          >
-            Apply for Travel Grant
-          </a>
+        <Button buttonType={"primary"} disabled>
+          Applications Closed
         </Button>
       </div>
     </section>

@@ -25,6 +25,26 @@ const Partners = () => {
           <div className="relative w-[155px] h-[100px]">
             <Image
               alt="IEEE Blockchain"
+              src="/partners/tcr_logo.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="IEEE Blockchain"
+              src="/partners/tmp_logo.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex justify-center md:mt-10">
+        <div className="sm:flex sm:space-x-8">
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="IEEE Blockchain"
               src="/partners/btc_echo_logo.png"
               fill={true}
               style={{ objectFit: "contain" }}

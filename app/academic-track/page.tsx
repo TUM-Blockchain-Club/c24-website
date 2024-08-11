@@ -275,9 +275,13 @@ export default function PaperSubmission() {
                   style={{ listStyleType: "circle" }}
                   className="pl-5 space-y-2"
                 >
-                  <li>Georg Carle, TUM, Chair of Architectures and Services</li>
                   <li>
-                    Filip Rezabek, TUM, Chair of Architectures and Services
+                    Georg Carle, TUM, Chair of Network Architectures and
+                    Services
+                  </li>
+                  <li>
+                    Filip Rezabek, TUM, Chair of Network Architectures and
+                    Services
                   </li>
                 </ul>
               </Text>
@@ -294,9 +298,13 @@ export default function PaperSubmission() {
                   <li>Jens Ernstberger, a16z Research</li>
                   <li>Revanth Airre, IEEE Silicon Valley Blockchain Chapter</li>
                   <li>Manjiri Birajdar, IEEE Blockchain</li>
-                  <li>Kilian Glas, TUM, Chair of Architectures and Services</li>
                   <li>
-                    Richard von Seck, TUM, Chair of Architectures and Services
+                    Kilian Glas, TUM, Chair of Network Architectures and
+                    Services
+                  </li>
+                  <li>
+                    Richard von Seck, TUM, Chair of Network Architectures and
+                    Services
                   </li>
                   <li>
                     Jan Lauringer, TUM, Chair of Embedded Systems and Internet
@@ -321,7 +329,8 @@ export default function PaperSubmission() {
                   className="pl-5 space-y-2"
                 >
                   <li>
-                    Filip Rezabek, TUM, Chair of Architectures and Services
+                    Filip Rezabek, TUM, Chair of Network Architectures and
+                    Services
                   </li>
                   <li>Lucas Aschenbach, TUM Blockchain Club</li>
                   <li>Luis Bahners, TUM Blockchain Club</li>

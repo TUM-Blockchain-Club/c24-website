@@ -33,7 +33,7 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-12">
               <Text textType={"paragraph"}>
-                <b>Status:</b> Open for Submissions
+                <b>Status:</b> Submissions Closed
               </Text>
             </div>
             <div className="mt-2">

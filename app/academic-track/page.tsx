@@ -295,6 +295,7 @@ export default function PaperSubmission() {
                   style={{ listStyleType: "circle" }}
                   className="pl-5 space-y-2"
                 >
+                  <li>Justin Y. Shi, IEEE Blockchain Editor-in-Chief</li>
                   <li>Jens Ernstberger, a16z Research</li>
                   <li>Revanth Airre, IEEE Silicon Valley Blockchain Chapter</li>
                   <li>Manjiri Birajdar, IEEE Blockchain</li>
@@ -316,6 +317,7 @@ export default function PaperSubmission() {
                     Valentin Zieglmeier, TUM, Chair for Software and Systems
                     Engineering
                   </li>
+                  <li>Lucas Aschenbach, TUM Blockchain Club</li>
                 </ul>
               </Text>
             </div>

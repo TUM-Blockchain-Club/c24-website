@@ -128,6 +128,13 @@ const Sponsors = () => {
           link="https://www.wmdatenservice.com/en/"
           imageSrc={"/sponsors/wm_datenservice_logo.jpg"}
         />
+        <Sponsor
+          alt="Ethereum Name Service"
+          sponsorType="bronze"
+          link="https://ens.domains"
+          className={"!p-10"}
+          imageSrc={"/sponsors/ens_logo.png"}
+        />
       </div>
     </section>
   );

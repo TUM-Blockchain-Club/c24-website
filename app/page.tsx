@@ -2,6 +2,7 @@ import Sparkle from "@/app/components/Sparkle";
 import { Container } from "@/app/components/container";
 import Sponsors from "@/app/sections/Sponsors";
 import Statistic from "@/app/sections/Statistic";
+import Script from "next/script";
 import { Link } from "./components/link";
 import { Text } from "./components/text";
 import AcademicTrack from "./sections/AcademicTrack";
@@ -18,36 +19,63 @@ import Video from "./sections/Video";
 
 export default function Home() {
   return (
-    <div>
-      <Sparkle />
-      <main className={"w-full flex justify-center pt-[25px] lg:pt-0 z-20"}>
-        <Container>
-          <div className={"flex flex-col max-w-7xl z-10"}>
-            <Hero />
-            <div className={"flex flex-col pb-24 gap-32"}>
-              <Video />
-              <Statistic />
-              <Manifesto />
-              <Speaker />
-              <AcademicTrack />
-              <Tracks />
-              <Venue />
-              <Tickets />
-              <StudentGrants />
-              <Sponsors />
-              <Partners />
-              <div className="w-full flex justify-center">
-                <Text className="border border-white px-6 py-4">
-                  <Link href={"https://www.tum-blockchain.com/conference2023"}>
-                    Throwback 2023
-                  </Link>
-                </Text>
+    <>
+      <Script
+        id="tally-widget"
+        src="https://tally.so/widgets/embed.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="tally-config"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.TallyConfig = {
+              formId: "wv4qLD",
+              popup: {
+                width: 400,
+                open: {
+                  trigger: "time",
+                  ms: 5000
+                }
+              }
+            };
+          `,
+        }}
+      />
+      <div>
+        <Sparkle />
+        <main className={"w-full flex justify-center pt-[25px] lg:pt-0 z-20"}>
+          <Container>
+            <div className={"flex flex-col max-w-7xl z-10"}>
+              <Hero />
+              <div className={"flex flex-col pb-24 gap-32"}>
+                <Video />
+                <Statistic />
+                <Manifesto />
+                <Speaker />
+                <AcademicTrack />
+                <Tracks />
+                <Venue />
+                <Tickets />
+                <StudentGrants />
+                <Sponsors />
+                <Partners />
+                <div className="w-full flex justify-center">
+                  <Text className="border border-white px-6 py-4">
+                    <Link
+                      href={"https://www.tum-blockchain.com/conference2023"}
+                    >
+                      Throwback 2023
+                    </Link>
+                  </Text>
+                </div>
+                <FAQSection />
               </div>
-              <FAQSection />
             </div>
-          </div>
-        </Container>
-      </main>
-    </div>
+          </Container>
+        </main>
+      </div>
+    </>
   );
 }

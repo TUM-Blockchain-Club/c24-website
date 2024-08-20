@@ -1,5 +1,11 @@
 export const faqItems = [
   {
+    question:
+      "What should I do if I want to have an invoice for my ticket purchase?",
+    answer:
+      "You can easily generate an invoice for your ticket purchase by filling out the following form with the necessary information. This will ensure that we have all the details required to process your request promptly and accurately: https://forms.tum-blockchain.com/conference-invoices",
+  },
+  {
     question: "What is the TUM Blockchain Conference Student Travel Grant?",
     answer:
       "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",

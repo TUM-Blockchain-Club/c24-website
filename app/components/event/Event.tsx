@@ -32,7 +32,7 @@ export const Event = React.forwardRef<EventElement, EventProps>((props) => {
         <Text textType={"sub_title"} as="p">
           {title}
         </Text>
-        <Text className="mt-4" textType={"small"} as="p">
+        <Text className="mt-4 underline" textType={"small"} as="p">
           {date}
         </Text>
         <Text className="mt-4" textType={"small"} as="p">

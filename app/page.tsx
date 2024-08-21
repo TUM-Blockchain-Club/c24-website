@@ -11,7 +11,7 @@ import Hero from "./sections/Hero";
 import Manifesto from "./sections/Manifesto";
 import Partners from "./sections/Partners";
 import Speaker from "./sections/Speaker";
-import StudentGrants from "./sections/StudentGrants";
+import Grants from "./sections/Grants";
 import Tickets from "./sections/Tickets";
 import Tracks from "./sections/Tracks";
 import Venue from "./sections/Venue";
@@ -58,7 +58,7 @@ export default function Home() {
                 <Tracks />
                 <Venue />
                 <Tickets />
-                <StudentGrants />
+                <Grants />
                 <Sponsors />
                 <Partners />
                 <div className="w-full flex justify-center">

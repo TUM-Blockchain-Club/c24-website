@@ -83,6 +83,12 @@ const Sponsors = () => {
           link="https://arcium.com"
           imageSrc={"/sponsors/arcium_logo.png"}
         />
+        <Sponsor
+          alt="Doubleup"
+          sponsorType="silver"
+          link="https://www.doubleup.fun/"
+          imageSrc={"/sponsors/doubleup-buckyou.png"}
+        />
       </div>
       <Text textType={"title"}>Bronze</Text>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">

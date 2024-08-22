@@ -115,7 +115,7 @@ const Partners = () => {
           <div className="relative w-[155px] h-[100px] flex items-center justify-center">
             <Image
               alt="PretzelDAO"
-              src="/partners/pretzelDAO.png"
+              src="/partners/pretzeldao-logo.png"
               width={110}
               height={0}
               style={{ objectFit: "contain" }}
@@ -133,7 +133,7 @@ const Partners = () => {
           <div className="relative w-[155px] h-[100px]">
             <Image
               alt="Deutsches Museum"
-              src="/partners/Deutsches_Museum_Logo.png"
+              src="/partners/DM_Logo.png"
               fill={true}
               style={{ objectFit: "contain" }}
             ></Image>

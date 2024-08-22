@@ -2,9 +2,11 @@ import { Container } from "@/app/components/container";
 import { Text } from "@/app/components/text";
 import { sideEventsItems } from "@/app/constants/SideEventData";
 import Image from "next/image";
+import NextLink from "next/link";
 
 export async function generateStaticParams() {
-  return sideEventsItems.map((event) => ({
+  const eventItems = sideEventsItems.filter((event) => event.subpage);
+  return eventItems.map((event) => ({
     event: event.url,
   }));
 }
@@ -27,19 +29,17 @@ export default function EventDetail({ params }: { params: { event: string } }) {
             >
               {event?.title}
             </Text>
-            <Text textType={"paragraph"} className="text-left mt-10" as="p">
-              {event?.description}
-            </Text>
-            <div className="flex mt-20 justify-center space-x-20">
-              <div className="relative w-[300px] h-[250px]">
-                <Image
-                  className="object-cover cta-border"
-                  src={event.backgroundImg}
-                  alt={event.title}
-                  fill
-                />
-              </div>
-              <div className="relative w-[300px] h-[250px]">
+            <NextLink href="/side-events">
+              <Text
+                textType={"paragraph"}
+                className="text-left underline mt-4"
+                as="p"
+              >
+                Back to overview
+              </Text>
+            </NextLink>
+            <div className="flex mt-10 justify-center space-x-20">
+              <div className="relative w-full h-[250px]">
                 <Image
                   className="object-cover cta-border"
                   src={event.backgroundImg}
@@ -48,6 +48,9 @@ export default function EventDetail({ params }: { params: { event: string } }) {
                 />
               </div>
             </div>
+            <Text textType={"paragraph"} className="text-left mt-10" as="p">
+              {event?.description}
+            </Text>
           </div>
         </Container>
       </main>

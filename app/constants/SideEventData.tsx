@@ -1,47 +1,12 @@
 export const sideEventsItems = [
   {
-    title: "Aeternity Hackathon",
-    url: "aeternity-hackathon",
+    title: "XRPL Meetup in Munich",
+    url: "xrpl-meetup",
+    subpage: false,
     description:
-      "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",
-    link: "/",
-    date: "September 15th - 17th 2024",
+      "XRPL Meetups aim to spread knowledge and create real-life connections and communities around blockchain and the XRP Ledger by establishing local “XRPL Hubs” across Europe. These meetups provide regular gatherings where individuals from various sectors can meet, exchange ideas, and deepen their understanding of blockchain technology. Designed to be inclusive, XRPL Meetups welcome participants from academia, private industries, public sectors, and NGOs.",
+    link: "https://www.eventbrite.fr/e/xrpl-meetup-in-munich-tickets-957654278727",
+    date: "Thursday, September 12 | 5:30 - 9pm",
     backgroundImg: "/venue/venue_2.jpg",
-  },
-  {
-    title: "XRPL Commons",
-    url: "xrpl-commons",
-    description:
-      "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",
-    link: "/",
-    date: "September 18th - 19th 2024",
-    backgroundImg: "/venue/venue_3.jpg",
-  },
-  {
-    title: "Solana superteam",
-    url: "solana-superteam",
-    description:
-      "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",
-    link: "/",
-    date: "September 18th - 19th 2024",
-    backgroundImg: "/venue/venue_4.jpg",
-  },
-  {
-    title: "SUI",
-    url: "sui",
-    description:
-      "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",
-    link: "/",
-    date: "September 18th - 19th 2024",
-    backgroundImg: "/venue/venue_4.jpg",
-  },
-  {
-    title: "W3.hub",
-    url: "w3-hub",
-    description:
-      "The student travel grant is a financial assistance program designed to help students attend the TUM Blockchain Conference. It aims to cover your travel expenses for students who might otherwise be unable to attend due to financial constraints.",
-    link: "/",
-    date: "September 18th - 19th 2024",
-    backgroundImg: "/venue/venue_4.jpg",
   },
 ];

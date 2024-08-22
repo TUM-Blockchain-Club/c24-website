@@ -9,6 +9,8 @@ export interface SideEventItem {
   url: string;
   date: string;
   backgroundImg: string;
+  subpage: boolean;
+  link: string;
 }
 
 export interface SideEventProps {
@@ -16,12 +18,6 @@ export interface SideEventProps {
 }
 
 export const Events: React.FC<SideEventProps> = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleQuestion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <>
       {items.map((item, index) => (
@@ -32,6 +28,8 @@ export const Events: React.FC<SideEventProps> = ({ items }) => {
           url={item.url}
           bgImage={item.backgroundImg}
           date={item.date}
+          subpage={item.subpage}
+          link={item.link}
         />
       ))}
     </>

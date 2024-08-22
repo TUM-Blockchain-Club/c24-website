@@ -3,6 +3,7 @@
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
+import classNames from "classnames";
 
 const buttonVariants = cva(
   "hover:no-underline font-sans button text-white p-3 bg-black",
@@ -38,7 +39,12 @@ export const Button = React.forwardRef<ButtonElement, ButtonProps>(
         data-disabled={disabled || undefined}
         {...buttonProps}
         disabled={disabled}
-        className={buttonVariants({ className, buttonType })}
+        className={buttonVariants({
+          className: classNames(className, {
+            "opacity-50 cursor-not-allowed": disabled,
+          }),
+          buttonType,
+        })}
         ref={ref}
       ></Comp>
     );

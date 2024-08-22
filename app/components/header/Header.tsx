@@ -64,7 +64,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Text>
           )}
           <Text asChild>
-            <Link href="/academic-track">Abstracts Submission</Link>
+            <Link href="/side-events">Side Events</Link>
           </Text>
           {pathName === "/" && (
             <>
@@ -168,8 +168,8 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 </Text>
               )}
               <Text asChild>
-                <Link href="/academic-track" className="text-center">
-                  Abstracts Submission
+                <Link href="/side-events" className="text-center">
+                  Side Events
                 </Link>
               </Text>
               {pathName === "/" && (

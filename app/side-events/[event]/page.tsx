@@ -4,7 +4,7 @@ import { sideEventsItems } from "@/app/constants/SideEventData";
 import Image from "next/image";
 import NextLink from "next/link";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const eventItems = sideEventsItems.filter((event) => event.subpage);
   return eventItems.map((event) => ({
     event: event.url,

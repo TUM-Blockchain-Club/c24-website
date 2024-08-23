@@ -1,21 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../components/button";
-import { Container } from "../components/container";
-import Session from "../components/session/Session";
-import { Text } from "../components/text";
+import { Button } from "@/app/components/button";
+import { Container } from "@/app/components/container";
+import Session from "@/app/components/session/Session";
+import { Session as SessionModel, Stages, Tracks } from "@/app/model/session";
+import { Text } from "@/app/components/text";
 
-export type AgendaProps = {
-  sessions: any[];
-};
-
-export default function Agenda(props: AgendaProps) {
+const Agenda = ({ sessions }: { sessions: SessionModel[] }) => {
   const [dayFilter, setDayFilter] = useState<Date>();
-  const [trackFilter, setTrackFilter] = useState<string>();
-  const [stageFilter, setStageFilter] = useState<string>();
+  const [trackFilter, setTrackFilter] = useState<SessionModel["track"]>();
+  const [stageFilter, setStageFilter] = useState<SessionModel["room"]>();
 
-  function sameDay(d1: Date, d2: Date) {
+  function isSameDay(d1: Date, d2: Date) {
     return (
       d1.getFullYear() === d2.getFullYear() &&
       d1.getMonth() === d2.getMonth() &&
@@ -24,158 +21,122 @@ export default function Agenda(props: AgendaProps) {
   }
 
   return (
-    <div className={"overflow-x-hidden"}>
-      <main className={"w-full pt-[25px] lg:pt-0 z-20 2xl:px-[225px] pb-40"}>
-        <Container className="flex justify-center">
+    <div className={"flex justify-center"}>
+      <main className={"w-full max-w-7xl pt-[25px] lg:pt-0 z-20 pb-40"}>
+        <Container>
           <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
-            <Text
-              textType={"sub_hero"}
-              className="text-gradient text-left mb-20"
-              as="p"
-            >
-              Agenda
-            </Text>
-            <div className="flex">
-              <div className="border-[1px] border-white p-6">
-                <Text textType={"sub_title"} className="text-left" as="p">
-                  Filter
-                </Text>
-                <Text textType={"paragraph"} className="text-left mt-6" as="p">
+            <div className="lg:flex items-center">
+              <Text textType={"sub_hero"} className="text-gradient text-left">
+                Agenda
+              </Text>
+            </div>
+          </div>
+          <div className={"flex relative gap-2 lg:gap-8 mt-24"}>
+            <div className="sticky top-24 border border-white p-6 w-[250px] flex flex-col gap-6">
+              <Text textType={"sub_title"} className="text-left" as="p">
+                Filter
+              </Text>
+              <div className="flex flex-col gap-3">
+                <Text
+                  textType={"paragraph"}
+                  className="font-bold text-left"
+                  as="p"
+                >
                   Days
                 </Text>
-                <div>
-                  <Button
-                    id="day-12"
-                    onClick={() => setDayFilter(new Date("2024-09-12"))}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className="text-left" as="p">
-                      Thursday, 12th October 2024
-                    </Text>
-                  </Button>
-                  <Button
-                    id="day-13"
-                    onClick={() => setDayFilter(new Date("2024-09-13"))}
-                    className="mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Friday, 13th October 2024
-                    </Text>
-                  </Button>
+                <div className="flex flex-col gap-2">
+                  {[new Date("2024-09-12"), new Date("2024-09-13")].map(
+                    (date, index) => (
+                      <Button
+                        onClick={() =>
+                          dayFilter && isSameDay(dayFilter, date)
+                            ? setDayFilter(undefined)
+                            : setDayFilter(date)
+                        }
+                        className="block py-2 w-full"
+                        key={index}
+                      >
+                        <Text textType={"small"} className="text-center" as="p">
+                          {date.toLocaleDateString("en-DE", {
+                            weekday: "long",
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </Text>
+                      </Button>
+                    ),
+                  )}
                 </div>
-                <Text textType={"paragraph"} className="text-left mt-6" as="p">
+              </div>
+              <div className="flex flex-col gap-3">
+                <Text
+                  textType={"paragraph"}
+                  className="font-bold text-left"
+                  as="p"
+                >
                   Stages
                 </Text>
-                <div>
-                  <Button
-                    onClick={() => setStageFilter("Dome Stage")}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className="text-center" as="p">
-                      Dome Stage
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setStageFilter("Tech Stage")}
-                    className="mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Tech Stage
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setStageFilter("Education Stage")}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className="text-center" as="p">
-                      Education Stage
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setStageFilter("Workshop Stage")}
-                    className="mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Workshop Stage
-                    </Text>
-                  </Button>
+                <div className="flex flex-col gap-2">
+                  {Stages.map((stage, index) => (
+                    <Button
+                      onClick={() =>
+                        stageFilter === stage
+                          ? setStageFilter(undefined)
+                          : setStageFilter(stage)
+                      }
+                      className="block py-2 w-full"
+                    >
+                      <Text textType={"small"} className="text-center" as="p">
+                        {stage}
+                      </Text>
+                    </Button>
+                  ))}
                 </div>
-                <Text textType={"paragraph"} className="text-left mt-6" as="p">
+              </div>
+              <div className="flex flex-col gap-3">
+                <Text
+                  textType={"paragraph"}
+                  className="font-bold text-left"
+                  as="p"
+                >
                   Tracks
                 </Text>
-                <div>
-                  <Button
-                    onClick={() => setTrackFilter("Education Track")}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className="text-center" as="p">
-                      Education Track
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setTrackFilter("Application Track")}
-                    className="mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Application Track
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setTrackFilter("Research Track")}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className="text-center" as="p">
-                      Research Track
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setTrackFilter("Regulation Track")}
-                    className="mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Regulation Track
-                    </Text>
-                  </Button>
-                  <Button
-                    onClick={() => setTrackFilter("Ecosystem Track")}
-                    className="block mt-3 py-2 w-[200px]"
-                    type="reset"
-                  >
-                    <Text textType={"small"} className=" text-center" as="p">
-                      Ecosystem Track
-                    </Text>
-                  </Button>
+                <div className="flex flex-col gap-2">
+                  {Tracks.map((track, index) => (
+                    <Button
+                      onClick={() =>
+                        trackFilter === track
+                          ? setTrackFilter(undefined)
+                          : setTrackFilter(track)
+                      }
+                      className="block py-2 w-full"
+                    >
+                      <Text textType={"small"} className="text-center" as="p">
+                        {track}
+                      </Text>
+                    </Button>
+                  ))}
                 </div>
               </div>
-              <div>
-                {props.sessions &&
-                  props.sessions
-                    .filter((item, index) => {
-                      console.log(item);
-                      console.log(dayFilter, trackFilter, stageFilter);
-                      if (!item) return false;
-                      if (item.track != trackFilter) return false;
-                      if (item.stage != stageFilter) return false;
-                      let itemDate = new Date(item.startTime);
-                      if (!dayFilter) return false;
-                      return sameDay(dayFilter, itemDate);
-                    })
-                    .map((item, index) => <Session session={item} />)}
-              </div>
+            </div>
+            <div className="flex flex-grow flex-col">
+              {sessions &&
+                sessions
+                  .filter(
+                    (item) =>
+                      (!dayFilter ||
+                        isSameDay(dayFilter, new Date(item.startTime))) &&
+                      (!trackFilter || trackFilter === item.track) &&
+                      (!stageFilter || stageFilter === item.room),
+                  )
+                  .map((item, index) => <Session session={item} key={index} />)}
             </div>
           </div>
         </Container>
       </main>
     </div>
   );
-}
+};
+
+export default Agenda;

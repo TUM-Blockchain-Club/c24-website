@@ -1,29 +1,12 @@
-import Speaker from "@/app/model/speaker";
-
-export const Tracks = [
-  "Education Track",
-  "Application Track",
-  "Research Track",
-  "Regulation Track",
-  "Ecosystem Track",
-] as const;
-
-export const Stages = [
-  "Dome Stage",
-  "Tech Stage",
-  "Education Stage",
-  "Workshop Stage",
-] as const;
-
 export interface Session {
   title: string;
-  track: (typeof Tracks)[number];
-  type: "Workshop" | "Panel Discussion" | "Talk";
+  track: string;
+  type: string;
   startTime: string;
   endTime: string;
-  room: (typeof Stages)[number];
+  room: string;
   description: string;
-  speakers: Speaker[];
+  speakers: string[];
 }
 
 export default Session;

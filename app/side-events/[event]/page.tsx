@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function EventDetail({ params }: { params: { event: string } }) {
+export default function Page({ params }: { params: { event: string } }) {
   const event = sideEventsItems.find((obj) => obj.url == params.event);
   if (!event) {
     window.location.href = "/";

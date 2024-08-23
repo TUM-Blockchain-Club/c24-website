@@ -19,12 +19,12 @@ const Grants = () => {
           className="text-left max-w-[250px] sm:max-w-[42rem]"
         >
           Our commitment to fostering innovation, curiosity, and an inclusive
-          environment drives our efforts. To make the conference more accessible
-          to builders, students, and academics, we are excited to announce the
-          builder and academic grants!
+          environment drives our efforts. To make the conference more
+          accessible, we are excited to announce builder and academic ticket
+          grants, as well as student travel grants!
         </Text>
       </div>
-      <div className="w-full flex justify-center flex-wrap gap-y-8">
+      <div className="w-full flex justify-center flex-wrap gap-y-12">
         <div className="p-5 w-full flex justify-center items-center md:w-96 flex-col gap-4">
           <Text textType="sub_title">Academic Grant</Text>
           <Text>For all curious learners and educators</Text>
@@ -41,6 +41,19 @@ const Grants = () => {
             <Link href="https://tally.so/r/nrVY7o" target="_blank">
               Apply for Builder Grant
             </Link>
+          </Button>
+        </div>
+        <div className="p-5 w-full flex justify-center items-center flex-col gap-4">
+          <Text textType="sub_title">Student Grant</Text>
+          <Image
+            className={"object-cover"}
+            src={SuiLogo}
+            alt={"Sui Logo"}
+            width={100}
+            height={100}
+          />
+          <Button className="w-fit" disabled>
+            Application Closed
           </Button>
         </div>
       </div>

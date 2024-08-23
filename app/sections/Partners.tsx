@@ -139,6 +139,34 @@ const Partners = () => {
             ></Image>
           </div>
         </div>
+        <div className="w-full flex justify-center gap-8 flex-wrap">
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="Acconsis"
+              src="/partners/Acconsis.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px] flex items-center justify-center">
+            <Image
+              alt="CryptoChicks"
+              src="/partners/CryptoChicks.png"
+              width={110}
+              height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px] flex items-center justify-center">
+            <Image
+              alt="HerDAO"
+              src="/partners/HERDAO.png"
+              width={110}
+              height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+        </div>
       </div>
     </section>
   );

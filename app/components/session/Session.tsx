@@ -67,5 +67,6 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
     );
   },
 );
+Session.displayName = "Session";
 
 export default Session;

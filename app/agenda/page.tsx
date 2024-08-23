@@ -85,6 +85,7 @@ const Agenda = ({ sessions }: { sessions: SessionModel[] }) => {
                           ? setStageFilter(undefined)
                           : setStageFilter(stage)
                       }
+                      key={index}
                       className="block py-2 w-full"
                     >
                       <Text textType={"small"} className="text-center" as="p">
@@ -110,6 +111,7 @@ const Agenda = ({ sessions }: { sessions: SessionModel[] }) => {
                           ? setTrackFilter(undefined)
                           : setTrackFilter(track)
                       }
+                      key={index}
                       className="block py-2 w-full"
                     >
                       <Text textType={"small"} className="text-center" as="p">

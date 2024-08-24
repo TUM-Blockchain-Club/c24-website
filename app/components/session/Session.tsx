@@ -69,9 +69,9 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         <div>
           <Text>{session.description}</Text>
         </div>
-        <div className="flex gap-8">
+        <div className="flex flex-col gap-2">
           <div>Speaker{session.speakers.length > 1 && "s"}:</div>
-          <div className="flex-grow flex gap-4 flex-wrap">
+          <div className="flex-grow flex gap-x-8 gap-y-4 flex-wrap">
             {session.speakers.map((speaker, index) => (
               <div className="flex gap-2 items-center" key={index}>
                 {speaker.profilePhoto && (

@@ -110,6 +110,30 @@ body {
   );
 }
 
+.bg-gradient-tbc {
+  background-image: linear-gradient(
+    to right bottom,
+    theme("colors.tbc-yellow"),
+    theme("colors.tbc-pink"),
+    theme("colors.tbc-blue")
+  );
+}
+
+.bg-gradient-tbc-md {
+  background-image: linear-gradient(
+    to right bottom,
+    theme("colors.tbc-yellow"),
+    theme("colors.tbc-pink"),
+    theme("colors.tbc-blue")
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .bg-gradient-tbc-md {
+    background-image: none;
+  }
+}
+
 #footer::after {
   content: "";
   position: absolute;

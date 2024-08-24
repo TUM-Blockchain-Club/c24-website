@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/app/components/button";
 import { Container } from "@/app/components/container";
 import Session from "@/app/components/session/Session";
-import { Session as SessionModel, Stages, Tracks } from "@/app/model/session";
 import { Text } from "@/app/components/text";
+import { Session as SessionModel, Stages, Tracks } from "@/app/model/session";
+import { useState } from "react";
 
 const Agenda = ({ sessions }: { sessions: SessionModel[] }) => {
   const [dayFilter, setDayFilter] = useState<Date>();

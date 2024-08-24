@@ -28,8 +28,8 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         )}
         ref={ref}
       >
-        <div className="flex flex-col">
-          <div className="flex justify-between w-full">
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-col md:flex-row justify-between w-full">
             <div className="flex-grow max-w-[300px]">
               <Text textType={"sub_title"} as={"p"} className="text-wrap">
                 {session.title}
@@ -44,7 +44,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
               </div>
             </div>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-x-8 flex-col md:flex-row">
             <div className="flex items-center gap-1">
               <SewingPinIcon className="text-yellow-400" />
               <Text>{session.room}</Text>

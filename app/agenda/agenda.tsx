@@ -5,6 +5,7 @@ import { Button } from "@/app/components/button";
 import { Session, Stages, Tracks } from "@/app/model/session";
 import { Session as SessionComponent } from "@/app/components/session";
 import React, { useState } from "react";
+import { Toggle } from "@/app/components/toggle";
 
 type AgendaProps = { sessions: Session[] };
 
@@ -34,16 +35,23 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
           <div className="flex flex-col gap-2">
             {[new Date("2024-09-12"), new Date("2024-09-13")].map(
               (date, index) => (
-                <Button
+                <Toggle
                   onClick={() =>
-                    dayFilter && isSameDay(dayFilter, date)
+                    dayFilter !== undefined && isSameDay(dayFilter, date)
                       ? setDayFilter(undefined)
                       : setDayFilter(date)
+                  }
+                  pressed={
+                    dayFilter !== undefined && isSameDay(dayFilter, date)
                   }
                   className="block py-2 w-full"
                   key={index}
                 >
-                  <Text textType={"small"} className="text-center" as="p">
+                  <Text
+                    textType={"small"}
+                    className="!text-inherit text-center"
+                    as="p"
+                  >
                     {date.toLocaleDateString("en-DE", {
                       weekday: "long",
                       day: "numeric",
@@ -51,7 +59,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
                       year: "numeric",
                     })}
                   </Text>
-                </Button>
+                </Toggle>
               ),
             )}
           </div>
@@ -62,19 +70,24 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
           </Text>
           <div className="flex flex-col gap-2">
             {Stages.map((stage, index) => (
-              <Button
+              <Toggle
                 onClick={() =>
                   stageFilter === stage
                     ? setStageFilter(undefined)
                     : setStageFilter(stage)
                 }
+                pressed={stageFilter === stage}
                 key={index}
                 className="block py-2 w-full"
               >
-                <Text textType={"small"} className="text-center" as="p">
+                <Text
+                  textType={"small"}
+                  className="!text-inherit text-center"
+                  as="p"
+                >
                   {stage}
                 </Text>
-              </Button>
+              </Toggle>
             ))}
           </div>
         </div>
@@ -84,19 +97,24 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
           </Text>
           <div className="flex flex-col gap-2">
             {Tracks.map((track, index) => (
-              <Button
+              <Toggle
                 onClick={() =>
                   trackFilter === track
                     ? setTrackFilter(undefined)
                     : setTrackFilter(track)
                 }
+                pressed={trackFilter === track}
                 key={index}
                 className="block py-2 w-full"
               >
-                <Text textType={"small"} className="text-center" as="p">
+                <Text
+                  textType={"small"}
+                  className="!text-inherit text-center"
+                  as="p"
+                >
                   {track}
                 </Text>
-              </Button>
+              </Toggle>
             ))}
           </div>
         </div>

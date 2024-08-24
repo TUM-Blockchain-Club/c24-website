@@ -1,7 +1,6 @@
 "use client";
 
 import { Text } from "@/app/components/text";
-import { Button } from "@/app/components/button";
 import { Session, Stages, Tracks } from "@/app/model/session";
 import { Session as SessionComponent } from "@/app/components/session";
 import React, { useState } from "react";
@@ -21,6 +20,13 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
       d1.getDate() === d2.getDate()
     );
   }
+
+  const filteredSessions = sessions.filter(
+    (item) =>
+      (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
+      (!trackFilter || trackFilter === item.track) &&
+      (!stageFilter || stageFilter === item.room),
+  );
 
   return (
     <div className={"flex relative gap-2 lg:gap-8 mt-24"}>
@@ -120,18 +126,14 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
         </div>
       </div>
       <div className="flex flex-grow flex-col">
-        {sessions &&
-          sessions
-            .filter(
-              (item) =>
-                (!dayFilter ||
-                  isSameDay(dayFilter, new Date(item.startTime))) &&
-                (!trackFilter || trackFilter === item.track) &&
-                (!stageFilter || stageFilter === item.room),
-            )
-            .map((item, index) => (
-              <SessionComponent session={item} key={index} />
-            ))}
+        {filteredSessions.map((item, index) => (
+          <SessionComponent session={item} key={index} />
+        ))}
+        {filteredSessions.length === 0 && (
+          <Text className="text-gray-500">
+            There is no session with that filter :(
+          </Text>
+        )}
       </div>
     </div>
   );

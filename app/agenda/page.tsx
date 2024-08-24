@@ -1,13 +1,8 @@
 "use client";
 
-import { Button } from "@/app/components/button";
-import { Container } from "@/app/components/container";
-import { Text } from "@/app/components/text";
-import { Session as SessionModel, Stages, Tracks } from "@/app/model/session";
-import { useState } from "react";
-
 const Agenda = (/*{ sessions }: { sessions: SessionModel[] }*/) => {
-  const [dayFilter, setDayFilter] = useState<Date>();
+  return <></>;
+  /*const [dayFilter, setDayFilter] = useState<Date>();
   const [trackFilter, setTrackFilter] = useState<SessionModel["track"]>();
   const [stageFilter, setStageFilter] = useState<SessionModel["room"]>();
 
@@ -122,7 +117,7 @@ const Agenda = (/*{ sessions }: { sessions: SessionModel[] }*/) => {
               </div>
             </div>
             <div className="flex flex-grow flex-col">
-              {/*sessions &&
+              {sessions &&
                 sessions
                   .filter(
                     (item) =>
@@ -131,13 +126,13 @@ const Agenda = (/*{ sessions }: { sessions: SessionModel[] }*/) => {
                       (!trackFilter || trackFilter === item.track) &&
                       (!stageFilter || stageFilter === item.room),
                   )
-                  .map((item, index) => <Session session={item} key={index} />)*/}
+                  .map((item, index) => <Session session={item} key={index} />)}
             </div>
           </div>
         </Container>
       </main>
     </div>
-  );
+  );*/
 };
 
 export default Agenda;

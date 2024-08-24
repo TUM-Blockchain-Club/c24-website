@@ -1,4 +1,6 @@
 import Session from "@/app/model/session";
+import Speaker from "@/app/model/speaker";
+import { findAssetURL } from "@/app/hooks/useSpeaker";
 
 export const useSession = async (): Promise<Session[]> => {
   const spaceId = process.env.CONTENTFUL_SPACE_ID!;
@@ -30,7 +32,31 @@ export const useSession = async (): Promise<Session[]> => {
       endTime: item.fields.endTime,
       room: item.fields.room,
       description: item.fields.description,
-      speakers: item.fields.speakers,
+      speakers: item.fields.speakers.map(
+        (speaker: {
+          sys: { type: string; linkType: string; id: string };
+        }): undefined | Speaker => {
+          const speakerEntry = jsonRes.includes.Entry.find(
+            (entry: any) => entry.sys.id == speaker.sys.id,
+          );
+
+          if (!speakerEntry) {
+            return undefined;
+          }
+
+          return {
+            name: speakerEntry.fields.name,
+            description: speakerEntry.fields.description,
+            profilePhoto: findAssetURL(
+              jsonRes.includes.Asset,
+              speakerEntry.fields.profilePhoto.sys.id,
+            ),
+            url: speakerEntry.fields.url,
+            urlType: speakerEntry.fields.urlType,
+            priority: speakerEntry.fields.priority,
+          };
+        },
+      ),
     };
   });
 

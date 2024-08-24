@@ -7,7 +7,7 @@ import { Text } from "@/app/components/text";
 import { Session as SessionModel, Stages, Tracks } from "@/app/model/session";
 import { useState } from "react";
 
-const Agenda = ({ sessions }: { sessions: SessionModel[] }) => {
+const Agenda = ({ sessions }: { sessions: any }) => {
   const [dayFilter, setDayFilter] = useState<Date>();
   const [trackFilter, setTrackFilter] = useState<SessionModel["track"]>();
   const [stageFilter, setStageFilter] = useState<SessionModel["room"]>();

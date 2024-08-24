@@ -26,5 +26,6 @@ export const Toggle = React.forwardRef<ToggleElement, ToggleProps>(
     );
   },
 );
+Toggle.displayName = "Toggle";
 
 export default Toggle;

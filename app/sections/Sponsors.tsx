@@ -87,7 +87,7 @@ const Sponsors = () => {
           alt="Doubleup"
           sponsorType="silver"
           link="https://www.doubleup.fun/"
-          imageSrc={"/sponsors/doubleup-buckyou.png"}
+          imageSrc={"/sponsors/doubleup_logo.png"}
         />
       </div>
       <Text textType={"title"}>Bronze</Text>

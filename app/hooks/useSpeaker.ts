@@ -1,6 +1,6 @@
 import Speaker from "@/app/model/speaker";
 
-const findAssetURL = (
+export const findAssetURL = (
   assetsArray: any[],
   assetId: string,
 ): string | undefined => {

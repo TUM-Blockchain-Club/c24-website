@@ -6,12 +6,13 @@ export const Tracks = [
   "Research Track",
   "Regulation Track",
   "Ecosystem Track",
+  "Academic Track",
 ] as const;
 
 export const Stages = [
   "Dome Stage",
   "Tech Stage",
-  "Education Stage",
+  "Forum Stage",
   "Workshop Stage",
 ] as const;
 

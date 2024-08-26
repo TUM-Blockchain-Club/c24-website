@@ -11,7 +11,7 @@ export const Tracks = [
 export const Stages = [
   "Dome Stage",
   "Tech Stage",
-  "Education Stage",
+  "Forum Stage",
   "Workshop Stage",
 ] as const;
 

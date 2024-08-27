@@ -85,6 +85,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                 <Text key={index}>{speaker.name}</Text>
               </div>
             ))}
+            {session.speakers.length === 0 && <Text>Coming soon...</Text>}
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export interface Session {
   endTime: string;
   room: (typeof Stages)[number];
   description: string;
-  speakers: Speaker[];
+  speakers?: Speaker[];
 }
 
 export default Session;

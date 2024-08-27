@@ -13,6 +13,7 @@ export const Stages = [
   "Dome Stage",
   "Tech Stage",
   "Forum Stage",
+  "Research Stage",
   "Workshop Stage",
 ] as const;
 

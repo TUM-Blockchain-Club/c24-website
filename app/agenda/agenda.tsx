@@ -46,7 +46,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Days
           </Text>
           <div className="flex flex-col gap-2">
-            {[new Date("2024-09-12"), new Date("2024-09-13")]?.map(
+            {[new Date("2024-09-12"), new Date("2024-09-13")].map(
               (date, index) => (
                 <Toggle
                   onClick={() =>
@@ -82,7 +82,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Stages
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Stages?.map((stage, index) => (
+            {Stages.map((stage, index) => (
               <Toggle
                 onClick={() =>
                   stageFilter === stage
@@ -109,7 +109,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Tracks
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Tracks?.map((track, index) => (
+            {Tracks.map((track, index) => (
               <Toggle
                 onClick={() =>
                   trackFilter === track

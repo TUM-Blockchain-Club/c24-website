@@ -62,6 +62,16 @@ const Partners = () => {
             ></Image>
           </div>
         </div>
+        <div className="w-full flex justify-center gap-8 flex-wrap">
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="Web3 Vision"
+              src="/partners/w3.vision_white.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+        </div>
       </div>
       <div className={"flex flex-col gap-6 lg:gap-12"}>
         <Text className="w-full text-center" as="p" textType={"sub_title"}>

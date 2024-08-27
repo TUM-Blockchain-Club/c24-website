@@ -66,6 +66,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Text asChild>
             <Link href="/side-events">Side Events</Link>
           </Text>
+          <Text asChild>
+            <Link href="/agenda">Agenda</Link>
+          </Text>
           {pathName === "/" && (
             <>
               <Text asChild>

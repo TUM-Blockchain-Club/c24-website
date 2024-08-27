@@ -178,13 +178,16 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               {pathName === "/" && (
                 <>
                   <Text asChild>
-                    <Link href="#grants">Student Grants</Link>
+                    <Link href="#grants">Grants</Link>
                   </Text>
                   <Text asChild>
                     <Link href="#faq">FAQ</Link>
                   </Text>
                 </>
               )}
+              <Text asChild>
+                <Link href="/agenda">Agenda</Link>
+              </Text>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Tickets

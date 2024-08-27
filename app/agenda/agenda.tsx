@@ -21,12 +21,16 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
     );
   }
 
-  const filteredSessions = sessions.filter(
-    (item) =>
-      (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
-      (!trackFilter || trackFilter === item.track) &&
-      (!stageFilter || stageFilter === item.room),
-  );
+  let filteredSessions = null;
+
+  if (sessions) {
+    filteredSessions = sessions.filter(
+      (item) =>
+        (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
+        (!trackFilter || trackFilter === item.track) &&
+        (!stageFilter || stageFilter === item.room),
+    );
+  }
 
   return (
     <div className={"flex flex-col md:flex-row relative gap-8 mt-24"}>
@@ -42,7 +46,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Days
           </Text>
           <div className="flex flex-col gap-2">
-            {[new Date("2024-09-12"), new Date("2024-09-13")].map(
+            {[new Date("2024-09-12"), new Date("2024-09-13")]?.map(
               (date, index) => (
                 <Toggle
                   onClick={() =>
@@ -78,7 +82,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Stages
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Stages.map((stage, index) => (
+            {Stages?.map((stage, index) => (
               <Toggle
                 onClick={() =>
                   stageFilter === stage
@@ -105,7 +109,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Tracks
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Tracks.map((track, index) => (
+            {Tracks?.map((track, index) => (
               <Toggle
                 onClick={() =>
                   trackFilter === track
@@ -133,10 +137,10 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
           <Text textType={"title"}>Sessions</Text>
         </div>
         <div className="flex w-full flex-col items-center md:items-start">
-          {filteredSessions.map((item, index) => (
+          {filteredSessions?.map((item, index) => (
             <SessionComponent session={item} key={index} />
           ))}
-          {filteredSessions.length === 0 && (
+          {filteredSessions?.length === 0 && (
             <Text className="text-gray-500">
               There is no session with that filter :(
             </Text>

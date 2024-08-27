@@ -28,20 +28,28 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         )}
         ref={ref}
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex w-full flex-col gap-2">
           <div className="flex flex-col md:flex-row justify-between w-full">
-            <div className="flex-grow max-w-[300px]">
-              <Text textType={"sub_title"} as={"p"} className="text-wrap">
+            <div className="flex-grow w-full max-w-[450px]">
+              <Text
+                textType={"sub_title"}
+                as={"p"}
+                className="text-wrap w-full"
+              >
                 {session.title}
               </Text>
             </div>
-            <div className="flex gap-2">
-              <div className="w-fit border px-3 h-fit">
-                <Text textType={"small"}>{session.type}</Text>
-              </div>
-              <div className="w-fit border px-3 h-fit">
-                <Text textType={"small"}>{session.track}</Text>
-              </div>
+            <div className="flex gap-2 w-fit justify-end">
+              {session.type && (
+                <div className="min-w-fit border px-3 h-fit">
+                  <Text textType={"small"}>{session.type}</Text>
+                </div>
+              )}
+              {session.track && (
+                <div className="min-w-fit border px-3 h-fit">
+                  <Text textType={"small"}>{session.track}</Text>
+                </div>
+              )}
             </div>
           </div>
           <div className="flex gap-x-8 flex-col md:flex-row">
@@ -66,25 +74,33 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             </div>
           </div>
         </div>
-        <div>
-          <Text>{session.description}</Text>
+        <div className="w-full text-wrap overflow-auto">
+          <Text className="w-full text-wrap overflow-auto">
+            {session.description}
+          </Text>
         </div>
         <div className="flex flex-col gap-2">
-          <div>Speaker{session.speakers.length > 1 && "s"}:</div>
+          <div>
+            Speaker{session.speakers && session.speakers.length > 1 && "s"}:
+          </div>
           <div className="flex-grow flex gap-x-8 gap-y-4 flex-wrap">
-            {session.speakers.map((speaker, index) => (
-              <div className="flex gap-2 items-center" key={index}>
-                {speaker.profilePhoto && (
-                  <Image
-                    src={speaker.profilePhoto}
-                    alt={speaker.name}
-                    width={48}
-                    height={48}
-                  />
-                )}
-                <Text key={index}>{speaker.name}</Text>
-              </div>
-            ))}
+            {session.speakers &&
+              session.speakers.map((speaker, index) => (
+                <div className="flex gap-2 items-center" key={index}>
+                  {speaker.profilePhoto && (
+                    <Image
+                      src={speaker.profilePhoto}
+                      alt={speaker.name}
+                      width={48}
+                      height={48}
+                    />
+                  )}
+                  <Text key={index}>{speaker.name}</Text>
+                </div>
+              ))}
+            {(!session.speakers || session.speakers.length === 0) && (
+              <Text>Coming soon...</Text>
+            )}
           </div>
         </div>
       </div>

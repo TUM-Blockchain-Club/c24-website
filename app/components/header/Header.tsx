@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { Button } from "@/app/components/button";
 import { Link } from "@/app/components/link";
 import { Text } from "@/app/components/text";
@@ -8,6 +7,7 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 type HeaderElement = React.ElementRef<"header">;
@@ -137,13 +137,13 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 />
               </NextLink>
             </div>
-            <div className={"flex sm:hidden"}>
+            {/*<div className={"flex sm:hidden"}>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
                   Tickets
                 </NextLink>
               </Button>
-            </div>
+            </div>*/}
             <nav
               className={
                 "hidden sm:flex h-full justify-center gap-8 items-center"
@@ -188,7 +188,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 </NextLink>
               </Button>
             </nav>
-            <div className="hidden py-2 px-4">
+            <div className="md:hidden py-2 px-4">
               <HamburgerMenuIcon
                 height={"25"}
                 width={"25"}
@@ -197,7 +197,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
             </div>
           </div>
         </header>
-        {/*<Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />*/}
+        <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
       </>
     );
   },

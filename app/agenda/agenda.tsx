@@ -9,7 +9,6 @@ import { Toggle } from "@/app/components/toggle";
 type AgendaProps = { sessions: Session[] };
 
 export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
-  if (!sessions) return;
   const [dayFilter, setDayFilter] = useState<Date>();
   const [trackFilter, setTrackFilter] = useState<Session["track"]>();
   const [stageFilter, setStageFilter] = useState<Session["room"]>();
@@ -22,12 +21,16 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
     );
   }
 
-  const filteredSessions = sessions.filter(
-    (item) =>
-      (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
-      (!trackFilter || trackFilter === item.track) &&
-      (!stageFilter || stageFilter === item.room),
-  );
+  let filteredSessions = null;
+
+  if (sessions) {
+    filteredSessions = sessions.filter(
+      (item) =>
+        (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
+        (!trackFilter || trackFilter === item.track) &&
+        (!stageFilter || stageFilter === item.room),
+    );
+  }
 
   return (
     <div className={"flex flex-col md:flex-row relative gap-8 mt-24"}>

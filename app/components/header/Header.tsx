@@ -188,7 +188,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 </NextLink>
               </Button>
             </nav>
-            <div className="py-2 px-4">
+            <div className="md:hidden py-2 px-4">
               <HamburgerMenuIcon
                 height={"25"}
                 width={"25"}

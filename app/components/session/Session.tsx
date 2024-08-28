@@ -54,6 +54,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                     "border-blue-400": session.track === "Ecosystem Track",
                     "border-purple-400": session.track === "Research Track",
                     "border-red-400": session.track === "Regulation Track",
+                    "border-orange-400": session.track === "Application Track",
                   })}
                 >
                   <Text
@@ -64,6 +65,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                       "text-blue-400": session.track === "Ecosystem Track",
                       "text-purple-400": session.track === "Research Track",
                       "text-red-400": session.track === "Regulation Track",
+                      "text-orange-400": session.track === "Application Track",
                     })}
                   >
                     {session.track}

@@ -5,13 +5,14 @@ import { Session, Stages, Tracks } from "@/app/model/session";
 import { Session as SessionComponent } from "@/app/components/session";
 import React, { useState } from "react";
 import { Toggle } from "@/app/components/toggle";
+import * as Select from "@/app/components/select/Select";
 
 type AgendaProps = { sessions: Session[] };
 
 export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
   const [dayFilter, setDayFilter] = useState<Date>();
-  const [trackFilter, setTrackFilter] = useState<Session["track"]>();
-  const [stageFilter, setStageFilter] = useState<Session["room"]>();
+  const [trackFilter, setTrackFilter] = useState<Session["track"] & "all">();
+  const [stageFilter, setStageFilter] = useState<Session["room"] & "all">();
 
   function isSameDay(d1: Date, d2: Date) {
     return (
@@ -27,8 +28,8 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
     filteredSessions = sessions.filter(
       (item) =>
         (!dayFilter || isSameDay(dayFilter, new Date(item.startTime))) &&
-        (!trackFilter || trackFilter === item.track) &&
-        (!stageFilter || stageFilter === item.room),
+        (trackFilter === "all" || !trackFilter || trackFilter === item.track) &&
+        (stageFilter === "all" || !stageFilter || stageFilter === item.room),
     );
   }
 
@@ -82,26 +83,21 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Stages
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Stages.map((stage, index) => (
-              <Toggle
-                onClick={() =>
-                  stageFilter === stage
-                    ? setStageFilter(undefined)
-                    : setStageFilter(stage)
-                }
-                pressed={stageFilter === stage}
-                key={index}
-                className="block py-2 w-fit md:w-full"
-              >
-                <Text
-                  textType={"small"}
-                  className="!text-inherit text-center"
-                  as="p"
-                >
-                  {stage}
-                </Text>
-              </Toggle>
-            ))}
+            <Select.Root
+              onValueChange={(value: (typeof Stages)[number] & "all") => {
+                setStageFilter(value);
+              }}
+            >
+              <Select.Trigger placeholder={"Any Stage"} className="w-full" />
+              <Select.Content>
+                <Select.Item value={"all"}>Any Stage</Select.Item>
+                {Stages.map((stage, index) => (
+                  <Select.Item value={stage} key={index}>
+                    {stage}
+                  </Select.Item>
+                ))}
+              </Select.Content>
+            </Select.Root>
           </div>
         </div>
         <div className="flex flex-col gap-3">
@@ -109,26 +105,21 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
             Tracks
           </Text>
           <div className="flex md:flex-col flex-wrap gap-2">
-            {Tracks.map((track, index) => (
-              <Toggle
-                onClick={() =>
-                  trackFilter === track
-                    ? setTrackFilter(undefined)
-                    : setTrackFilter(track)
-                }
-                pressed={trackFilter === track}
-                key={index}
-                className="block py-2 md:w-full w-fit"
-              >
-                <Text
-                  textType={"small"}
-                  className="!text-inherit text-center"
-                  as="p"
-                >
-                  {track}
-                </Text>
-              </Toggle>
-            ))}
+            <Select.Root
+              onValueChange={(value: (typeof Tracks)[number] & "all") => {
+                setTrackFilter(value);
+              }}
+            >
+              <Select.Trigger placeholder={"Any Track"} className="w-full" />
+              <Select.Content>
+                <Select.Item value={"all"}>Any Track</Select.Item>
+                {Tracks.map((stage, index) => (
+                  <Select.Item value={stage} key={index}>
+                    {stage}
+                  </Select.Item>
+                ))}
+              </Select.Content>
+            </Select.Root>
           </div>
         </div>
       </div>

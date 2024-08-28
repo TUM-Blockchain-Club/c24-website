@@ -60,14 +60,14 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
       data-accent-color={color}
       {...textProps}
       ref={ref}
-      className={textVariants({
-        className: classNames(
-          className,
-          spaceGrotesk.variable,
-          montserrat.variable,
-        ),
-        textType,
-      })}
+      className={classNames(
+        className,
+        textVariants({
+          textType,
+        }),
+        spaceGrotesk.variable,
+        montserrat.variable,
+      )}
     >
       {asChild ? children : <Tag>{children}</Tag>}
     </Slot>

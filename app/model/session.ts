@@ -19,13 +19,13 @@ export const Stages = [
 
 export interface Session {
   title: string;
-  track: (typeof Tracks)[number];
-  type: "Workshop" | "Panel Discussion" | "Talk";
+  track?: (typeof Tracks)[number];
+  type?: "Workshop" | "Panel Discussion" | "Talk";
   startTime: string;
   endTime: string;
   room: (typeof Stages)[number];
   description: string;
-  speakers: Speaker[];
+  speakers?: Speaker[];
 }
 
 export default Session;

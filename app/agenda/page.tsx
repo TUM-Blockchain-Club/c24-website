@@ -9,7 +9,7 @@ import { useSession } from "@/app/hooks/useSession";
 
 const AgendaPage = async () => {
   const sessions = await useSession();
-  /* TEST SESSION
+  // TEST SESSION
   /*const sessions = [
     {
       title: "The ABC of DEF",

@@ -24,7 +24,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         {...divProps}
         className={classNames(
           className,
-          "border shadow-glow w-full cta-border flex p-4 flex-col gap-4",
+          "border w-full border-white flex p-4 flex-col gap-4",
         )}
         ref={ref}
       >

@@ -24,7 +24,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         {...divProps}
         className={classNames(
           className,
-          "border w-full flex p-4 flex-col gap-4",
+          "border shadow-glow w-full cta-border flex p-4 flex-col gap-4",
         )}
         ref={ref}
       >
@@ -41,13 +41,17 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             </div>
             <div className="flex gap-2 w-fit justify-end">
               {session.type && (
-                <div className="min-w-fit border px-3 h-fit">
-                  <Text textType={"small"}>{session.type}</Text>
+                <div className="min-w-fit px-3 h-fit">
+                  <Text className="underline" textType={"small"}>
+                    {session.type}
+                  </Text>
                 </div>
               )}
               {session.track && (
-                <div className="min-w-fit border px-3 h-fit">
-                  <Text textType={"small"}>{session.track}</Text>
+                <div className="min-w-fit px-3 h-fit">
+                  <Text className="underline" textType={"small"}>
+                    {session.track}
+                  </Text>
                 </div>
               )}
             </div>
@@ -55,11 +59,11 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
           <div className="flex gap-x-8 flex-col md:flex-row">
             <div className="flex items-center gap-1">
               <SewingPinIcon className="text-yellow-400" />
-              <Text>{session.room}</Text>
+              <Text textType={"small"}>{session.room}</Text>
             </div>
             <div className="flex items-center gap-1">
               <ClockIcon className="text-yellow-400" />
-              <Text>
+              <Text textType={"small"}>
                 {startTime.toLocaleDateString("en-DE", { weekday: "short" })},{" "}
                 {startTime.toLocaleTimeString("en-DE", {
                   hour: "2-digit",

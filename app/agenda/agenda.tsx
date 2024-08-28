@@ -5,6 +5,7 @@ import { Session, Stages, Tracks } from "@/app/model/session";
 import { Session as SessionComponent } from "@/app/components/session";
 import React, { useState } from "react";
 import { Toggle } from "@/app/components/toggle";
+import Image from "next/image";
 
 type AgendaProps = { sessions: Session[] };
 
@@ -133,10 +134,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
         </div>
       </div>
       <div id="sessions" className="flex w-full flex-col gap-y-4">
-        <div>
-          <Text textType={"title"}>Sessions</Text>
-        </div>
-        <div className="flex w-full flex-col items-center md:items-start">
+        <div className="flex w-full flex-col space-y-4 items-center md:items-start">
           {filteredSessions?.map((item, index) => (
             <SessionComponent session={item} key={index} />
           ))}

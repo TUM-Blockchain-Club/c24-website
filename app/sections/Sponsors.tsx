@@ -50,6 +50,12 @@ const Sponsors = () => {
           link="https://verus.io"
           imageSrc={"/sponsors/verus_logo.png"}
         />
+        <Sponsor
+          alt="aeternity"
+          sponsorType="gold"
+          link="https://aeternity.com/"
+          imageSrc={"/sponsors/aeternity.png"}
+        />
       </div>
       <Text textType={"title"}>Silver</Text>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

@@ -19,6 +19,21 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
       endTime: new Date(session.endTime),
     };
 
+    const getSessionColor = (track: String) => {
+      switch (track) {
+        case "Education Track":
+          return "bg-green-500";
+        case "Research Track":
+          return "bg-yellow-500";
+        case "Ecosystem Track":
+          return "bg-blue-500";
+        case "Application Track":
+          return "bg-purple-500";
+        case "Regulation Track":
+          return "bg-red-500";
+      }
+    };
+
     return (
       <div
         {...divProps}
@@ -46,7 +61,12 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                 </div>
               )}
               {session.track && (
-                <div className="min-w-fit border px-3 h-fit">
+                <div
+                  className={
+                    "min-w-fit border px-3 h-fit " +
+                    getSessionColor(session.track)
+                  }
+                >
                   <Text textType={"small"}>{session.track}</Text>
                 </div>
               )}

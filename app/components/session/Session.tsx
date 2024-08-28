@@ -3,6 +3,7 @@ import { Session as SessionModel } from "@/app/model/session";
 import classNames from "classnames";
 import { Text } from "@/app/components/text";
 import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
+import { Tracks } from "@/app/model/session";
 import Image from "next/image";
 
 export type SessionElement = React.ElementRef<"div">;
@@ -17,21 +18,6 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
     const { startTime, endTime } = {
       startTime: new Date(session.startTime),
       endTime: new Date(session.endTime),
-    };
-
-    const getSessionColor = (track: String) => {
-      switch (track) {
-        case "Education Track":
-          return "bg-green-500";
-        case "Research Track":
-          return "bg-yellow-500";
-        case "Ecosystem Track":
-          return "bg-blue-500";
-        case "Application Track":
-          return "bg-purple-500";
-        case "Regulation Track":
-          return "bg-red-500";
-      }
     };
 
     return (
@@ -62,12 +48,26 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
               )}
               {session.track && (
                 <div
-                  className={
-                    "min-w-fit border px-3 h-fit " +
-                    getSessionColor(session.track)
-                  }
+                  className={classNames("min-w-fit border px-3 h-fit", {
+                    "border-green-400": session.track === "Education Track",
+                    "border-yellow-400": session.track === "Research Track",
+                    "border-blue-400": session.track === "Ecosystem Track",
+                    "border-purple-400": session.track === "Research Track",
+                    "border-red-400": session.track === "Regulation Track",
+                  })}
                 >
-                  <Text textType={"small"}>{session.track}</Text>
+                  <Text
+                    textType={"small"}
+                    className={classNames({
+                      "text-green-400": session.track === "Education Track",
+                      "text-yellow-400": session.track === "Research Track",
+                      "text-blue-400": session.track === "Ecosystem Track",
+                      "text-purple-400": session.track === "Research Track",
+                      "text-red-400": session.track === "Regulation Track",
+                    })}
+                  >
+                    {session.track}
+                  </Text>
                 </div>
               )}
             </div>

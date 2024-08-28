@@ -141,6 +141,12 @@ const Sponsors = () => {
           className={"!p-10"}
           imageSrc={"/sponsors/ens_logo.png"}
         />
+        <Sponsor
+          alt="Nil"
+          sponsorType="bronze"
+          link="https://nil.foundation/"
+          imageSrc={"/sponsors/nil_logo.svg"}
+        />
       </div>
     </section>
   );

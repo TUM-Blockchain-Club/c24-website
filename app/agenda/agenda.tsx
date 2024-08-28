@@ -131,9 +131,6 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
         </div>
       </div>
       <div id="sessions" className="flex w-full flex-col gap-y-4">
-        <div>
-          <Text textType={"title"}>Sessions</Text>
-        </div>
         <div className="flex w-full flex-col items-center md:items-start">
           {filteredSessions?.map((item, index) => (
             <SessionComponent session={item} key={index} />

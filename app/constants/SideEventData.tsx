@@ -47,6 +47,6 @@ export const sideEventsItems = [
       "Join us for the Sui Community Breakfast on September 13, 2024, from 8:30 to 10:30 AM at the Rosi Coffee & Bar in München. ​Get the latest news about the Sui ecosystem, engage in insightful discussions, enjoy delicious food and drinks, and connect with other Sui builders and developers — just a 5-minute walk from the TUM Blockchain Conference venue. ​Everyone is welcome, whether you're a developer, project founder, investor, or Web3 enthusiast.",
     link: "https://lu.ma/zs91488v?tk=GlGfDy",
     date: "Friday, September 13 | 8:30 - 10.30am",
-    backgroundImg: "/side-events/community-brekafast.jpg",
+    backgroundImg: "/side-events/community-breakfast.jpg",
   },
 ];

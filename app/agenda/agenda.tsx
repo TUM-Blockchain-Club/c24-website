@@ -68,6 +68,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
                   >
                     {date.toLocaleDateString("en-DE", {
                       weekday: "long",
+                      timeZone: "Europe/Berlin",
                     })}
                     <span className="hidden md:inline">
                       ,{" "}
@@ -75,6 +76,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
                         day: "numeric",
                         month: "short",
                         year: "numeric",
+                        timeZone: "Europe/Berlin",
                       })}
                     </span>
                   </Text>

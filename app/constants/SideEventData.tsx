@@ -28,5 +28,5 @@ export const sideEventsItems = [
     link: "https://lu.ma/vbkdwhxe",
     date: "Wednesday, September 11 | 6:30 - 10pm",
     backgroundImg: "/side-events/w3-pizza.jpg",
-  }
+  },
 ];

@@ -32,22 +32,23 @@ const SelectTrigger = React.forwardRef<
   const { children, placeholder, className, ...triggerProps } = props;
 
   return (
-    <RadixSelect.Trigger {...triggerProps}>
-      <Text asChild textType={"small"}>
-        <Button
-          className={classNames(
-            "flex justify-between items-center gap-3",
-            className,
-          )}
-          ref={forwardRef}
-        >
+    <Text asChild textType={"small"}>
+      <Button
+        asChild
+        className={classNames(
+          "flex justify-between items-center gap-3",
+          className,
+        )}
+        ref={forwardRef}
+      >
+        <RadixSelect.Trigger {...triggerProps}>
           <RadixSelect.Value placeholder={placeholder}></RadixSelect.Value>
           <RadixSelect.Icon>
             <ChevronDownIcon />
           </RadixSelect.Icon>
-        </Button>
-      </Text>
-    </RadixSelect.Trigger>
+        </RadixSelect.Trigger>
+      </Button>
+    </Text>
   );
 });
 SelectTrigger.displayName = "Select.Trigger";

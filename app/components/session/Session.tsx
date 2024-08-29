@@ -25,7 +25,15 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         {...divProps}
         className={classNames(
           className,
-          "border w-full flex p-4 flex-col gap-4",
+          "border w-full flex p-4 flex-col gap-4 bg-opacity-40",
+          {
+            "bg-green-950": session.track === "Education Track",
+            "bg-yellow-950": session.track === "Research Track",
+            "bg-blue-950": session.track === "Ecosystem Track",
+            "bg-purple-950": session.track === "Research Track",
+            "bg-red-950": session.track === "Regulation Track",
+            "bg-orange-950": session.track === "Application Track",
+          },
         )}
         ref={ref}
       >
@@ -43,7 +51,9 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             <div className="flex gap-2 w-fit justify-end">
               {session.type && (
                 <div className="min-w-fit border px-3 h-fit">
-                  <Text textType={"small"}>{session.type}</Text>
+                  <Text textType={"small"} className="text-white">
+                    {session.type}
+                  </Text>
                 </div>
               )}
               {session.track && (

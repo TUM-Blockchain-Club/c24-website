@@ -54,7 +54,7 @@ const Sponsors = () => {
           alt="aeternity"
           sponsorType="gold"
           link="https://aeternity.com/"
-          imageSrc={"/sponsors/aeternity.png"}
+          imageSrc={"/sponsors/aeternity_logo.png"}
         />
       </div>
       <Text textType={"title"}>Silver</Text>

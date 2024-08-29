@@ -106,8 +106,8 @@ const Partners = () => {
           </div>
           <div className="relative w-[155px] h-[100px]">
             <Image
-              alt="Blockchain Bundesverband (Bundesblock)"
-              src="/partners/bundesblock_logo.png"
+              alt="UnternehmerTUM"
+              src="/partners/UnternehmerTUM.png"
               fill={true}
               style={{ objectFit: "contain" }}
             ></Image>
@@ -182,6 +182,14 @@ const Partners = () => {
               src="/partners/venture_labs.png"
               width={110}
               height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px] flex items-center justify-center">
+            <Image
+              alt="Blockchain Bundesverband (Bundesblock)"
+              src="/partners/bundesblock_logo.png"
+              fill={true}
               style={{ objectFit: "contain" }}
             ></Image>
           </div>

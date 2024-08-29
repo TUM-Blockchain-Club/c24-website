@@ -92,15 +92,22 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             <div className="flex items-center gap-1">
               <ClockIcon className="text-yellow-400" />
               <Text>
-                {startTime.toLocaleDateString("en-DE", { weekday: "short" })},{" "}
+                {startTime.toLocaleDateString("en-DE", {
+                  weekday: "short",
+                  timeZone: "Europe/Berlin",
+                })}
+                ,{" "}
                 {startTime.toLocaleTimeString("en-DE", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Europe/Berlin",
                 })}{" "}
                 -{" "}
                 {endTime.toLocaleTimeString("en-DE", {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone: "Europe/Berlin",
+                  timeZoneName: "short",
                 })}
               </Text>
             </div>

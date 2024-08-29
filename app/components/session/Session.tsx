@@ -39,7 +39,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
       >
         <div className="flex w-full flex-col gap-2">
           <div className="flex flex-col md:flex-row justify-between w-full">
-            <div className="flex-grow w-full max-w-[450px]">
+            <div className="flex-grow w-full md:max-w-[400px]">
               <Text
                 textType={"sub_title"}
                 as={"p"}

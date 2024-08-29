@@ -19,6 +19,7 @@ export const Toggle = React.forwardRef<ToggleElement, ToggleProps>(
           "hover:no-underline font-sans button p-3 bg-black",
           "bg-black border border-white text-white hover:bg-bg-hover",
           "data-[state=on]:bg-white data-[state=on]:text-black",
+          "duration-300",
         )}
       >
         {children}

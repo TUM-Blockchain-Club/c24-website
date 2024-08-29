@@ -32,6 +32,10 @@ body {
   animation: glow 5s infinite;
 }
 
+.shadow-glow {
+  animation: shadow-glow 5s infinite;
+}
+
 .sponsor-bronze {
   box-shadow: 0px 0px 100px 10px rgba(92, 21, 103, 0.5);
   background-color: rgba(92, 21, 103, 0.5);
@@ -53,6 +57,21 @@ body {
   100% {
     background-color: rgba(255, 203, 109, 0.5);
     box-shadow: 0px 0px 100px 10px rgba(255, 203, 109, 0.8);
+  }
+}
+
+@keyframes shadow-glow {
+  0% {
+    box-shadow: 0px 0px 100px 10px rgba(255, 203, 109, 0.2);
+  }
+  33.3% {
+    box-shadow: 0px 0px 100px 10px rgba(228, 52, 165, 0.2);
+  }
+  66.6% {
+    box-shadow: 0px 0px 100px 10px rgba(52, 138, 235, 0.2);
+  }
+  100% {
+    box-shadow: 0px 0px 100px 10px rgba(255, 203, 109, 0.2);
   }
 }
 
@@ -99,15 +118,6 @@ body {
       rgba(52, 138, 235, 1) 100%
     )
     1;
-}
-
-.bg-gradient-tbc {
-  background-image: linear-gradient(
-    to right bottom,
-    theme("colors.tbc-yellow"),
-    theme("colors.tbc-pink"),
-    theme("colors.tbc-blue")
-  );
 }
 
 .bg-gradient-tbc {

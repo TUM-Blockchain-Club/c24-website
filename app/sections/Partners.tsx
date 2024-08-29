@@ -117,7 +117,7 @@ const Partners = () => {
           <div className="relative w-[155px] h-[100px]">
             <Image
               alt="BAF"
-              src="/partners/BAF_logo.png"
+              src="/partners/baf.png"
               fill={true}
               style={{ objectFit: "contain" }}
             ></Image>
@@ -171,6 +171,15 @@ const Partners = () => {
             <Image
               alt="HerDAO"
               src="/partners/HERDAO.png"
+              width={110}
+              height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px] flex items-center justify-center">
+            <Image
+              alt="TUM Venture Labs"
+              src="/partners/venture_labs.png"
               width={110}
               height={0}
               style={{ objectFit: "contain" }}

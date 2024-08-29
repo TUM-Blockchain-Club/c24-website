@@ -3,6 +3,7 @@ import { Session as SessionModel } from "@/app/model/session";
 import classNames from "classnames";
 import { Text } from "@/app/components/text";
 import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
+import { Tracks } from "@/app/model/session";
 import Image from "next/image";
 
 export type SessionElement = React.ElementRef<"div">;
@@ -24,7 +25,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         {...divProps}
         className={classNames(
           className,
-          "border w-full border-white flex p-4 flex-col gap-4",
+          "border w-full flex p-4 flex-col gap-4",
         )}
         ref={ref}
       >
@@ -41,15 +42,32 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             </div>
             <div className="flex gap-2 w-fit justify-end">
               {session.type && (
-                <div className="min-w-fit px-3 h-fit">
-                  <Text className="underline" textType={"small"}>
-                    {session.type}
-                  </Text>
+                <div className="min-w-fit border px-3 h-fit">
+                  <Text textType={"small"}>{session.type}</Text>
                 </div>
               )}
               {session.track && (
-                <div className="min-w-fit px-3 h-fit">
-                  <Text className="underline" textType={"small"}>
+                <div
+                  className={classNames("min-w-fit border px-3 h-fit", {
+                    "border-green-400": session.track === "Education Track",
+                    "border-yellow-400": session.track === "Research Track",
+                    "border-blue-400": session.track === "Ecosystem Track",
+                    "border-purple-400": session.track === "Research Track",
+                    "border-red-400": session.track === "Regulation Track",
+                    "border-orange-400": session.track === "Application Track",
+                  })}
+                >
+                  <Text
+                    textType={"small"}
+                    className={classNames({
+                      "text-green-400": session.track === "Education Track",
+                      "text-yellow-400": session.track === "Research Track",
+                      "text-blue-400": session.track === "Ecosystem Track",
+                      "text-purple-400": session.track === "Research Track",
+                      "text-red-400": session.track === "Regulation Track",
+                      "text-orange-400": session.track === "Application Track",
+                    })}
+                  >
                     {session.track}
                   </Text>
                 </div>
@@ -59,11 +77,11 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
           <div className="flex gap-x-8 flex-col md:flex-row">
             <div className="flex items-center gap-1">
               <SewingPinIcon className="text-yellow-400" />
-              <Text textType={"small"}>{session.room}</Text>
+              <Text>{session.room}</Text>
             </div>
             <div className="flex items-center gap-1">
               <ClockIcon className="text-yellow-400" />
-              <Text textType={"small"}>
+              <Text>
                 {startTime.toLocaleDateString("en-DE", { weekday: "short" })},{" "}
                 {startTime.toLocaleTimeString("en-DE", {
                   hour: "2-digit",

@@ -19,4 +19,14 @@ export const sideEventsItems = [
     date: "Wednesday, September 11 | 6:00 - 9pm",
     backgroundImg: "/side-events/solana-mixer.jpg",
   },
+  {
+    title: "w3.pizza",
+    url: "w3-pizza",
+    subpage: false,
+    description:
+      "Join us for another exciting w3.pizza event as we kick off TUM Blockchain Conference with KPMG & Solana. This is your chance to learn more about Digital Assets and hearing the latest insights from industry experts such as Staking Facilities, Solana Beach, Arcium, TUM Blockchain Club & Aachen Blockchain Club",
+    link: "https://lu.ma/vbkdwhxe",
+    date: "Wednesday, September 11 | 6:30 - 10pm",
+    backgroundImg: "/side-events/w3-pizza.jpg",
+  },
 ];

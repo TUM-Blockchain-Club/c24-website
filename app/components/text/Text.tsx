@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
-const textVariants = cva("text-white", {
+const textVariants = cva("", {
   variants: {
     textType: {
       hero: "text-6xl lg:text-8xl font-display",

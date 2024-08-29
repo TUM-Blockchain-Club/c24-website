@@ -29,7 +29,10 @@ const Grants = () => {
           <Text textType="sub_title">Academic Grant</Text>
           <Text>For all curious learners and educators</Text>
           <Button asChild className="w-fit">
-            <Link href="https://tally.so/r/mBZeYA" target="_blank">
+            <Link
+              href="https://apply.tum-blockchain.com/academic-grant-24"
+              target="_blank"
+            >
               Apply for Academic Grant
             </Link>
           </Button>
@@ -38,7 +41,10 @@ const Grants = () => {
           <Text textType="sub_title">Builder Grant</Text>
           <Text>For all the innovative trailblazers</Text>
           <Button asChild className="w-fit">
-            <Link href="https://tally.so/r/nrVY7o" target="_blank">
+            <Link
+              href="https://apply.tum-blockchain.com/builder-grant-24"
+              target="_blank"
+            >
               Apply for Builder Grant
             </Link>
           </Button>

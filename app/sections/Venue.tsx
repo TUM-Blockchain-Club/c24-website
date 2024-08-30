@@ -66,14 +66,21 @@ const Venue = () => {
             ref={timerRef}
           ></div>
         </div>
-        <div className="relative -translate-y-[50%] bg-black mx-auto border-gradient-tbc border-2 text-center max-w-[250px] sm:max-w-[400px] py-4 sm:py-8">
-          <Text as="p" textType={"sub_title"}>
-            Deutsches Museum
-          </Text>
-          <Text as="p" textType={"paragraph"}>
-            Museumsinsel 1, 80538 Munich
-          </Text>
-        </div>
+        <a
+          href="https://maps.app.goo.gl/NGALyFUZ3n1Wvg76A"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="relative -translate-y-[50%] bg-black mx-auto border-gradient-tbc border-2 text-center max-w-[250px] sm:max-w-[400px] py-4 sm:py-8">
+            <Text as="p" textType={"sub_title"}>
+              Deutsches Museum
+            </Text>
+            <Text as="p" textType={"paragraph"}>
+              Museumsinsel 1, 80538 Munich
+            </Text>
+          </div>
+        </a>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ const Sponsors = () => {
           alt="XRP Ledger"
           sponsorType="silver"
           link="https://www.xrpl-commons.org/"
-          imageSrc={"/sponsors/xrp_ledger_logo.png"}
+          imageSrc={"/sponsors/xrpl.png"}
         />
         <Sponsor
           alt="Starknet"

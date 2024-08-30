@@ -35,7 +35,7 @@ export const sideEventsItems = [
     subpage: false,
     description:
       "Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, and Bundesblock. We'll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks and some casual networking. It's the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!",
-    link: "",
+    link: "https://www.eventbrite.de/e/blockchain-ecosystem-night-tickets-1005031866367?aff=oddtdtcreator",
     date: "Thursday, September 12 | 5:45 - 8pm",
     backgroundImg: "/side-events/ecosystem-night.jpg",
   },

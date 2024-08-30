@@ -148,6 +148,14 @@ const Partners = () => {
               style={{ objectFit: "contain" }}
             ></Image>
           </div>
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="SystAIn3r"
+              src="/partners/systain3r.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
         </div>
         <div className="w-full flex justify-center gap-8 flex-wrap">
           <div className="relative w-[155px] h-[100px]">

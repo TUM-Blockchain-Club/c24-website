@@ -1,5 +1,15 @@
 export const sideEventsItems = [
   {
+    title: "Student Initiative Night",
+    url: "initiative-night",
+    subpage: false,
+    description:
+      "Join us for an exciting evening where 15 initiatives will pitch the most interesting projects that they have been working on and how you can get involved with them! Note: This event is open to everyone attending the conference, so whether you're a professional, entrepreneur, or corporate, don't miss joining us to get a scoop on the latest happenings!",
+    link: "/student-initiatives-night",
+    date: "Thursday, September 12 | 5:30 - 9pm",
+    backgroundImg: "/side-events/xrpl-meetup.jpg",
+  },
+  {
     title: "XRPL Meetup in Munich",
     url: "xrpl-meetup",
     subpage: false,

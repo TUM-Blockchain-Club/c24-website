@@ -6,6 +6,8 @@ import { Session as SessionComponent } from "@/app/components/session";
 import React, { useState } from "react";
 import { Toggle } from "@/app/components/toggle";
 import * as Select from "@/app/components/select/Select";
+import * as Separator from "@radix-ui/react-separator";
+import classNames from "classnames";
 
 type AgendaProps = { sessions: Session[] };
 
@@ -135,7 +137,30 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
       <div id="sessions" className="flex w-full flex-col gap-y-4">
         <div className="flex w-full flex-col items-center md:items-start">
           {filteredSessions?.map((item, index) => (
-            <SessionComponent session={item} key={index} />
+            <>
+              {
+                // Add divider when there is they change
+                index > 0 &&
+                  new Date(filteredSessions[index - 1].startTime).getDate() <
+                    new Date(item.startTime).getDate() && (
+                    <Separator.Root
+                      attr-text={new Date(item.startTime).toLocaleDateString(
+                        "en-DE",
+                        {
+                          weekday: "long",
+                          timeZone: "Europe/Berlin",
+                        },
+                      )}
+                      className={classNames(
+                        "h-px my-16 bg-gradient-tbc w-full text-center overflow-visible",
+                        "after:bg-black after:px-4 after:relative after:-top-[0.75em]",
+                        "after:content-[attr(attr-text)]",
+                      )}
+                    />
+                  )
+              }
+              <SessionComponent session={item} key={index} />
+            </>
           ))}
           {filteredSessions?.length === 0 && (
             <Text className="text-gray-500">

@@ -36,7 +36,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
       return () => {
         window.removeEventListener("resize", checkLineClamping);
       };
-    }, []);
+    }, [lineClampRef]);
 
     const { startTime, endTime } = {
       startTime: new Date(session.startTime),
@@ -62,7 +62,12 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
       >
         <div className="flex w-full flex-col gap-2">
           <div className="flex flex-col md:flex-row justify-between w-full">
-            <div className="flex-grow w-full md:max-w-[400px]">
+            <div
+              className={classNames("flex-grow w-full", {
+                "md:max-w-[450px]": !session.isSpecialSession,
+                "md:max-w-[400px]": session.isSpecialSession,
+              })}
+            >
               <Text
                 textType={"sub_title"}
                 as={"p"}
@@ -72,6 +77,13 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
               </Text>
             </div>
             <div className="flex gap-2 w-fit justify-end">
+              {session.isSpecialSession && (
+                <div className="min-w-fit border px-3 h-fit">
+                  <Text textType={"small"} className="text-white">
+                    Keynote
+                  </Text>
+                </div>
+              )}
               {session.type && (
                 <div className="min-w-fit border px-3 h-fit">
                   <Text textType={"small"} className="text-white">
@@ -170,17 +182,19 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
           <div className="flex-grow flex gap-x-8 gap-y-4 flex-wrap">
             {session.speakers &&
               session.speakers.map((speaker, index) => (
-                <div className="flex gap-2 items-center" key={index}>
-                  {speaker.profilePhoto && (
-                    <Image
-                      src={speaker.profilePhoto}
-                      alt={speaker.name}
-                      width={48}
-                      height={48}
-                    />
-                  )}
-                  <Text key={index}>{speaker.name}</Text>
-                </div>
+                <>
+                  <div className="flex gap-2 items-center" key={index}>
+                    {speaker.profilePhoto && (
+                      <Image
+                        src={speaker.profilePhoto}
+                        alt={speaker.name}
+                        width={48}
+                        height={48}
+                      />
+                    )}
+                    <Text key={index}>{speaker.name}</Text>
+                  </div>
+                </>
               ))}
             {(!session.speakers || session.speakers.length === 0) && (
               <Text>Coming soon...</Text>

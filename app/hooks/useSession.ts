@@ -32,6 +32,7 @@ export const useSession = async (): Promise<Session[]> => {
       endTime: item.fields.endTime,
       room: item.fields.room,
       description: item.fields.description,
+      isSpecialSession: item.fields.isSpecialSession,
       speakers: item.fields.speakers?.map(
         (speaker: {
           sys: { type: string; linkType: string; id: string };

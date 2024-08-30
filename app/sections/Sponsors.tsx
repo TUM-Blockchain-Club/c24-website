@@ -62,6 +62,7 @@ const Sponsors = () => {
         <Sponsor
           alt="XRP Ledger"
           sponsorType="silver"
+          className={"!p-2"}
           link="https://www.xrpl-commons.org/"
           imageSrc={"/sponsors/xrpl.png"}
         />

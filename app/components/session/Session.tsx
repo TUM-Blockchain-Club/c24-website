@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Session as SessionModel } from "@/app/model/session";
 import classNames from "classnames";
 import { Text } from "@/app/components/text";
 import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
-import { Tracks } from "@/app/model/session";
 import Image from "next/image";
 
 export type SessionElement = React.ElementRef<"div">;
@@ -14,6 +13,30 @@ export type SessionProps = React.ComponentPropsWithoutRef<"div"> & {
 export const Session = React.forwardRef<SessionElement, SessionProps>(
   (props, ref) => {
     const { session, className, ...divProps } = props;
+    const [clamped, setClamped] = useState<boolean>(true);
+    const [isLineClampClamped, setIsLineClampClamped] =
+      useState<boolean>(false);
+    const lineClampRef = useRef<HTMLParagraphElement>(null);
+
+    useEffect(() => {
+      const checkLineClamping = () => {
+        if (lineClampRef.current) {
+          const lineClampElement = lineClampRef.current;
+          setIsLineClampClamped(
+            lineClampElement.scrollHeight > lineClampElement.clientHeight,
+          );
+        }
+      };
+
+      checkLineClamping();
+
+      // Re-check on window resize
+      window.addEventListener("resize", checkLineClamping);
+
+      return () => {
+        window.removeEventListener("resize", checkLineClamping);
+      };
+    }, []);
 
     const { startTime, endTime } = {
       startTime: new Date(session.startTime),
@@ -113,10 +136,32 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             </div>
           </div>
         </div>
-        <div className="w-full text-wrap overflow-auto">
-          <Text className="w-full text-wrap overflow-auto">
+        <div className="w-full text-wrap">
+          <Text
+            ref={lineClampRef}
+            className={classNames("w-full text-wrap", {
+              "line-clamp-3": clamped,
+              "line-clamp-none": !clamped,
+            })}
+          >
             {session.description}
           </Text>
+          {isLineClampClamped && (
+            <Text
+              onClick={() => setClamped(!clamped)}
+              className={classNames("cursor-pointer", {
+                "text-green-400": session.track === "Education Track",
+                "text-yellow-400":
+                  session.track === "Research Track" || !session.track,
+                "text-blue-400": session.track === "Ecosystem Track",
+                "text-purple-400": session.track === "Research Track",
+                "text-red-400": session.track === "Regulation Track",
+                "text-orange-400": session.track === "Application Track",
+              })}
+            >
+              {clamped ? "Show More" : "Show Less"}
+            </Text>
+          )}
         </div>
         <div className="flex flex-col gap-2">
           <div>

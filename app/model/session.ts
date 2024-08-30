@@ -26,6 +26,7 @@ export interface Session {
   room: (typeof Stages)[number];
   description: string;
   speakers?: Speaker[];
+  isSpecialSession?: boolean;
 }
 
 export default Session;

@@ -7,12 +7,12 @@ const AfterEvents = () => {
   return (
     <section className="w-full" id="tickets">
       <div className="flex w-full justify-center items-center">
-        <Text textType={"sub_hero"} className="text-gradient text-center">
+        <Text textType={"sub_hero"} className="text-gradient">
           After Events
         </Text>
       </div>
       <div className="w-full flex justify-center mt-12">
-        <div className="w-full border border-gradient-tbc max-w-[250px] sm:max-w-[42rem] p-4 md:p-6">
+        <div className="w-full border border-gradient-tbc max-w-[250px] sm:max-w-[42rem] p-6">
           <div className="relative w-full h-[200px]">
             <Image
               alt="Student Initiatives Night"

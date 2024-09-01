@@ -6,8 +6,8 @@ export const sideEventsItems = [
     description:
       "Join us for an exciting evening where 15 initiatives will pitch the most interesting projects that they have been working on and how you can get involved with them! Note: This event is open to everyone attending the conference, so whether you're a professional, entrepreneur, or corporate, don't miss joining us to get a scoop on the latest happenings!",
     link: "/student-initiatives-night",
-    date: "Thursday, September 12 | 5:30 - 9pm",
-    backgroundImg: "/side-events/xrpl-meetup.jpg",
+    date: "Friday, September 13 | 5 - 9pm",
+    backgroundImg: "/side-events/student-initiatives-night.jpg",
   },
   {
     title: "XRPL Meetup in Munich",
@@ -58,5 +58,16 @@ export const sideEventsItems = [
     link: "https://lu.ma/zs91488v?tk=GlGfDy",
     date: "Friday, September 13 | 8:30 - 10.30am",
     backgroundImg: "/side-events/community-breakfast.jpg",
+  },
+  {
+    title:
+      "Æternity Uni Hack: Shaping the Future with AI, Oracles & State Channels",
+    url: "community-breakfast",
+    subpage: false,
+    description:
+      "This hybrid hackathon invites developers, innovators, and tech enthusiasts to create cutting-edge solutions using AI-powered chatbots, oracles, and state channels on the Æternity blockchain. Participants will use Sophia, Æternity’s smart contract language, to build decentralized applications (dApps) that address real-world challenges. Whether participating online or in-person, teams will collaborate and compete to develop impactful solutions.",
+    link: "https://www.eventbrite.co.uk/e/ternity-uni-hack-shaping-the-future-with-ai-oracles-state-channels-tickets-1005566675997?aff=oddtdtcreator",
+    date: "Tuesday, September 10 | 9:30am - Friday, September 13 | 9pm",
+    backgroundImg: "/side-events/aeternity-unihack.jpg",
   },
 ];

@@ -118,6 +118,12 @@ const Sponsors = () => {
           imageSrc={"/sponsors/filecoin_foundation_logo.png"}
         />
         <Sponsor
+          alt="polkadot blockchain academy"
+          sponsorType="bronze"
+          link="https://polkadot.com/blockchain-academy"
+          imageSrc={"/sponsors/PBA2.jpg"}
+        />
+        <Sponsor
           alt="API3"
           sponsorType="bronze"
           link="https://api3.org"
@@ -153,6 +159,12 @@ const Sponsors = () => {
           sponsorType="bronze"
           link="https://nil.foundation/"
           imageSrc={"/sponsors/nil_logo.svg"}
+        />
+        <Sponsor
+          alt="Polkadot"
+          sponsorType="bronze"
+          link="https://polkadot.com/"
+          imageSrc={"/sponsors/Polkadot.png"}
         />
       </div>
     </section>

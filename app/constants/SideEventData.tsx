@@ -3,9 +3,6 @@ export const sideEventsItems = [
     title:
       "Æternity Uni Hack: Shaping the Future with AI, Oracles & State Channels",
     url: "community-breakfast",
-    title:
-      "Æternity Uni Hack: Shaping the Future with AI, Oracles & State Channels",
-    url: "community-breakfast",
     subpage: false,
     description:
       "This hybrid hackathon invites developers, innovators, and tech enthusiasts to create cutting-edge solutions using AI-powered chatbots, oracles, and state channels on the Æternity blockchain. Participants will use Sophia, Æternity’s smart contract language, to build decentralized applications (dApps) that address real-world challenges. Whether participating online or in-person, teams will collaborate and compete to develop impactful solutions.",

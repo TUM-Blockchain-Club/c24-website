@@ -41,7 +41,7 @@ export const Event = React.forwardRef<EventElement, EventProps>(
         )}
         {...restProps}
       >
-        <div className="relative w-full h-[200px] bg-gradient-tbc-md">
+        <div className="relative w-full h-[300px] bg-gradient-tbc-md">
           <Image
             className={"object-contain"}
             src={bgImage}

@@ -129,12 +129,12 @@ export default function PaperSubmission() {
             </div>
             <div className="mt-16">
               <Text textType={"paragraph"}>
-                Student initiatives are an integral part of Munich's innovative
-                ecosystem, always brimming with energy and enthusiasm. But we
-                have few opportunities to truly understand the exciting projects
-                that they are working on. That is why we bring to you the second
-                iteration of Student Initiatives Night as part of this year's
-                TUM Blockchain Conference!
+                Join us for an exciting evening where 15 initiatives will pitch
+                the most interesting projects that they have been working on and
+                how you can get involved with them! Note: This event is open to
+                everyone attending the conference, so whether you're a
+                professional, entrepreneur, or corporate, don't miss joining us
+                to get a scoop on the latest happenings!
               </Text>
             </div>
             <div className="mt-12">

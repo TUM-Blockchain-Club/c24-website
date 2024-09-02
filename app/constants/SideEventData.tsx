@@ -21,6 +21,16 @@ export const sideEventsItems = [
     backgroundImg: "/side-events/solana-mixer.jpg",
   },
   {
+    title: "TU Munich Blockchain Conference Pre-Event",
+    url: "pre-event",
+    subpage: false,
+    description:
+      'Ready to kick off the TUM Blockchain Conference 2024 with a bang? Join us at our lively pre-event, "AI, Privacy & DePin in Web3" September 11th at Wayra Germany in the heart of Munich for an evening filled with insightful discussions, networking, and a whole lot of heartfelt welcome vibes.',
+    link: "https://lu.ma/v24yqx2q",
+    date: "Wednesday, September 11 | 6:00 - 9pm",
+    backgroundImg: "/side-events/pre-event.jpg",
+  },
+  {
     title: "w3.pizza",
     url: "w3-pizza",
     subpage: false,
@@ -29,6 +39,16 @@ export const sideEventsItems = [
     link: "https://lu.ma/vbkdwhxe",
     date: "Wednesday, September 11 | 6:30 - 10pm",
     backgroundImg: "/side-events/w3-pizza.jpg",
+  },
+  {
+    title: "XRPL Meetup in Munich",
+    url: "xrpl-meetup",
+    subpage: false,
+    description:
+      "XRPL Meetups aim to spread knowledge and create real-life connections and communities around blockchain and the XRP Ledger by establishing local “XRPL Hubs” across Europe. These meetups provide regular gatherings where individuals from various sectors can meet, exchange ideas, and deepen their understanding of blockchain technology. Designed to be inclusive, XRPL Meetups welcome participants from academia, private industries, public sectors, and NGOs.",
+    link: "https://www.eventbrite.fr/e/xrpl-meetup-in-munich-tickets-957654278727",
+    date: "Thursday, September 12 | 5:30 - 9pm",
+    backgroundImg: "/side-events/xrpl-meetup.jpg",
   },
   {
     title: "XRPL Meetup in Munich",

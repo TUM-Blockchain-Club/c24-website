@@ -31,6 +31,25 @@ const Partners = () => {
         <div className="w-full flex justify-center gap-8 flex-wrap">
           <div className="relative w-[155px] h-[100px]">
             <Image
+              alt="Web3 Vision"
+              src="/partners/w3.vision_white.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px] flex items-center justify-center">
+            <Image
+              alt="Werk1"
+              src="/partners/werk1.jpeg"
+              width={110}
+              height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+        </div>
+        <div className="w-full flex justify-center gap-8 flex-wrap">
+          <div className="relative w-[155px] h-[100px]">
+            <Image
               alt="BTC Echo"
               src="/partners/btc_echo_logo.png"
               fill={true}
@@ -57,16 +76,6 @@ const Partners = () => {
             <Image
               alt="The Market Periodical"
               src="/partners/tmp_logo.png"
-              fill={true}
-              style={{ objectFit: "contain" }}
-            ></Image>
-          </div>
-        </div>
-        <div className="w-full flex justify-center gap-8 flex-wrap">
-          <div className="relative w-[155px] h-[100px]">
-            <Image
-              alt="Web3 Vision"
-              src="/partners/w3.vision_white.png"
               fill={true}
               style={{ objectFit: "contain" }}
             ></Image>
@@ -167,12 +176,31 @@ const Partners = () => {
               style={{ objectFit: "contain" }}
             ></Image>
           </div>
+
           <div className="relative w-[155px] h-[100px] flex items-center justify-center">
             <Image
               alt="HerDAO"
               src="/partners/HERDAO.png"
               width={110}
               height={0}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="SystAIn3r"
+              src="/partners/systain3r.png"
+              fill={true}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
+        </div>
+        <div className="w-full flex justify-center gap-8 flex-wrap">
+          <div className="relative w-[155px] h-[100px]">
+            <Image
+              alt="w3muc"
+              src="/partners/w3muc.jpeg"
+              fill={true}
               style={{ objectFit: "contain" }}
             ></Image>
           </div>

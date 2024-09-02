@@ -183,7 +183,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             {session.speakers &&
               session.speakers.map((speaker, index) => (
                 <>
-                  <div className="flex gap-2 items-center" key={index}>
+                  <div className="flex gap-2 items-start" key={index}>
                     {speaker.profilePhoto && (
                       <Image
                         src={speaker.profilePhoto}
@@ -192,7 +192,12 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                         height={48}
                       />
                     )}
-                    <Text key={index}>{speaker.name}</Text>
+                    <div className="flex flex-col max-w-48">
+                      <Text key={index}>{speaker.name}</Text>
+                      <Text key={index} textType="small">
+                        {speaker.description}
+                      </Text>
+                    </div>
                   </div>
                 </>
               ))}

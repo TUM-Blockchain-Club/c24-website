@@ -50,7 +50,7 @@ const Grants = () => {
           </Button>
         </div>
         <div className="p-5 w-full flex justify-center items-center flex-col gap-4">
-          <Text textType="sub_title">Student Grant</Text>
+          <Text textType="sub_title">Student Travel Grant</Text>
           <Image
             className={"object-cover"}
             src={SuiLogo}

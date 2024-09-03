@@ -21,7 +21,7 @@ export const sideEventsItems = [
     backgroundImg: "/side-events/solana-mixer.jpg",
   },
   {
-    title: "TU Munich Blockchain Conference Pre-Event",
+    title: "AI, Privacy & DePin in Web3",
     url: "pre-event",
     subpage: false,
     description:
@@ -39,16 +39,6 @@ export const sideEventsItems = [
     link: "https://lu.ma/vbkdwhxe",
     date: "Wednesday, September 11 | 6:30 - 10pm",
     backgroundImg: "/side-events/w3-pizza.jpg",
-  },
-  {
-    title: "XRPL Meetup in Munich",
-    url: "xrpl-meetup",
-    subpage: false,
-    description:
-      "XRPL Meetups aim to spread knowledge and create real-life connections and communities around blockchain and the XRP Ledger by establishing local “XRPL Hubs” across Europe. These meetups provide regular gatherings where individuals from various sectors can meet, exchange ideas, and deepen their understanding of blockchain technology. Designed to be inclusive, XRPL Meetups welcome participants from academia, private industries, public sectors, and NGOs.",
-    link: "https://www.eventbrite.fr/e/xrpl-meetup-in-munich-tickets-957654278727",
-    date: "Thursday, September 12 | 5:30 - 9pm",
-    backgroundImg: "/side-events/xrpl-meetup.jpg",
   },
   {
     title: "XRPL Meetup in Munich",

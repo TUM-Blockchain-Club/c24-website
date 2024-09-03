@@ -1,12 +1,13 @@
 import { Text } from "@/app/components/text";
 import AfterEvent from "../components/afterevent/AfterEvent";
+import { Button } from "../components/button";
 
 const AfterEvents = () => {
   return (
     <section className="w-full" id="tickets">
       <div className="flex w-full justify-center items-center">
         <Text textType={"sub_hero"} className="text-center text-gradient">
-          After Events
+          Evening Events
         </Text>
       </div>
       <div className="w-full flex justify-center mt-12">
@@ -29,6 +30,11 @@ const AfterEvents = () => {
             desc="Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, and Bundesblock. We'll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks and some casual networking. It's the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!"
           />
         </div>
+      </div>
+      <div className="w-full flex justify-center mt-20">
+        <Button buttonType={"cta"} asChild>
+          <a href="/side-events">All Side Events</a>
+        </Button>
       </div>
     </section>
   );

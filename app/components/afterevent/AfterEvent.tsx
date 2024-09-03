@@ -12,7 +12,7 @@ type AfterEventProps = {
 
 const AfterEvent = (props: AfterEventProps) => {
   return (
-    <div className="w-full relative pb-32 border border-gradient-tbc max-w-[250px] sm:max-w-[30rem] p-6">
+    <div className="w-full relative pb-32 border border-white max-w-[250px] sm:max-w-[30rem] p-6">
       <div className="relative w-full h-[150px]">
         <Image
           alt={props.title}
@@ -22,10 +22,10 @@ const AfterEvent = (props: AfterEventProps) => {
           style={{ objectFit: "contain" }}
         ></Image>
       </div>
-      <div className="w-full flex justify-center mt-10">
+      <div className="w-full flex justify-left mt-10">
         <Text
           textType={"sub_title"}
-          className="underline text-center max-w-[250px] sm:max-w-[42rem]"
+          className="text-left max-w-[250px] sm:max-w-[42rem]"
         >
           {props.title}
         </Text>
@@ -34,14 +34,14 @@ const AfterEvent = (props: AfterEventProps) => {
         <Text
           textType={"lgsmall"}
           as="p"
-          className="text-left max-w-[250px] sm:max-w-[42rem]"
+          className="text-left text-gray-400 max-w-[250px] sm:max-w-[42rem]"
         >
           {props.desc}
         </Text>
       </div>
-      <div className="w-full absolute bottom-10 flex justify-center mt-10">
-        <Button className="-translate-x-[50%]" buttonType={"cta"}>
-          <NextLink href={props.link}>more</NextLink>
+      <div className="w-full absolute bottom-10 flex justify-start mt-10">
+        <Button buttonType={"cta"}>
+          <NextLink href={props.link}>Learn More</NextLink>
         </Button>
       </div>
     </div>

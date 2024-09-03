@@ -180,7 +180,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             <div className="mt-5 mb-4">
               <Button asChild>
                 <Link href={session.registrationLink}>
-                  Register for@ Workshop
+                  Register for Workshop
                 </Link>
               </Button>
             </div>

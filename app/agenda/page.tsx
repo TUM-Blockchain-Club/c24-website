@@ -1,11 +1,9 @@
+import Agenda from "@/app/agenda/agenda";
 import { Container } from "@/app/components/container";
 import { Text } from "@/app/components/text";
-import React from "react";
-import Agenda from "@/app/agenda/agenda";
-import Session from "../model/session";
-import { Tracks, Stages } from "../model/session";
-import Speaker from "@/app/model/speaker";
 import { useSession } from "@/app/hooks/useSession";
+import NextLink from "next/link";
+import { Button } from "../components/button";
 
 const AgendaPage = async () => {
   const sessions = await useSession();
@@ -52,6 +50,12 @@ const AgendaPage = async () => {
               <Text textType={"sub_hero"} className="text-gradient text-left">
                 Agenda
               </Text>
+            </div>
+            <div className="mt-8">
+              <Text as="p">Also check out our</Text>
+              <Button className="mt-2" buttonType={"cta"}>
+                <NextLink href="/workshops">Workshops</NextLink>
+              </Button>
             </div>
           </div>
           <Agenda sessions={sessions} />

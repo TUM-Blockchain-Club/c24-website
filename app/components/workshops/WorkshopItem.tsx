@@ -29,7 +29,7 @@ export const Workshop = React.forwardRef<WorkshopElement, WorkshopProps>(
         )}
         {...restProps}
       >
-        <div className="relative w-full h-[250px]">
+        <div className="relative w-full h-[100px] md:h-[250px]">
           <Image
             className={"object-contain"}
             src={bgImage}

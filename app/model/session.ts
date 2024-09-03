@@ -1,5 +1,10 @@
 import Speaker from "@/app/model/speaker";
 
+export const Dates = [
+  new Date("2024-09-12").toISOString(),
+  new Date("2024-09-13").toISOString(),
+] as const;
+
 export const Tracks = [
   "Education Track",
   "Application Track",
@@ -27,6 +32,7 @@ export interface Session {
   description: string;
   speakers?: Speaker[];
   isSpecialSession?: boolean;
+  registrationLink?: string;
 }
 
 export default Session;

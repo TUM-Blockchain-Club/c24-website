@@ -179,7 +179,11 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
           {session.registrationLink && (
             <div className="mt-5 mb-4">
               <Button asChild>
-                <Link href={session.registrationLink}>
+                <Link
+                  href={session.registrationLink}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   Register for Workshop
                 </Link>
               </Button>

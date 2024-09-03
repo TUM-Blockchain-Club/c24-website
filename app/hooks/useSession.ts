@@ -33,6 +33,7 @@ export const useSession = async (): Promise<Session[]> => {
       room: item.fields.room,
       description: item.fields.description,
       isSpecialSession: item.fields.isSpecialSession,
+      registrationLink: item.fields.registrationLink,
       speakers: item.fields.speakers?.map(
         (speaker: {
           sys: { type: string; linkType: string; id: string };
@@ -60,6 +61,8 @@ export const useSession = async (): Promise<Session[]> => {
       ),
     };
   });
+
+  console.log(JSON.stringify(sessions));
 
   if (!sessions) {
     console.log("Sessions is undefined");

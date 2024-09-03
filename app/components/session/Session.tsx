@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { Text } from "@/app/components/text";
 import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import { Button } from "@/app/components/button";
+import Link from "next/link";
 
 export type SessionElement = React.ElementRef<"div">;
 export type SessionProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -61,7 +63,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
         ref={ref}
       >
         <div className="flex w-full flex-col gap-2">
-          <div className="flex flex-col md:flex-row justify-between w-full">
+          <div className="flex flex-col md:flex-row justify-between w-full gap-1">
             <div
               className={classNames("flex-grow w-full", {
                 "md:max-w-[450px]": !session.isSpecialSession,
@@ -148,7 +150,7 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             </div>
           </div>
         </div>
-        <div className="w-full text-wrap">
+        <div className="w-full flex flex-col text-wrap">
           <Text
             ref={lineClampRef}
             className={classNames("w-full text-wrap", {
@@ -173,6 +175,15 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             >
               {clamped ? "Show More" : "Show Less"}
             </Text>
+          )}
+          {session.registrationLink && (
+            <div className="mt-5 mb-4">
+              <Button asChild>
+                <Link href={session.registrationLink}>
+                  Register for@ Workshop
+                </Link>
+              </Button>
+            </div>
           )}
         </div>
         <div className="flex flex-col gap-2">

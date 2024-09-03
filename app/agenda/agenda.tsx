@@ -1,13 +1,13 @@
 "use client";
 
-import { Text } from "@/app/components/text";
-import { Session, Stages, Tracks } from "@/app/model/session";
-import { Session as SessionComponent } from "@/app/components/session";
-import React, { useState } from "react";
-import { Toggle } from "@/app/components/toggle";
 import * as Select from "@/app/components/select/Select";
+import { Session as SessionComponent } from "@/app/components/session";
+import { Text } from "@/app/components/text";
+import { Toggle } from "@/app/components/toggle";
+import { Session, Stages, Tracks } from "@/app/model/session";
 import * as Separator from "@radix-ui/react-separator";
 import classNames from "classnames";
+import React, { useState } from "react";
 
 type AgendaProps = { sessions: Session[] };
 
@@ -36,7 +36,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
   }
 
   return (
-    <div className={"flex flex-col md:flex-row relative gap-8 mt-24"}>
+    <div className={"flex flex-col md:flex-row relative gap-8 mt-20"}>
       <div
         id="filter"
         className="bg-black sticky top-[76px] md:top-24 border border-white p-6 md:min-w-[250px] flex flex-col gap-4 md:gap-6 h-fit"

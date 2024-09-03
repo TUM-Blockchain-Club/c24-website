@@ -24,6 +24,7 @@ const textVariants = cva("", {
       title: "text-2xl lg:text-5xl font-sans",
       sub_title: "text-md lg:text-2xl font-sans",
       paragraph: "text-sm lg:text-base font-sans",
+      lgsmall: "text-sm font-sans",
       small: "text-xs font-sans",
     },
   },

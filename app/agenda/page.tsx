@@ -1,10 +1,6 @@
+import Agenda from "@/app/agenda/agenda";
 import { Container } from "@/app/components/container";
 import { Text } from "@/app/components/text";
-import React from "react";
-import Agenda from "@/app/agenda/agenda";
-import Session from "../model/session";
-import { Tracks, Stages } from "../model/session";
-import Speaker from "@/app/model/speaker";
 import { useSession } from "@/app/hooks/useSession";
 
 const AgendaPage = async () => {

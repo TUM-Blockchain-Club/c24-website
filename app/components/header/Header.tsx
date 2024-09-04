@@ -69,6 +69,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Text asChild>
             <Link href="/agenda">Agenda</Link>
           </Text>
+          <Text asChild>
+            <Link href="/workshops">Workshops</Link>
+          </Text>
           {pathName === "/" && (
             <>
               <Text asChild>
@@ -176,17 +179,15 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 </Link>
               </Text>
               {pathName === "/" && (
-                <>
-                  <Text asChild>
-                    <Link href="#grants">Grants</Link>
-                  </Text>
-                  <Text asChild>
-                    <Link href="#faq">FAQ</Link>
-                  </Text>
-                </>
+                <Text asChild>
+                  <Link href="#grants">Grants</Link>
+                </Text>
               )}
               <Text asChild>
                 <Link href="/agenda">Agenda</Link>
+              </Text>
+              <Text asChild>
+                <Link href="/workshops">Workshops</Link>
               </Text>
               <Button asChild buttonType={"cta"}>
                 <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">

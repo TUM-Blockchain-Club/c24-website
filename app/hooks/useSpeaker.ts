@@ -58,6 +58,7 @@ export const useSpeaker = async (count?: number): Promise<Speaker[]> => {
     if (total === 0) {
       break;
     } else {
+      console.log("Paginating speaker");
       skipCounter += 100;
     }
   } while (!count);

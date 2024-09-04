@@ -37,18 +37,27 @@ export const Event = React.forwardRef<EventElement, EventProps>(
       <div
         className={classNames(
           className,
-          "flex flex-col cta-border border-[1px] border-white p-6 mt-10 hover:scale-[102%] duration-500 ease-in-out",
+          "flex flex-col border-[1px] border-white p-6 mt-10 hover:scale-[102%] duration-500 ease-in-out",
         )}
         {...restProps}
       >
-        <div className="relative w-full h-[300px] bg-gradient-tbc-md">
+        <div className="relative w-full h-[300px]">
           <Image
-            className={"object-contain"}
+            className={"object-cover"}
             src={bgImage}
             alt={title}
             title={title}
             fill
           />
+          <div className="backdrop-blur-3xl w-full h-full">
+            <Image
+              className={"object-contain"}
+              src={bgImage}
+              alt={title}
+              title={title}
+              fill
+            />
+          </div>
         </div>
         <Text textType={"sub_title"} as="p" className="mt-10">
           {title}
@@ -56,12 +65,12 @@ export const Event = React.forwardRef<EventElement, EventProps>(
         <Text className="mt-4 underline" textType={"small"} as="p">
           {date}
         </Text>
-        <Text className="mt-4" textType={"small"} as="p">
+        <Text className="mt-4 text-gray-400" textType={"small"} as="p">
           {description}
         </Text>
         <NextLink href={subpage ? `/side-events/${url}` : link}>
-          <Button className="mt-4" buttonType={"primary"}>
-            more
+          <Button className="mt-4" buttonType={"cta"}>
+            Learn More
           </Button>
         </NextLink>
       </div>

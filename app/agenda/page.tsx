@@ -51,6 +51,12 @@ const AgendaPage = async () => {
                 Agenda
               </Text>
             </div>
+            <div className="mt-8">
+              <Text as="p">Also check out our</Text>
+              <Button className="mt-2" buttonType={"cta"}>
+                <NextLink href="/workshops">Workshops</NextLink>
+              </Button>
+            </div>
           </div>
           <Agenda sessions={sessions} />
         </Container>

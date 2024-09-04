@@ -57,7 +57,8 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
             "bg-blue-950": session.track === "Ecosystem Track",
             "bg-purple-950": session.track === "Research Track",
             "bg-red-950": session.track === "Regulation Track",
-            "bg-orange-950": session.track === "Application Track",
+            "bg-orange-950": session.track === "Academic Track",
+            "bg-teal-950": session.track === "Application Track",
           },
         )}
         ref={ref}
@@ -101,7 +102,8 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                     "border-blue-400": session.track === "Ecosystem Track",
                     "border-purple-400": session.track === "Research Track",
                     "border-red-400": session.track === "Regulation Track",
-                    "border-orange-400": session.track === "Application Track",
+                    "border-orange-400": session.track === "Academic Track",
+                    "border-teal-400": session.track === "Application Track",
                   })}
                 >
                   <Text
@@ -112,7 +114,8 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                       "text-blue-400": session.track === "Ecosystem Track",
                       "text-purple-400": session.track === "Research Track",
                       "text-red-400": session.track === "Regulation Track",
-                      "text-orange-400": session.track === "Application Track",
+                      "text-orange-400": session.track === "Academic Track",
+                      "text-teal-400": session.track === "Application Track",
                     })}
                   >
                     {session.track}
@@ -170,7 +173,8 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                 "text-blue-400": session.track === "Ecosystem Track",
                 "text-purple-400": session.track === "Research Track",
                 "text-red-400": session.track === "Regulation Track",
-                "text-orange-400": session.track === "Application Track",
+                "text-orange-400": session.track === "Academic Track",
+                "text-teal-400": session.track === "Application Track",
               })}
             >
               {clamped ? "Show More" : "Show Less"}

@@ -25,7 +25,7 @@ export const Workshop = React.forwardRef<WorkshopElement, WorkshopProps>(
       <div
         className={classNames(
           className,
-          "flex flex-col cta-border border-[1px] border-white p-6 mt-10 hover:scale-[102%] duration-500 ease-in-out",
+          "flex flex-col border-[1px] border-white p-6 mt-10 hover:scale-[102%] duration-500 ease-in-out",
         )}
         {...restProps}
       >
@@ -41,12 +41,12 @@ export const Workshop = React.forwardRef<WorkshopElement, WorkshopProps>(
         <Text textType={"sub_title"} as="p" className="mt-10">
           {title}
         </Text>
-        <Text className="mt-4" textType={"small"} as="p">
+        <Text className="mt-4 text-gray-400" textType={"small"} as="p">
           {description}
         </Text>
         <NextLink href={url}>
-          <Button className="mt-4" buttonType={"primary"}>
-            more
+          <Button className="mt-4" buttonType={"cta"}>
+            Learn More
           </Button>
         </NextLink>
       </div>

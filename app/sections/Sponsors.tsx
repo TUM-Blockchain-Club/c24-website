@@ -127,7 +127,7 @@ const Sponsors = () => {
           alt="Polkadot"
           sponsorType="bronze"
           link="https://polkadot.com/"
-          imageSrc={"/sponsors/Polkadot.png"}
+          imageSrc={"/sponsors/Polkadot_Logo.png"}
         />
         <Sponsor
           alt="Lido"

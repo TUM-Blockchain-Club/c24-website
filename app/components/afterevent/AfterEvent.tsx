@@ -13,7 +13,7 @@ type AfterEventProps = {
 
 const AfterEvent = (props: AfterEventProps) => {
   return (
-    <div className="w-full relative pb-32 border border-white max-w-[250px] sm:max-w-[30rem] p-6">
+    <div className="w-full relative pb-32 border border-gradient-tbc max-w-[280px] sm:max-w-[30rem] p-6">
       <div className="relative w-full h-[150px]">
         <Image
           alt={props.title}

@@ -204,12 +204,14 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                 <>
                   <div className="flex gap-2 items-start" key={index}>
                     {speaker.profilePhoto && (
-                      <Image
-                        src={speaker.profilePhoto}
-                        alt={speaker.name}
-                        width={48}
-                        height={48}
-                      />
+                      <Link href={speaker.url || "#"}>
+                        <Image
+                          src={speaker.profilePhoto}
+                          alt={speaker.name}
+                          width={48}
+                          height={48}
+                        />
+                      </Link>
                     )}
                     <div className="flex flex-col max-w-48">
                       <Text key={index}>{speaker.name}</Text>

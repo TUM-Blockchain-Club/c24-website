@@ -12,7 +12,15 @@ const AfterEvents = () => {
       <div className="w-full flex justify-center mt-12">
         <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
           <AfterEvent
+            title="Blockchain Ecosystem Night"
+            date="12.09.2024 | 5.45 - 8pm"
+            img="/side-events/ecosystem-night.jpg"
+            link="https://www.eventbrite.de/e/blockchain-ecosystem-night-tickets-1005031866367?aff=oddtdtcreator"
+            desc="Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, and Bundesblock. We'll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks and some casual networking. It's the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!"
+          />
+          <AfterEvent
             title="Student Initiatives Night"
+            date="13.09.2024 | 8.30 - 10.30pm"
             img="/side-events/student-initiatives-night.jpg"
             link="/student-initiatives-night"
             desc="Student initiatives are an integral part of Munich's innovative
@@ -21,12 +29,6 @@ const AfterEvents = () => {
           working on. That is why we bring to you the second iteration of
           Student Initiatives Night as part of this year's TUM Blockchain
           Conference!"
-          />
-          <AfterEvent
-            title="Blockchain Ecosystem Night"
-            img="/side-events/ecosystem-night.jpg"
-            link="https://www.eventbrite.de/e/blockchain-ecosystem-night-tickets-1005031866367?aff=oddtdtcreator"
-            desc="Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, and Bundesblock. We'll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks and some casual networking. It's the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!"
           />
         </div>
       </div>

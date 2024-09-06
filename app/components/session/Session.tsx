@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Session as SessionModel } from "@/app/model/session";
-import classNames from "classnames";
-import { Text } from "@/app/components/text";
-import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 import { Button } from "@/app/components/button";
+import { Text } from "@/app/components/text";
+import { Session as SessionModel } from "@/app/model/session";
+import { ClockIcon, SewingPinIcon } from "@radix-ui/react-icons";
+import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
 
 export type SessionElement = React.ElementRef<"div">;
 export type SessionProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -194,18 +194,20 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
           <div>
             Speaker{session.speakers && session.speakers.length > 1 && "s"}:
           </div>
-          <div className="flex-grow flex gap-x-8 gap-y-4 flex-wrap">
+          <div className="grid md:grid-cols-2 gap-2">
             {session.speakers &&
               session.speakers.map((speaker, index) => (
                 <>
                   <div className="flex gap-2 items-start" key={index}>
                     {speaker.profilePhoto && (
-                      <Image
-                        src={speaker.profilePhoto}
-                        alt={speaker.name}
-                        width={48}
-                        height={48}
-                      />
+                      <Link href={speaker.url || "#"}>
+                        <Image
+                          src={speaker.profilePhoto}
+                          alt={speaker.name}
+                          width={48}
+                          height={48}
+                        />
+                      </Link>
                     )}
                     <div className="flex flex-col max-w-48">
                       <Text key={index}>{speaker.name}</Text>

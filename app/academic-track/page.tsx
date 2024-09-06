@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Button } from "../components/button";
-import { Container } from "../components/container";
-import { Text } from "../components/text";
-import { Link } from "../components/link";
+import { Button } from "@/components/button";
+import { Container } from "@/components/container";
+import { Text } from "@/components/text";
+import { Link } from "@/components/link";
 
 export default function PaperSubmission() {
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Text } from "../components/text";
+import { Text } from "@/components/text";
 
 export default function PaperSubmission() {
   return (

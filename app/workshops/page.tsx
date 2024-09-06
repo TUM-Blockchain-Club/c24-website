@@ -1,7 +1,7 @@
-import { Container } from "@/app/components/container";
-import { Text } from "@/app/components/text";
-import { WorkshopsContainer } from "../components/workshops/WorkshopsContainer";
-import { workshopItems } from "../constants/WorkshopData";
+import { Container } from "@/components/container";
+import { Text } from "@/components/text";
+import { WorkshopsContainer } from "@/components/workshops/WorkshopsContainer";
+import { workshopItems } from "@/constants/WorkshopData";
 
 const Workshops = async () => {
   return (

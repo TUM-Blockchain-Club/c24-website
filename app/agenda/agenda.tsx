@@ -1,10 +1,10 @@
 "use client";
 
-import * as Select from "@/app/components/select/Select";
-import { Session as SessionComponent } from "@/app/components/session";
-import { Text } from "@/app/components/text";
-import { Toggle } from "@/app/components/toggle";
-import { Session, Stages, Tracks } from "@/app/model/session";
+import * as Select from "@/components/select/Select";
+import { Session as SessionComponent } from "@/components/session";
+import { Text } from "@/components/text";
+import { Toggle } from "@/components/toggle";
+import { Session, Stages, Tracks } from "@/model/session";
 import * as Separator from "@radix-ui/react-separator";
 import classNames from "classnames";
 import React, { useState } from "react";

@@ -21,29 +21,6 @@ import Video from "./sections/Video";
 export default function Home() {
   return (
     <>
-      <Script
-        id="tally-widget"
-        src="https://tally.so/widgets/embed.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        id="tally-config"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.TallyConfig = {
-              formId: "wv4qLD",
-              popup: {
-                width: 400,
-                open: {
-                  trigger: "time",
-                  ms: 5000
-                }
-              }
-            };
-          `,
-        }}
-      />
       <div>
         <Sparkle />
         <main className={"w-full flex justify-center pt-[25px] lg:pt-0 z-20"}>

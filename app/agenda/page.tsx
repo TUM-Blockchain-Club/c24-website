@@ -1,7 +1,7 @@
 import Agenda from "@/app/agenda/agenda";
-import { Container } from "@/app/components/container";
-import { Text } from "@/app/components/text";
-import { useSession } from "@/app/hooks/useSession";
+import { Container } from "@/components/container";
+import { Text } from "@/components/text";
+import { useSession } from "@/hooks/useSession";
 
 const AgendaPage = async () => {
   const sessions = await useSession();

@@ -1,7 +1,7 @@
-import { Container } from "@/app/components/container";
-import { Speaker as SpeakerComponent } from "@/app/components/speaker";
-import { Text } from "@/app/components/text";
-import { useSpeaker } from "@/app/hooks/useSpeaker";
+import { Container } from "@/components/container";
+import { Speaker as SpeakerComponent } from "@/components/speaker";
+import { Text } from "@/components/text";
+import { useSpeaker } from "@/hooks/useSpeaker";
 
 const SpeakersPage = async () => {
   const speakers = await useSpeaker();

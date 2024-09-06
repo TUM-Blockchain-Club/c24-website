@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Container } from "../components/container";
-import { Text } from "../components/text";
+import { Container } from "@/components/container";
+import { Text } from "@/components/text";
 
 export default function PaperSubmission() {
   return (

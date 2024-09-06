@@ -1,7 +1,7 @@
-import { sideEventsItems } from "@/app/constants/SideEventData";
-import { Container } from "../components/container";
-import { Events } from "../components/event/Events";
-import { Text } from "../components/text";
+import { sideEventsItems } from "@/constants/SideEventData";
+import { Container } from "@/components/container";
+import { Events } from "@/components/event/Events";
+import { Text } from "@/components/text";
 
 export default function SideEvents() {
   return (

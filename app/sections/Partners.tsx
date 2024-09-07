@@ -40,7 +40,7 @@ const Partners = () => {
           <div className="relative w-[155px] h-[100px] flex items-center justify-center">
             <Image
               alt="Werk1"
-              src="/partners/werk1.jpeg"
+              src="/partners/werk1.png"
               width={110}
               height={0}
               style={{ objectFit: "contain" }}

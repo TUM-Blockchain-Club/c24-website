@@ -5,6 +5,7 @@ import { Text } from "../text";
 
 type AfterEventProps = {
   img: string;
+  date: string;
   title: string;
   desc: string;
   link: string;
@@ -12,7 +13,7 @@ type AfterEventProps = {
 
 const AfterEvent = (props: AfterEventProps) => {
   return (
-    <div className="w-full relative pb-32 border border-white max-w-[250px] sm:max-w-[30rem] p-6">
+    <div className="w-full relative pb-32 border border-gradient-tbc max-w-[280px] sm:max-w-[30rem] p-6">
       <div className="relative w-full h-[150px]">
         <Image
           alt={props.title}
@@ -28,6 +29,14 @@ const AfterEvent = (props: AfterEventProps) => {
           className="text-left max-w-[250px] sm:max-w-[42rem]"
         >
           {props.title}
+        </Text>
+      </div>
+      <div className="w-full flex justify-center">
+        <Text
+          textType={"paragraph"}
+          className="text-center max-w-[250px] sm:max-w-[42rem]"
+        >
+          {props.date}
         </Text>
       </div>
       <div className="w-full flex justify-center mt-6">

@@ -39,7 +39,7 @@ export const Agenda: React.FC<AgendaProps> = ({ sessions }) => {
     <div className={"flex flex-col md:flex-row relative gap-8 mt-20"}>
       <div
         id="filter"
-        className="bg-black sticky top-[76px] md:top-24 border border-white p-6 md:min-w-[250px] flex flex-col gap-4 md:gap-6 h-fit"
+        className="bg-black md:sticky md:top-24 border border-white p-6 md:min-w-[250px] flex flex-col gap-4 md:gap-6 h-fit"
       >
         <Text textType={"sub_title"} className="text-left" as="p">
           Filter

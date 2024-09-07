@@ -1,6 +1,6 @@
-import { Text } from "@/app/components/text";
-import AfterEvent from "../components/afterevent/AfterEvent";
-import { Button } from "../components/button";
+import { Text } from "@/components/text";
+import AfterEvent from "@/components/afterevent/AfterEvent";
+import { Button } from "@/components/button";
 
 const AfterEvents = () => {
   return (

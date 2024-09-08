@@ -53,7 +53,7 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
     sessionsInStage: Session[],
   ): { currentSession: Session | null; nextSession: Session | null } => {
     const now =
-      simulatedDate && process.env.VERCEL_ENV !== "production"
+      simulatedDate && process.env.NEXT_PUBLIC_PRODUCTION !== "production"
         ? currentTime
         : new Date();
     let currentSession = null;

@@ -172,7 +172,7 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
                       )}
                     </div>
                     <div className="opacity-50">
-                      <h4>Up Next</h4>
+                      <h4 className="font-bold">Up Next</h4>
                       {nextSession !== null && (
                         <div className="flex flex-col gap-4">
                           <Text

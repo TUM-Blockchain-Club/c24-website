@@ -1,22 +1,22 @@
-import Sparkle from "@/app/components/Sparkle";
-import { Container } from "@/app/components/container";
-import Sponsors from "@/app/sections/Sponsors";
-import Statistic from "@/app/sections/Statistic";
+import Sparkle from "@/components/Sparkle";
+import { Container } from "@/components/container";
+import Sponsors from "@/sections/Sponsors";
+import Statistic from "@/sections/Statistic";
 import Script from "next/script";
-import { Link } from "./components/link";
-import { Text } from "./components/text";
-import AcademicTrack from "./sections/AcademicTrack";
-import AfterEvents from "./sections/AfterEvents";
-import FAQSection from "./sections/FAQ";
-import Grants from "./sections/Grants";
-import Hero from "./sections/Hero";
-import Manifesto from "./sections/Manifesto";
-import Partners from "./sections/Partners";
-import Speaker from "./sections/Speaker";
-import Tickets from "./sections/Tickets";
-import Tracks from "./sections/Tracks";
-import Venue from "./sections/Venue";
-import Video from "./sections/Video";
+import { Link } from "@/components/link";
+import { Text } from "@/components/text";
+import AcademicTrack from "@/sections/AcademicTrack";
+import AfterEvents from "@/sections/AfterEvents";
+import FAQSection from "@/sections/FAQ";
+import Grants from "@/sections/Grants";
+import Hero from "@/sections/Hero";
+import Manifesto from "@/sections/Manifesto";
+import Partners from "@/sections/Partners";
+import Speaker from "@/sections/Speaker";
+import Tickets from "@/sections/Tickets";
+import Tracks from "@/sections/Tracks";
+import Venue from "@/sections/Venue";
+import Video from "@/sections/Video";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
-import { Container } from "@/app/components/container";
-import { Text } from "@/app/components/text";
-import { sideEventsItems } from "@/app/constants/SideEventData";
+import { Container } from "@/components/container";
+import { Text } from "@/components/text";
+import { sideEventsItems } from "@/constants/SideEventData";
 import Image from "next/image";
 import NextLink from "next/link";
 

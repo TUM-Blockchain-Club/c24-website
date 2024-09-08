@@ -5,8 +5,8 @@ const nextConfig = {
     unoptimized: true,
   },
   generateBuildId: async () => {
-    return process.env.VERCEL_DEPLOYMENT_ID || Date.now().toString()
-  }
+    return process.env.VERCEL_DEPLOYMENT_ID || Date.now().toString();
+  },
   // basePath: '/c24-website',
   // assetPrefix: '/c24-website',
 };

@@ -2,7 +2,6 @@ import Sparkle from "@/components/Sparkle";
 import { Container } from "@/components/container";
 import Sponsors from "@/sections/Sponsors";
 import Statistic from "@/sections/Statistic";
-import Script from "next/script";
 import { Link } from "@/components/link";
 import { Text } from "@/components/text";
 import AcademicTrack from "@/sections/AcademicTrack";

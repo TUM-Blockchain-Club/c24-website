@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 import Session, { Stages } from "@/model/session";
-import Link from "next/link";
 import Image from "next/image";
 
 // New custom hook for simulated time
@@ -120,58 +119,62 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
                       </h3>
                       {currentSession !== null && (
                         <div className="flex flex-col gap-4">
-                          <Text textType={"sub_title"}>
-                            {currentSession.title}
-                          </Text>
-                          <Text>
-                            {new Date(
-                              currentSession.startTime,
-                            ).toLocaleTimeString("en-DE", {
-                              hour: "2-digit",
-                              minute: "2-digit",
-                              timeZone: "Europe/Berlin",
-                            })}{" "}
-                            -{" "}
-                            {new Date(
-                              currentSession.endTime,
-                            ).toLocaleTimeString("en-DE", {
-                              hour: "2-digit",
-                              minute: "2-digit",
-                              timeZone: "Europe/Berlin",
-                              timeZoneName: "short",
-                            })}
-                          </Text>
-                          {currentSession.speakers &&
-                            currentSession.speakers.map((speaker, index) => (
-                              <>
-                                <div
-                                  className="flex gap-2 items-start"
-                                  key={index}
-                                >
-                                  {speaker.profilePhoto && (
-                                    <Image
-                                      src={speaker.profilePhoto}
-                                      alt={speaker.name}
-                                      width={48}
-                                      height={48}
-                                    />
-                                  )}
-                                  <div className="flex flex-col max-w-48">
-                                    <Text>{speaker.name}</Text>
-                                    <Text textType={"small"}>
-                                      {speaker.description}
-                                    </Text>
+                          <div className="flex flex-col gap-2">
+                            <Text textType={"sub_title"}>
+                              {currentSession.title}
+                            </Text>
+                            <Text>
+                              {new Date(
+                                currentSession.startTime,
+                              ).toLocaleTimeString("en-DE", {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                timeZone: "Europe/Berlin",
+                              })}{" "}
+                              -{" "}
+                              {new Date(
+                                currentSession.endTime,
+                              ).toLocaleTimeString("en-DE", {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                timeZone: "Europe/Berlin",
+                                timeZoneName: "short",
+                              })}
+                            </Text>
+                          </div>
+                          <div className="flex flex-col gap-4">
+                            {currentSession.speakers &&
+                              currentSession.speakers.map((speaker, index) => (
+                                <>
+                                  <div
+                                    className="flex gap-2 items-start"
+                                    key={index}
+                                  >
+                                    {speaker.profilePhoto && (
+                                      <Image
+                                        src={speaker.profilePhoto}
+                                        alt={speaker.name}
+                                        width={48}
+                                        height={48}
+                                      />
+                                    )}
+                                    <div className="flex flex-col max-w-48">
+                                      <Text>{speaker.name}</Text>
+                                      <Text textType={"small"}>
+                                        {speaker.description}
+                                      </Text>
+                                    </div>
                                   </div>
-                                </div>
-                              </>
-                            ))}
+                                </>
+                              ))}
+                          </div>
                         </div>
                       )}
                       {currentSession === null && (
                         <Text>There is currently no active session.</Text>
                       )}
                     </div>
-                    <div className="opacity-50">
+                    <div className="opacity-40">
                       <h4 className="font-bold">Up Next</h4>
                       {nextSession !== null && (
                         <div className="flex flex-col gap-4">

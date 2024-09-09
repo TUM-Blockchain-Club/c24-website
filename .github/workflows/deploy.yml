@@ -15,7 +15,7 @@ on:
         required: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +30,7 @@ jobs:
       - name: Install Dependencies
         shell: bash
         run: npm install
-      - name: Vercel Build
+      - name: Vercel Deploy
         shell: bash
         run: |
           if [ "${{ inputs.environment }}" = "prod" ]; then 

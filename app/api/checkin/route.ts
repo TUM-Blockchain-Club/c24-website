@@ -25,6 +25,10 @@ interface CheckInResponse {
   wasAlreadyCheckedIn: boolean;
 }
 
+export const OPTIONS = async (req: NextRequest): Promise<NextResponse> => {
+  return NextResponse.json({}, { status: 200 });
+};
+
 export const POST = async (req: NextRequest): Promise<NextResponse> => {
   // Check authentication
   const authHeader = req.headers.get("authorization");

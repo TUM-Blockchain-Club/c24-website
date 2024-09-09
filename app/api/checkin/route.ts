@@ -25,7 +25,7 @@ interface CheckInResponse {
   wasAlreadyCheckedIn: boolean;
 }
 
-export async function POST(req: NextRequest): Promise<NextResponse> {
+export const POST = async (req: NextRequest): Promise<NextResponse> => {
   // Check authentication
   const authHeader = req.headers.get("authorization");
   if (
@@ -77,7 +77,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       { status: 500 },
     );
   }
-}
+};
 
 async function findAttendeeByBarcode(
   barcode: string,

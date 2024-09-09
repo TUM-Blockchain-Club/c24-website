@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/checkin/*.ts": {
+      "maxDuration": 30
+    },
+    "api/version/*.ts": {
+      "maxDuration": 30
+    }
+  }
+}

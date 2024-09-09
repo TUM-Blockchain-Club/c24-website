@@ -21,7 +21,7 @@ const AfterEvents = () => {
           />
           <AfterEvent
             title="Student Initiatives Night"
-            date="13.09.2024 | 8.30 - 10.30pm"
+            date="13.09.2024 | 6.15 - 7pm"
             img="/side-events/student-initiatives-night.jpg"
             link="/student-initiatives-night"
             desc="Student initiatives are an integral part of Munich's innovative

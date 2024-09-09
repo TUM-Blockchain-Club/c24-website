@@ -32,19 +32,19 @@ export default function PaperSubmission() {
           <Text as="p" textType={"paragraph"}>
             <ul style={{ listStyleType: "circle" }} className="pl-5 space-y-2">
               <li>
-                17:00 - 18:00: Board Workshop
+                16:00 - 17:30: Board Workshop
                 <br /> In this workshop, we will discuss the most pressing
                 issues that the initiatives face and how to overcome them!
               </li>
               <li>
-                19:00 - 19.45: Initiative Pitches
+                18:15 - 19.00: Initiative Pitches
                 <br />
                 15 pitches, 2 minutes each! Initiatives will pitch the latest
                 projects that they have been working on, so stay tuned for
                 surprises and opportunities.
               </li>
               <li>
-                19:45 - 21:00: Networking
+                Networking
                 <br />
                 Network with various initiatives and get to know how you can
                 join them!

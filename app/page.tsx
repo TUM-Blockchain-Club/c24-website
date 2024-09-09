@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import Sparkle from "@/components/Sparkle";
 import { Container } from "@/components/container";
 import Sponsors from "@/sections/Sponsors";

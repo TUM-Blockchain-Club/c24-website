@@ -1,3 +1,7 @@
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+export const runtime = "nodejs";
+export const maxDuration = 5;
+
 import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 

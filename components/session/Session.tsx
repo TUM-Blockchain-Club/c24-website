@@ -8,6 +8,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { contentfulImageLoader } from "@/util/contentfulImageLoader";
 
 export type SessionElement = React.ElementRef<"div">;
 export type SessionProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -209,6 +210,11 @@ export const Session = React.forwardRef<SessionElement, SessionProps>(
                       <Link href={speaker.url || "#"}>
                         <Image
                           src={speaker.profilePhoto}
+                          loader={
+                            speaker.profilePhoto
+                              ? contentfulImageLoader
+                              : undefined
+                          }
                           alt={speaker.name}
                           width={48}
                           height={48}

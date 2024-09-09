@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 import { WorkshopsContainer } from "@/components/workshops/WorkshopsContainer";

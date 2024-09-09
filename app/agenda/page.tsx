@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import Agenda from "@/app/agenda/agenda";
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";

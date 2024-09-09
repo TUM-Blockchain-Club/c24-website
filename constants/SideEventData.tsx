@@ -77,7 +77,7 @@ export const sideEventsItems = [
     description:
       "Join us for an exciting evening where 15 initiatives will pitch the most interesting projects that they have been working on and how you can get involved with them! Note: This event is open to everyone attending the conference, so whether you're a professional, entrepreneur, or corporate, don't miss joining us to get a scoop on the latest happenings!",
     link: "/student-initiatives-night",
-    date: "Friday, September 13 | 18:15 - 7:00",
+    date: "Friday, September 13 | 18:15 - 21:00",
     backgroundImg: "/side-events/student-initiatives-night.jpg",
   },
 ];

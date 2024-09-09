@@ -12,6 +12,7 @@ import {
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
+import { contentfulImageLoader } from "@/util/contentfulImageLoader";
 
 type SpeakerElement = React.ElementRef<"div">;
 export type SpeakerProps = React.ComponentPropsWithoutRef<"div"> &
@@ -43,6 +44,7 @@ export const Speaker = React.forwardRef<SpeakerElement, SpeakerProps>(
         <Image
           className={"object-cover"}
           src={profilePhoto || "/speakers/placeholder.webp"}
+          loader={profilePhoto ? contentfulImageLoader : undefined}
           alt={name}
           title={name}
           width={275}

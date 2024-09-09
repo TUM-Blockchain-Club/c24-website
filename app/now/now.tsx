@@ -6,6 +6,7 @@ import { Container } from "@/components/container";
 import { Text } from "@/components/text";
 import Session, { Stages } from "@/model/session";
 import Image from "next/image";
+import { contentfulImageLoader } from "@/util/contentfulImageLoader";
 
 // New custom hook for simulated time
 const useSimulatedTime = (initialTime: Date) => {
@@ -153,6 +154,11 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
                                     {speaker.profilePhoto && (
                                       <Image
                                         src={speaker.profilePhoto}
+                                        loader={
+                                          speaker.profilePhoto
+                                            ? contentfulImageLoader
+                                            : undefined
+                                        }
                                         alt={speaker.name}
                                         width={48}
                                         height={48}
@@ -194,6 +200,11 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
                                   {speaker.profilePhoto && (
                                     <Image
                                       src={speaker.profilePhoto}
+                                      loader={
+                                        speaker.profilePhoto
+                                          ? contentfulImageLoader
+                                          : undefined
+                                      }
                                       alt={speaker.name}
                                       width={48}
                                       height={48}

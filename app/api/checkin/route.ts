@@ -1,3 +1,7 @@
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+export const runtime = "nodejs";
+export const maxDuration = 30;
+
 import { NextRequest, NextResponse } from "next/server";
 
 const EVENTBRITE_API_KEY = process.env.EVENTBRITE_API_KEY;
@@ -10,6 +14,11 @@ interface CheckInRequest {
 
 interface EventbriteAttendee {
   id: string;
+  profile: {
+    email: string;
+    name: string;
+  };
+  ticket_class_name: string;
   barcodes: { barcode: string }[];
   checked_in: boolean;
 }
@@ -21,7 +30,8 @@ interface EventbriteResponse {
   };
 }
 
-interface CheckInResponse {
+interface CheckInResponse
+  extends Omit<EventbriteAttendee, "checked_in" | "barcodes"> {
   wasAlreadyCheckedIn: boolean;
 }
 
@@ -81,6 +91,12 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
 
     const response: CheckInResponse = {
       wasAlreadyCheckedIn: checkInResult.wasAlreadyCheckedIn,
+      id: attendee.id,
+      profile: {
+        name: attendee.profile.name,
+        email: attendee.profile.email,
+      },
+      ticket_class_name: attendee.ticket_class_name,
     };
 
     return NextResponse.json(response, { status: 200 });
@@ -97,11 +113,10 @@ async function findAttendeeByBarcode(
   barcode: string,
 ): Promise<EventbriteAttendee | null> {
   let page = 1;
-  const limit = 50; // Adjust based on your needs
 
   while (true) {
     const response = await fetch(
-      `https://www.eventbriteapi.com/v3/events/${EVENT_ID}/attendees/?page=${page}&page_size=${limit}`,
+      `https://www.eventbriteapi.com/v3/events/${EVENT_ID}/attendees/?page=${page}`,
       {
         headers: { Authorization: `Bearer ${EVENTBRITE_API_KEY}` },
       },

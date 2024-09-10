@@ -12,7 +12,7 @@ interface CheckInRequest {
   barcode: string;
 }
 
-interface EventbriteAttendee {
+export interface EventbriteAttendee {
   id: string;
   profile: {
     email: string;

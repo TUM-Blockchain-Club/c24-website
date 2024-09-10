@@ -17,8 +17,8 @@ const AfterEvents = () => {
             date="12.09.2024 | 5.45 - 8pm"
             img="/side-events/ecosystem-night.jpg"
             link="https://www.eventbrite.de/e/blockchain-ecosystem-night-tickets-1005031866367?aff=oddtdtcreator"
-            desc="Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, and Bundesblock. We'll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks and some casual networking. It's the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!"
-          />
+            desc="Join us for a relaxed evening at the Blockchain Ecosystem Night, hosted by the TUM Blockchain Club, Blockchain Bayern, Bundesblock, and W3MUC. We’ll kick off with two panels: one featuring students from international blockchain clubs and the other highlighting local blockchain initiatives. In between, Prof. Möslein will present his new book. After that, we’ll come together for drinks from Metabrew and some casual networking. It’s the perfect chance to connect with other blockchain enthusiasts and experts. Looking forward to seeing you there!"
+            />
           <AfterEvent
             title="Student Initiatives Night"
             date="13.09.2024 | 6.15 - 7pm"

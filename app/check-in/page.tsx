@@ -5,7 +5,8 @@ import useSWR from "swr";
 import jsQR, { QRCode } from "jsqr";
 import { Container } from "@/components/container";
 import { Text } from "@/components/text";
-import { EventbriteAttendee } from "@/app/api/check-in/route";
+import { CheckInResponse } from "@/app/api/check-in/route";
+import { Button } from "@/components/button";
 
 const fetcher = async (url: string, barcode: string, passcode: string) => {
   const response = await fetch(url, {
@@ -30,15 +31,14 @@ const CheckInPage: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [qrCodeData, setQrCodeData] = useState<string>("");
-  const [attendeeData, setAttendeeData] = useState<EventbriteAttendee | null>(
-    null,
-  );
   const [error, setError] = useState<string>("");
   const [passcode, setPasscode] = useState<string>("");
+  const printPreviewIFrameRef = useRef<HTMLIFrameElement>(null);
 
   const {
     data,
     isLoading,
+    mutate,
     error: swrError,
   } = useSWR(
     qrCodeData ? ["/api/check-in", qrCodeData, passcode] : null,
@@ -96,6 +96,16 @@ const CheckInPage: React.FC = () => {
     }
   };
 
+  const printIframe = () => {
+    if (printPreviewIFrameRef.current) {
+      const iframeWindow = printPreviewIFrameRef.current.contentWindow;
+      if (iframeWindow) {
+        iframeWindow.focus();
+        iframeWindow.print();
+      }
+    }
+  };
+
   useEffect(() => {
     const detectQRCode = () => {
       if (videoRef.current && canvasRef.current) {
@@ -140,7 +150,9 @@ const CheckInPage: React.FC = () => {
               code.location.topLeftCorner,
               "#FF3B58",
             );
-            setQrCodeData(code.data);
+            if (code.binaryData.length > 0) {
+              setQrCodeData(code.data);
+            }
           }
         }
       }
@@ -150,17 +162,78 @@ const CheckInPage: React.FC = () => {
     detectQRCode();
   }, []);
 
+  const eventAttendee = data as CheckInResponse;
+
+  const iframeContent = eventAttendee
+    ? `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          html, body {
+              width: 62mm;
+              height: 28mm;
+              overflow: hidden;
+              page-break-after: avoid;
+              page-break-inside: avoid;
+          }
+          body { 
+            line-height: 1; 
+            font-family: Arial, 
+            sans-serif; 
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          h1 { 
+              font-size: 15pt;
+              margin: 0 0 1mm 0;
+            }
+          p {
+            font-size: 10pt;
+            margin: 0 0 1mm 0;
+          }
+          @page {
+            size: 62mm 28mm;
+            margin: 2mm 3mm;
+          }
+          @media print {
+              html, body {
+                width: 62mm;
+                height: 28mm;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+              }
+          }
+          @media screen {
+             body {
+              margin: 2mm 3mm;
+           }
+          }
+        </style>
+        <title>Ticket</title>
+      </head>
+      <body>
+        <h1>${eventAttendee.profile.name}</h1>
+        <p>Current time: ${new Date().toLocaleTimeString()}</p>
+      </body>
+    </html>
+  `
+    : "";
+
   return (
     <div className={"flex justify-center"}>
       <main className={"w-full max-w-7xl pt-[25px] lg:pt-0 z-20 pb-40"}>
         <Container>
-          <div className="mt-[100px] md:mt-[20vh] z-10 max-w-3xl">
+          <div className="mt-[100px] md:mt-[20vh] z-10">
             <div className="lg:flex items-center">
               <Text textType={"sub_hero"} className="text-gradient text-left">
                 Check In
               </Text>
             </div>
-            <div className="mt-20 flex">
+            <div className="mt-20 flex gap-8">
               <div className="flex flex-col gap-2">
                 <div>
                   <video
@@ -171,28 +244,33 @@ const CheckInPage: React.FC = () => {
                   />
                   <canvas ref={canvasRef} style={{ maxWidth: "100%" }} />
                 </div>
-                <div className="flex gap-3 items-center">
-                  <label htmlFor="passcode">Passcode: </label>
-                  <input
-                    onChange={(e) => setPasscode(e.target.value)}
-                    className="px-2 py-1 bg-gray-900 border border-white"
-                    id="passcode"
-                    type="password"
-                  />
+                <div className="flex justify-between">
+                  <div className="flex gap-3 items-center">
+                    <label htmlFor="passcode">Passcode: </label>
+                    <input
+                      onChange={(e) => setPasscode(e.target.value)}
+                      className="px-2 py-1 bg-gray-900 border border-white"
+                      id="passcode"
+                      type="password"
+                    />
+                  </div>
+                  <div>
+                    <Button onClick={() => printIframe()}>Print</Button>
+                  </div>
                 </div>
-                <div>
+                <div className="flex flex-col">
                   {qrCodeData && (
                     <div>
                       <p>Scanned Barcode: {qrCodeData}</p>
-                      {data && (
+                      {eventAttendee && (
                         <Text
                           className={
-                            data.wasAlreadyCheckedIn
+                            eventAttendee.wasAlreadyCheckedIn
                               ? "text-yellow-500"
                               : "text-green-500"
                           }
                         >
-                          {data.wasAlreadyCheckedIn
+                          {eventAttendee.wasAlreadyCheckedIn
                             ? "Already checked in"
                             : "Successfully checked in"}
                         </Text>
@@ -206,7 +284,16 @@ const CheckInPage: React.FC = () => {
                   )}
                 </div>
               </div>
-              <div></div>
+              <div className="flex flex-col gap-4">
+                <Text textType="sub_title">Print Preview</Text>
+                <iframe
+                  srcDoc={iframeContent}
+                  ref={printPreviewIFrameRef}
+                  width={248}
+                  height={112}
+                  className="translate-x-[25%] translate-y-[25%] scale-[150%]"
+                />
+              </div>
             </div>
           </div>
         </Container>

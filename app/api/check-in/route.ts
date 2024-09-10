@@ -30,7 +30,7 @@ interface EventbriteResponse {
   };
 }
 
-interface CheckInResponse
+export interface CheckInResponse
   extends Omit<EventbriteAttendee, "checked_in" | "barcodes"> {
   wasAlreadyCheckedIn: boolean;
 }
@@ -99,7 +99,14 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       ticket_class_name: attendee.ticket_class_name,
     };
 
-    return NextResponse.json(response, { status: 200 });
+    return NextResponse.json(response, {
+      status: 200,
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        Pragma: "no-cache",
+        Expires: "0",
+      },
+    });
   } catch (error) {
     console.error("Error:", error);
     return NextResponse.json(

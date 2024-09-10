@@ -162,7 +162,9 @@ export default function PaperSubmission() {
             can get involved with them! Note: This event is open to everyone
             attending the conference, so whether you're a professional,
             entrepreneur, or corporate, don't miss joining us to get a scoop on
-            the latest happenings!
+            the latest happenings!<br/><br/>
+            Venue for the Board Workshop: Workshop Stage<br/>
+Venue for the pitches: Tech Stage
           </Text>
         </div>
         <div className="mt-6">

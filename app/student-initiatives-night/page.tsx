@@ -154,6 +154,30 @@ export default function PaperSubmission() {
             width={100}
             height={100}
           />
+          <Image
+            src={"/student-initiatives/innovis.png"}
+            alt={"INNOVIS"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/RoboTUM.png"}
+            alt={"ROBOTUM"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/TUMBusinessGame.png"}
+            alt={"TUMBG"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/FalconVision.png"}
+            alt={"WARR"}
+            width={100}
+            height={100}
+          />
         </div>
         <div className="mt-16">
           <Text as="p" textType={"paragraph"}>

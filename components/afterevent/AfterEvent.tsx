@@ -25,10 +25,10 @@ const AfterEvent = (props: AfterEventProps) => {
           style={{ objectFit: "contain" }}
         ></Image>
       </div>
-      <div className="w-full flex justify-left mt-10">
+      <div className="w-full flex justify-center mt-10">
         <Text
           textType={"sub_title"}
-          className="text-left max-w-[250px] sm:max-w-[42rem]"
+          className="text-center max-w-[250px] sm:max-w-[42rem]"
         >
           {props.title}
         </Text>

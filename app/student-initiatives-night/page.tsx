@@ -154,6 +154,30 @@ export default function PaperSubmission() {
             width={100}
             height={100}
           />
+          <Image
+            src={"/student-initiatives/innovis.png"}
+            alt={"INNOVIS"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/RoboTUM.png"}
+            alt={"ROBOTUM"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/TUMBusinessGame.png"}
+            alt={"TUMBG"}
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/student-initiatives/FalconVision.png"}
+            alt={"WARR"}
+            width={100}
+            height={100}
+          />
         </div>
         <div className="mt-16">
           <Text as="p" textType={"paragraph"}>
@@ -163,6 +187,11 @@ export default function PaperSubmission() {
             attending the conference, so whether you're a professional,
             entrepreneur, or corporate, don't miss joining us to get a scoop on
             the latest happenings!
+            <br />
+            <br />
+            Venue for the Board Workshop: Workshop Stage
+            <br />
+            Venue for the pitches: Tech Stage
           </Text>
         </div>
         <div className="mt-6">
@@ -178,7 +207,7 @@ export default function PaperSubmission() {
             </div>
             <div className="relative w-[200px] h-[100px]">
               <Image
-                src="/sponsors/utum_venturelabs_logo.png"
+                src="/partners/venture_labs.png"
                 alt="UnternehmerTum"
                 fill
                 style={{ objectFit: "contain" }}

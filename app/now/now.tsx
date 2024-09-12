@@ -7,6 +7,7 @@ import { Text } from "@/components/text";
 import Session, { Stages } from "@/model/session";
 import Image from "next/image";
 import { contentfulImageLoader } from "@/util/contentfulImageLoader";
+import { Link } from "@/components/link";
 
 // New custom hook for simulated time
 const useSimulatedTime = (initialTime: Date) => {
@@ -84,14 +85,23 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
     <div className={"flex justify-center min-h-screen"}>
       <main
         className={
-          "w-full lg:max-w-7xl 2xl:max-w-full pt-[25px] lg:pt-0 z-20 pb-40 h-full"
+          "w-full lg:max-w-7xl 2xl:max-w-full pt-[25px] lg:pt-0 z-20 pb-40 min-h-full"
         }
       >
         <Container className={"flex flex-col min-h-full"}>
           <div className={"mt-[100px] md:mt-[20vh] z-10 max-w-3xl"}>
-            <div className="lg:flex items-center">
+            <div className="flex flex-col items-start">
               <Text textType={"sub_hero"} className="text-gradient text-left">
                 Now
+              </Text>
+              <Text textType={"small"}>
+                Grab it on your phone:{" "}
+                <Link
+                  className={"font-bold"}
+                  href={"https://conference.tum-blockchain.com/now"}
+                >
+                  https://conference.tum-blockchain.com/now
+                </Link>
               </Text>
             </div>
           </div>

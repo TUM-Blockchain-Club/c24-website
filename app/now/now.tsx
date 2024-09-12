@@ -194,12 +194,33 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
                       <h4 className="font-bold">Up Next</h4>
                       {nextSession !== null && (
                         <div className="flex flex-col gap-4">
-                          <Text
-                            textType={"paragraph"}
-                            className="text-ellipsis overflow-ellipsis"
-                          >
-                            {nextSession.title}
-                          </Text>
+                          <div className="flex flex-col gap-1">
+                            <Text
+                              textType={"paragraph"}
+                              className="text-ellipsis overflow-ellipsis"
+                            >
+                              {nextSession.title}
+                            </Text>
+                            <Text>
+                              {new Date(
+                                nextSession.startTime,
+                              ).toLocaleTimeString("en-DE", {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                timeZone: "Europe/Berlin",
+                              })}{" "}
+                              -{" "}
+                              {new Date(nextSession.endTime).toLocaleTimeString(
+                                "en-DE",
+                                {
+                                  hour: "2-digit",
+                                  minute: "2-digit",
+                                  timeZone: "Europe/Berlin",
+                                  timeZoneName: "short",
+                                },
+                              )}
+                            </Text>
+                          </div>
                           {nextSession.speakers &&
                             nextSession.speakers.map((speaker, index) => (
                               <>

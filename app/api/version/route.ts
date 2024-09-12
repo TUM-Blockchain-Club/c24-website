@@ -10,6 +10,12 @@ export const GET = async (request: Request) => {
     console.warn("Not using the intended Deployment ID!");
   }
 
+  if (process.env.VERCEL_ENV !== "production" && process.env.VERSION_OVERRIDE) {
+    return NextResponse.json({
+      version: process.env.VERSION_OVERRIDE,
+    });
+  }
+
   const deploymentId =
     process.env.VERCEL_DEPLOYMENT_ID || Date.now().toString();
   const deploymentIdHash = createHash("sha256")

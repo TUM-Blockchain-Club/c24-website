@@ -18,8 +18,12 @@ export function useVersionCheck(intervalMs = 30000) {
           currentVersion &&
           version !== currentVersion
         ) {
+          console.log(
+            `App version change from ${currentVersion} to ${version}`,
+          );
           setNewVersionAvailable(true);
         } else {
+          console.log(`appVersion stays the same ${version}`);
           localStorage.setItem("appVersion", version);
         }
       } catch (error) {

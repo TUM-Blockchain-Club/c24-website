@@ -172,7 +172,7 @@ const CheckInPage: React.FC = () => {
         <style>
           html, body {
               width: 62mm;
-              height: 28mm;
+              height: 29mm;
               overflow: hidden;
               page-break-after: avoid;
               page-break-inside: avoid;
@@ -196,20 +196,20 @@ const CheckInPage: React.FC = () => {
           }
           @page {
             size: 62mm 28mm;
-            margin: 2mm 3mm;
+            margin: 3mm 3mm;
           }
           @media print {
               html, body {
                 width: 62mm;
-                height: 28mm;
-                margin: 0;
-                padding: 0;
+                height: 29mm;
+                margin: 0!important;
+                padding: 0!important;
                 overflow: hidden;
               }
           }
           @media screen {
              body {
-              margin: 2mm 3mm;
+              margin: 3mm 3mm;
            }
           }
         </style>

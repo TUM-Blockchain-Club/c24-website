@@ -12,6 +12,7 @@ export function useVersionCheck(intervalMs = 30000) {
         const res = await fetch("/api/version");
         const { version } = await res.json();
         const currentVersion = localStorage.getItem("appVersion");
+        localStorage.setItem("appVersion", version);
 
         if (
           process.env.NEXT_PUBLIC_IS_SERVER === "1" &&
@@ -24,7 +25,6 @@ export function useVersionCheck(intervalMs = 30000) {
           setNewVersionAvailable(true);
         } else {
           console.log(`appVersion stays the same ${version}`);
-          localStorage.setItem("appVersion", version);
         }
       } catch (error) {
         console.error("Failed to check for new version:", error);

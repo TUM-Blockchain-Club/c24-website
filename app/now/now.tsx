@@ -113,7 +113,10 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
             >
               {Stages.map((stage, key) => {
                 const sessionsInThisStage = sessions.filter(
-                  (session) => session.room === stage,
+                  (session) =>
+                    session.room === stage &&
+                    new Date(session.startTime).getDate() ===
+                      new Date().getDate(),
                 );
 
                 const { currentSession, nextSession } =

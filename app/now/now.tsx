@@ -121,7 +121,7 @@ const Now: React.FC<NowProps> = ({ sessions, simulatedDate }) => {
 
                 return (
                   <div
-                    className="flex md:min-h-[500px] flex-1 border p-4 flex-col gap-8"
+                    className="flex md:min-h-[500px] flex-1 border p-4 flex-col gap-16"
                     key={key}
                   >
                     <div>

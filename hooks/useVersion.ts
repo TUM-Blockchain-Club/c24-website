@@ -14,6 +14,7 @@ export function useVersionCheck(intervalMs = 30000) {
         const currentVersion = localStorage.getItem("appVersion");
 
         if (
+          false &&
           process.env.NEXT_PUBLIC_IS_SERVER === "1" &&
           currentVersion &&
           version !== currentVersion

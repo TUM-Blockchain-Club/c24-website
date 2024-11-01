@@ -9,7 +9,7 @@ const Statistic = () => {
     >
       <div className={"flex flex-col items-center"}>
         <Text textType={"sub_title"} className={""}>
-          Last Year Statistic
+          This Year Statistic
         </Text>
         <div className={"flex flex-col items-center lg:flex-row gap-12 mt-12"}>
           <div className={"flex flex-col gap-2 items-center lg:items-start"}>
@@ -20,21 +20,33 @@ const Statistic = () => {
           </div>
           <div className={"flex flex-col gap-2 items-center lg:items-start"}>
             <Text className={""} textType={"sub_hero"}>
-              100+
+              150+
             </Text>
             <Text textType={"sub_title"}>Speakers</Text>
           </div>
           <div className={"flex flex-col gap-2 items-center lg:items-start"}>
             <Text className={""} textType={"sub_hero"}>
-              40+
+              23
+            </Text>
+            <Text textType={"sub_title"}>Sponsors</Text>
+          </div>
+          <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+            <Text className={""} textType={"sub_hero"}>
+              84
             </Text>
             <Text textType={"sub_title"}>Talks</Text>
           </div>
           <div className={"flex flex-col gap-2 items-center lg:items-start"}>
             <Text className={""} textType={"sub_hero"}>
-              20+
+              20
             </Text>
-            <Text textType={"sub_title"}>Sponsors</Text>
+            <Text textType={"sub_title"}>Panels</Text>
+          </div>
+          <div className={"flex flex-col gap-2 items-center lg:items-start"}>
+            <Text className={""} textType={"sub_hero"}>
+              7
+            </Text>
+            <Text textType={"sub_title"}>Workshops</Text>
           </div>
         </div>
       </div>

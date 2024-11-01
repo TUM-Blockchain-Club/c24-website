@@ -28,9 +28,7 @@ const AcademicTrack = () => {
           </Text>
         </div>
         <div className="w-full flex justify-center">
-          <Button buttonType={"cta"} asChild>
-            <a href={"/academic-track"}>Call for Abstracts</a>
-          </Button>
+          <Button disabled>Call for Abstracts</Button>
         </div>
       </div>
     </section>

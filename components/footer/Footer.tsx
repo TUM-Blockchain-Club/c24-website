@@ -56,7 +56,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                   />
                 </div>
                 <div className="flex space-x-4 mt-2">
-                  <a
+                  <Link
                     href="https://discord.gg/7V7KG8SESF"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -66,8 +66,8 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/company/tum-blockchain-club/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -77,8 +77,8 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://t.me/+6SMYu7pub0E1MGUy"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -88,8 +88,8 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://x.com/tbc_munich"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,7 +99,7 @@ export const Footer = React.forwardRef<FooterElement, FooterProps>(
                       alt={"TUM Blockchain Club Logo"}
                       width={25}
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div

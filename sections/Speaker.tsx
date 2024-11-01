@@ -2,6 +2,7 @@ import { Button } from "@/components/button";
 import { Text } from "@/components/text";
 import { Speaker as SpeakerComponent } from "@/components/speaker";
 import { useSpeaker } from "@/hooks/useSpeaker";
+import { Link } from "@/components/link";
 
 const Speaker = async () => {
   const speakers = await useSpeaker(12);
@@ -23,15 +24,13 @@ const Speaker = async () => {
       <div className="md:flex space-x-0 md:space-x-4 space-y-4 md:space-y-0">
         <div>
           <div className="w-full flex justify-center">
-            <Button buttonType={"cta"} asChild>
-              <a href={"https://tally.so/r/wk62O6"}>Apply as speaker</a>
-            </Button>
+            <Button disabled>Apply as speaker</Button>
           </div>
         </div>
         <div>
           <div className="w-full flex justify-center">
             <Button buttonType={"primary"} asChild>
-              <a href={"/speakers"}>All speakers</a>
+              <Link href={"/speakers"}>All speakers</Link>
             </Button>
           </div>
         </div>

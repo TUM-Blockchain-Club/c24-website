@@ -4,6 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
+import { Link } from "../link";
 
 const sponsorVariant = cva(
   "flex p-[10px] md:p-[20px] justify-center items-center shrink-0 bg-white",
@@ -44,7 +45,7 @@ export const Sponsor = React.forwardRef<SponsorElement, SponsorProps>(
         ref={ref}
         {...restProps}
       >
-        <a
+        <Link
           className="w-full h-full flex items-center justify-center"
           href={link}
           target="_blank"
@@ -57,7 +58,7 @@ export const Sponsor = React.forwardRef<SponsorElement, SponsorProps>(
             width={275}
             height={275}
           />
-        </a>
+        </Link>
       </div>
     );
   },

@@ -28,25 +28,15 @@ const Grants = () => {
         <div className="p-5 w-full flex justify-center items-center md:w-96 flex-col gap-4">
           <Text textType="sub_title">Academic Grant</Text>
           <Text>For all curious learners and educators</Text>
-          <Button asChild className="w-fit">
-            <Link
-              href="https://apply.tum-blockchain.com/academic-grant-24"
-              target="_blank"
-            >
-              Apply for Academic Grant
-            </Link>
+          <Button disabled className="w-fit">
+            Apply for Academic Grant
           </Button>
         </div>
         <div className="p-5 w-full flex justify-center items-center md:w-96 flex-col gap-4">
           <Text textType="sub_title">Builder Grant</Text>
           <Text>For all the innovative trailblazers</Text>
-          <Button asChild className="w-fit">
-            <Link
-              href="https://apply.tum-blockchain.com/builder-grant-24"
-              target="_blank"
-            >
-              Apply for Builder Grant
-            </Link>
+          <Button disabled className="w-fit">
+            Apply for Builder Grant
           </Button>
         </div>
         <div className="p-5 w-full flex justify-center items-center flex-col gap-4">

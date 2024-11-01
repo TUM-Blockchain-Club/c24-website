@@ -346,12 +346,12 @@ export default function PaperSubmission() {
               <Text textType={"paragraph"}>
                 For any inquiries regarding the poster presentation, reach out
                 to{" "}
-                <a
+                <Link
                   href="mailto:academic-track@tum-blockchain.com"
                   className="underline"
                 >
                   academic-track@tum-blockchain.com
-                </a>
+                </Link>
                 .
               </Text>
             </div>

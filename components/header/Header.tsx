@@ -82,10 +82,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Text>
             </>
           )}
-          <Button buttonType={"cta"} asChild className={"sm:hidden mr-4 w-fit"}>
-            <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-              Tickets
-            </NextLink>
+          <Button className={"sm:hidden mr-4 w-fit"} disabled>
+            Tickets
           </Button>
         </nav>
       </div>
@@ -143,13 +141,6 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
                 />
               </NextLink>
             </div>
-            {/*<div className={"flex sm:hidden"}>
-              <Button asChild buttonType={"cta"}>
-                <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-                  Tickets
-                </NextLink>
-              </Button>
-            </div>*/}
             <nav
               className={
                 "hidden sm:flex h-full justify-center gap-8 items-center"
@@ -189,11 +180,7 @@ export const Header = React.forwardRef<HeaderElement, HeaderProps>(
               <Text asChild>
                 <Link href="/workshops">Workshops</Link>
               </Text>
-              <Button asChild buttonType={"cta"}>
-                <NextLink href="https://tum-blockchain-conference-24.eventbrite.de/">
-                  Tickets
-                </NextLink>
-              </Button>
+              <Button disabled>Tickets</Button>
             </nav>
             <div className="md:hidden py-2 px-4">
               <HamburgerMenuIcon

@@ -1,5 +1,4 @@
 name: "Deploy Vercel"
-
 on:
   workflow_call:
     inputs:
@@ -13,30 +12,47 @@ on:
         required: true
       VERCEL_PROJECT_ID:
         required: true
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.3.0
+          run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install Vercel CLI
-        shell: bash
-        run: npm i -g vercel
-      - name: Install Dependencies
-        shell: bash
-        run: npm install
-      - name: Vercel Deploy
-        shell: bash
+        run: pnpm add --global vercel@59.16.0
+      - name: Verify deployment repository
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
-          if [ "${{ inputs.environment }}" = "prod" ]; then 
-            vercel pull --environment=production --yes --token=${{ secrets.vercel_token }}
-            vercel deploy --public --yes --prod --logs --token=${{ secrets.vercel_token }}
+          node --input-type=module <<'JS'
+          const response = await fetch('https://api.vercel.com/v9/projects/' + encodeURIComponent(process.env.VERCEL_PROJECT_ID) + '?teamId=' + encodeURIComponent(process.env.VERCEL_ORG_ID), { headers: { Authorization: 'Bearer ' + process.env.VERCEL_TOKEN } });
+          if (!response.ok) throw new Error('Could not verify deployment project');
+          const project = await response.json();
+          if (String(project.link?.repoId) !== process.env.GITHUB_REPOSITORY_ID) throw new Error('Vercel is linked to a different source repository; deployment stopped');
+          JS
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Vercel Deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          DEPLOY_ENVIRONMENT: ${{ inputs.environment }}
+        run: |
+          if [ "$DEPLOY_ENVIRONMENT" = "prod" ]; then
+            vercel pull --environment=production --yes
+            vercel deploy --yes --prod --logs
           else
-            vercel pull --environment=preview --yes --token=${{ secrets.vercel_token }}
-            vercel deploy --public --yes --logs --token=${{ secrets.vercel_token }}
+            vercel pull --environment=preview --yes
+            vercel deploy --yes --logs
           fi

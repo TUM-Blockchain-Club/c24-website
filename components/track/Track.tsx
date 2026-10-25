@@ -12,7 +12,7 @@ export type TrackProps = React.ComponentPropsWithoutRef<"div"> & {
   imageAlt: string;
   dimension: number;
   title: string;
-  desc: string | JSX.Element;
+  desc: string | React.JSX.Element;
 };
 
 export const Track = React.forwardRef<TrackElement, TrackProps>(

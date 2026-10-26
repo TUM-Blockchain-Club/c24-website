@@ -4,3 +4,4 @@
 - Use pnpm; install from pnpm-lock.yaml with `pnpm install --frozen-lockfile --ignore-scripts`.
 - Run the available build, lint, typecheck and test scripts before committing. Keep dependency patches separate from feature changes.
 - Treat environment files, credentials and generated private data as local-only. Do not run database, email or blockchain mutations during dependency verification.
+- Keep production deployments triggered by pushes to `main` or `workflow_dispatch` only; `repository_dispatch` can feed Vercel deployment events back into deployment loops.
